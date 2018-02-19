@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	/*
+	else는 if문 만으로 조건을 완성할 수 없는 복잡한 상황에서 사용
+	if문에서 true조건이 실행되면 else는 실행 안됨 
+	*/
+	if(true){//조건이 true이므로 bb만 출력, else는 실행 안함
+	   alert("bb")
+	} else{
+	   alert("AA")
+	}
+	if(false){//조건이 false이므로 else만 출력(DD)
+	   alert("cc")
+	} else{
+	   alert("DD")
+	}
+
+	if(false){
+	   alert("가가");//조건에 false이므로 실행 안됨
+	} else if(true){//아니면 조건에 if를 만나(true)가 된 상황
+	   alert("나나")//else if(true) 실행 됨
+	} else if(true){//위에서 실행되었으므로 출력 종료
+       alert("다다");
+	}
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

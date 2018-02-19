@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    var pattern = /(\w+)\s(\w+)/;//단어 (공백) 단어
+	/*
+	\w : 모든 문자열(특수기호 제외)
+	+ : 한개 이상의 문자
+    \s : 공백
+	*/
+    var str = "hello kim";
+    var result = str.replace(pattern, "$1, $2");
+	alert(result)
+	//정규표현식의 패턴으로 /[0-9]/를 사용하면 숫자만 필터링 한다.
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

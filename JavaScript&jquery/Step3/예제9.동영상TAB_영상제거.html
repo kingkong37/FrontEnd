@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style type="text/css">
+        .movie_tab{width:560px;height:400px;float:left}
+        .movie_tab ul{width:100%;padding:0;margin:0 0 10px 0;list-style:none;float:left}
+        .movie_tab ul li{float:left;margin-right:20px}
+        .movie_tab ul li a{color:#5b5b5b;text-decoration:none}
+        .movie_tab .movie_data{width:100%;height:315px;float:left}
+        .movie_tab .movie2{display:none}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//1번영상
+			$('.tab li a.btn1').click(function(){
+				$('.movie1').show();
+				$('.movie2').hide();
+				//버튼1번과 연결된 영상의 소스(src)를 다시 가져옴
+				$('.movie1 iframe').attr('src' , 'https://www.youtube.com/embed/Dza-lHdf6GU');
+				//2번 영상의 소스(src)를 없앰
+				$('.movie2 iframe').attr('src' , '');
+			});
+			//2번영상
+			$('.tab li a.btn2').click(function(){
+				$('.movie2').show();
+				$('.movie1').hide();
+				$('.movie2 iframe').attr('src' , 'https://www.youtube.com/embed/jy_UiIQn_d0');
+				$('.movie1 iframe').attr('src' , '');
+			})
+        });
+    </script>
+</head>
+<body>
+    <div class="movie_tab">
+        <ul class="tab">
+            <li><a href="#" class="btn1">MOVIE1</a></li>
+            <li><a href="#" class="btn2">MOVIE2</a></li>
+        </ul>
+        <div class="movie_data movie1" id="movie1"><iframe width="560" height="315" src="https://www.youtube.com/embed/Dza-lHdf6GU" frameborder="0" allowfullscreen></iframe></div>
+        <div class="movie_data movie2" id="movie2"><iframe width="560" height="315" src="https://www.youtube.com/embed/jy_UiIQn_d0" frameborder="0" allowfullscreen></iframe></div>
+    </div>
+</body>
+</html>

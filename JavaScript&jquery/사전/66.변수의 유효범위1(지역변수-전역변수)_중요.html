@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    //유효범위는 변수의 수명
+	var aa = "유효범위1"//전역변수(global)
+
+	function bb(){
+	   var aa = "유효범위2"//지역변수(local)
+	   alert(aa);
+	}
+    bb();
+
+    var scope1 = "가가가"//전역변수
+	function Myfun(){
+	   var scope1 = "나나나"//지역변수
+	   var scope2 = "다다다"//지역변수
+	   alert(scope2);//return = 다다다
+	}
+    Myfun();
+	alert(scope2)//return = 실행안됨
+
+	//지역변수로 선언한 변수는 함수 내에서만 호출이 가능하고 바깥쪽으로 불러올 수 없다.
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>...</title>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <link href="css/lq.css" rel="stylesheet" type="text/css" />
+    <!--이벤트사용-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var quick_menu = $(".menu_quick");
+            var quick_top = 200;
+            $(window).scroll(function () {
+                quick_menu.stop().animate({ "top": $(document).scrollTop() + quick_top + "px" }, 500);
+            });
+            $('.menu_quick li.link1 a').click(function () {
+                var scmove1 = $('#Double_Discount').offset().top;
+                $('html, body').animate({ scrollTop: scmove1 }, 600);
+            });
+            $('.menu_quick li.link2 a').click(function () {
+                var scmove2 = $('#Handbag').offset().top;
+                $('html, body').animate({ scrollTop: scmove2 }, 600);
+            });
+            $('.menu_quick li.link3 a').click(function () {
+                var scmove3 = $('#Gifticon').offset().top;
+                $('html, body').animate({ scrollTop: scmove3 }, 600);
+            });
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 0) {
+                    $('#top_menu').addClass('move');
+                }
+                else {
+                    $('#top_menu').removeClass('move');
+                }
+            });
+        });
+       
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 0 && scroll < 999) {
+                $("ul.menu_quick li.link1 a").removeClass("on");
+                $("ul.menu_quick li.link2 a").removeClass("on");
+                $("ul.menu_quick li.link3 a").removeClass("on");
+            }
+            if (scroll >= 1000 && scroll < 2600) {
+                $("ul.menu_quick li.link1 a").addClass("on");
+                $("ul.menu_quick li.link2 a").removeClass("on");
+                $("ul.menu_quick li.link3 a").removeClass("on");
+            }
+            if (scroll >= 2599 && scroll < 4500) {
+                $("ul.menu_quick li.link1 a").removeClass("on");
+                $("ul.menu_quick li.link2 a").addClass("on");
+                $("ul.menu_quick li.link3 a").removeClass("on");
+            }
+            if (scroll >= 4501 && scroll < 5000) {
+                $("ul.menu_quick li.link1 a").removeClass("on");
+                $("ul.menu_quick li.link2 a").removeClass("on");
+                $("ul.menu_quick li.link3 a").addClass("on");
+            }
+        });
+    </script>
+</head>
+<body>
+    <!--Event Wrap-->
+    <div class="event_wrap">
+        <div class="hangawi_gift">
+            <div id="top_menu"><img src="images/lq_menu.gif" /></div>
+            <!--Quick-->
+            <ul class="menu_quick">
+                <li class="link1"><a href="#Double_Discount">더블할인쿠폰</a></li>
+                <li class="link2"><a href="#Handbag">신상핸드백받기</a></li>
+                <li class="link3"><a href="#Gifticon">기프티콘받기</a></li>
+            </ul>
+            <!--//Quick-->
+            <div class="img_data top_area">
+                <div class="top_date"><img src="images/date.png" /></div>
+                <img src="images/top_tit.png" />
+            </div>
+            <div class="img_data section2">
+                <img src="images/section2_img.jpg" />
+            </div>
+            <div class="img_data section3" id="Double_Discount">
+                <div class="sec_img">
+                    <span><img src="images/sec3_top_img.png" /></span>
+                    <a href="#" class="coupon_down"><img src="images/blank.png" /></a>
+                    <a href="#" class="info"><img src="images/blank.png" /></a>
+                    <img src="images/section3_img.jpg" />
+                </div>
+            </div>
+            <div class="img_data section4">
+                <div class="sec_img">
+                    <a href="http://www.stylelq.com/fr/product/productView.do?PRD_MST_CD=LLHK2LO71FA0BL0010" class="link1"><img src="images/blank.png" /></a>
+                    <a href="http://www.stylelq.com/fr/product/productView.do?PRD_MST_CD=L11AL192F1101BL" class="link2"><img src="images/blank.png" /></a>
+                    <a href="http://www.stylelq.com/fr/product/productView.do?PRD_MST_CD=LLMJ4AH11MD0BL0010" class="link3"><img src="images/blank.png" /></a>
+                    <a href="http://www.stylelq.com/fr/product/productView.do?PRD_MST_CD=LLSG3AH03MF5BL0011" class="link4"><img src="images/blank.png" /></a>
+                    <a href="http://www.stylelq.com/fr/specialtyshop/planView.do?PLN_MST_IDX=951&previewYn=Y&site=1" class="more_btn"><img src="images/blank.png" /></a>
+                    <img src="images/section4_img.png" />
+                </div>
+            </div>
+            <div class="img_data section5" id="Handbag">
+                <div class="sec_img">
+                    <span><img src="images/sec5_top_img.png" /></span>
+                    <a href="#" class="entry"><img src="images/blank.png" /></a>
+                    <a href="#" class="info"><img src="images/blank.png" /></a>
+                    <img src="images/section5_img.jpg" />
+                </div>
+            </div>
+            <div class="img_data section6">
+                <div class="sec_img">
+                    <a href="http://www.stylelq.com/fr/product/productView.do?PRD_MST_CD=LLHL3TL16FA9BL0011" class="link1"><img src="images/blank.png" /></a>
+                    <a href="http://www.stylelq.com/fr/product/productView.do?PRD_MST_CD=LLHL3TL06FA4MOG011" class="link2"><img src="images/blank.png" /></a>
+                    <a href="http://www.stylelq.com/fr/product/productView.do?PRD_MST_CD=LLSL3AL04FF4BL0011" class="link3"><img src="images/blank.png" /></a>
+                    <a href="http://www.stylelq.com/fr/product/productView.do?PRD_MST_CD=LLSL3TH02MF5BL0011" class="link4"><img src="images/blank.png" /></a>
+                    <a href="http://www.stylelq.com/fr/specialtyshop/planView.do?PLN_MST_IDX=946&cPage=&site=1" class="more_btn"><img src="images/blank.png" /></a>
+                    <img src="images/section6_img.png" />
+                </div>
+            </div>
+            <div class="img_data section7" id="Gifticon">
+                <div class="sec_img">
+                    <span><img src="images/sec7_top_img.png" /></span>
+                    <a href="#" class="write"><img src="images/blank.png" /></a>
+                    <a href="#" class="info"><img src="images/blank.png" /></a>
+                    <img src="images/section7_img.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//Event Wrap-->
+</body>
+</html>

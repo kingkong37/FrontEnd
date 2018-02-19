@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+	<!--Jquery UI-->
+	<script src="jquery-ui/jquery-ui.min.js"></script>
+	<link href="jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
+	<!--//Jquery UI-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('input').datepicker({
+				showOn : 'both',
+				//캘린더 출력방법 선택(button:버튼생성 후 버튼누르면출력, both:input,button둘다누르면 출력, focus:input누르면 출력)
+				buttonImage : 'images/calendar.gif',
+				buttonImageOnly : true,
+				dateFormat: 'yy년mm월dd일'
+			});
+        });
+    </script>
+</head>
+<body>
+	<input type="text"/>
+</body>
+</html>

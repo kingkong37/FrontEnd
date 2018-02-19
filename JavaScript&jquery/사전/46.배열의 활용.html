@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    //배열이란, 여러개의 데이터를 변수에 담아 관리,호출하여 사용하는 것
+	var user = ['admin' , '0000'];
+
+    var login = prompt('아이디');
+	if(login == user[0]){
+	  var pw = prompt('패스워드');
+	  if(pw == user[1]){
+	    alert('성공')
+	  }else{
+	     alert('처음부터')
+	  }
+	}else{
+	   alert('일치값 없음')
+	}
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

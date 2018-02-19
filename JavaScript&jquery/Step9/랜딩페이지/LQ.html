@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>LQ</title>
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/lq.css" />
+    <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="scripts/flexslider.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            function fullpage() {
+                var Cheight = $(window).height();
+                $('.mote').css({ 'height': Cheight + 'px' });
+            }
+            window.onload = fullpage();
+            window.onresize = fullpage;
+			window.onresize = function(){location.reload()}
+
+            $('.img_data').flexslider({
+                animation: "",
+                pauseOnAction: false,
+                pauseOnHover: true,
+                controlNav: true,
+                directionNav: true,
+                slideshow: false,
+                animationSpeed: 1000,
+                slideshowSpeed: 5000,
+                start: function () { $('ul.flex-direction-nav').css('display', 'none'); }//시작첫화면
+				//end - 끝화면
+				//before - 해당화면이 등장할때
+				//after - 등장 후 함수
+            });
+
+            $('.slides li.intro').hover(function(){
+                $('ul.flex-direction-nav').css('display', 'none');
+            }, function () {
+                $('ul.flex-direction-nav').css('display', 'block');
+            })
+
+            $('.intro_text a').click(function () {
+                $('.img_data').flexslider('next');
+                $('ul.flex-direction-nav').show();
+            });
+            
+            $('ol.flex-control-nav li a').click(function () {
+                $('ul.flex-direction-nav').fadeIn()
+            })
+            $('ol.flex-control-nav li a').eq(0).click(function () {
+                $('ul.flex-direction-nav').fadeOut()
+            })
+        });
+    </script>
+</head>
+<body>
+    <!--Event Wrap-->
+    <div class="event_wrap">
+        <div class="mote">
+            <div class="img_data">
+                <ul class="slides">
+                    <li class="intro">
+                        <div class="intro_text">
+                            <span><img src="images/date.png" /></span>
+                            <a href="#prd1"><img src="images/blank.png" /></a>
+                            <img src="images/intro_text.png" />
+                        </div>
+                    </li>
+                    <li class="prd1">
+                        <div class="prd_img">
+                            <a href="#" title="candle"><img src="images/blank.png" /></a>
+                            <img src="images/prd1.png" />
+                        </div>
+                    </li>
+                    <li class="prd2">
+                        <div class="prd_img">
+                            <a href="#" title="Gift Box" class="gift_box"><img src="images/blank.png" /></a>
+                            <a href="#" title="BEFORE THE EARTH" class="link_btn link1"><img src="images/blank.png" /></a>
+                            <a href="#" title="DEEP CANYON" class="link_btn link2"><img src="images/blank.png" /></a>
+                            <a href="#" title="ENDLESS FOREST" class="link_btn link3"><img src="images/blank.png" /></a>
+                            <a href="#" title="LET ME SEA" class="link_btn link4"><img src="images/blank.png" /></a>
+                            <a href="#" title="RARE SKY" class="link_btn link5"><img src="images/blank.png" /></a>
+                            <a href="#" title="WINTER MIST" class="link_btn link6"><img src="images/blank.png" /></a>
+                            <img src="images/prd2.png" />
+                        </div>
+                    </li>
+                    <li class="prd3">
+                        <div class="prd_img">
+                            <a href="#" title="WINTER MIST" class="link1"><img src="images/blank.png" /></a>
+                            <a href="#" title="RARE SKY" class="link2"><img src="images/blank.png" /></a>
+                            <a href="#" title="LET ME SEA" class="link3"><img src="images/blank.png" /></a>
+                            <a href="#" title="BEFORE THE EARTH" class="link4"><img src="images/blank.png" /></a>
+                            <a href="#" title="ENDLESS FOREST" class="link5"><img src="images/blank.png" /></a>
+                            <a href="#" title="DEEP CANYON" class="link6"><img src="images/blank.png" /></a>
+                            <img src="images/prd3.png" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--//Event Wrap-->
+</body>
+</html>

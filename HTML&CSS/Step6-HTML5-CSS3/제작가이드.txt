@@ -1,0 +1,57 @@
+■Site Size : 1100px
+
+■Title : Starbucks Coffee Korea
+
+-he:height
+-c:color
+-bg:background-color
+-hv:hover
+
+■Header(bg-#f6f5ef , he-123px)
+
+■Top Menu(c-#555)
+Sign In
+My Starbucks
+Customer Service & Ideas
+Find a Store
+
+■GNB(c-#555 , hv:c-#669900 bg-#2c2a29)
+COFFEE
+MENU
+STORE
+RESPONSIBILITY
+MY STARBUCKS REWARDS
+WHAT'S NEW
+
+■Main Banner(bg-#f5e9d9)
+
+■Notice (bg-#111 , bg-#f6f5ef , he-62px)
+
+■Rewards(bg-#272727 , bg-#d6c798)
+
+■Product1 (he-572px)
+
+■Product2 (c-#d9aa8a , hv:c-#fff bg-#d9aa8a , he-400px)
+
+■Menu(he-800px)
+
+■Shop(he-590px)
+
+■Shop Find(he-400px)
+
+
+
+■Footer(bg-#2C2A29)
+개인정보처리방침
+영상정보처리기기
+운영관리 방침
+홈페이지 이용약관
+위치정보 이용약관
+스타벅스 카드 이용약관
+윤리경영 핫라인
+
+찾아오시는 길
+신규입점제의
+사이트 맵
+ⓒ 2015 Starbucks Coffee Company. All Rights Reserved.
+

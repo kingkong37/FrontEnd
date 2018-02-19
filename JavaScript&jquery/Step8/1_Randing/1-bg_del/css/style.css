@@ -1,0 +1,41 @@
+﻿@charset "utf-8";
+/*Reset Code*/
+html,body{width:100%;height:100%}
+body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul{margin:0;padding:0}
+body,button,h1,h2,h3,h4,h5,input,select,table,textarea{font-family:font-family:Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif;font-size:14px;line-height:1.267em;color:#000;font-weight:normal}
+body{position:relative;background-color:#fff;color:#000;-webkit-text-size-adjust:none}
+img,fieldset,iframe{border:0}
+ol,ul{list-style:none}
+li{list-style:none}
+input,select,button,img{vertical-align:middle}
+i,em,address{font-style:normal}
+label,button{cursor:pointer}
+button{margin:0;padding:0}
+a{color:#000;text-decoration:none}
+a:hover{text-decoration:none}
+legend{*width:0;display:none}
+table{border-collapse:collapse;border-spacing:0}
+*{box-sizing:border-box;-moz-box-sizing:border-box}
+/*Layout*/
+#wrap{width:100%;height:100%;position:relative;text-align:center;max-width:1140px;margin:0 auto}
+.top_img{width:100%;display:block;text-align:center;background:#f5f5f5}
+.top_img img{width:100%;max-width:1140px}
+.cupon_area{width:100%;display:block;background:#f5ddd1 url(../images/middle_bg.png) repeat-x center bottom;padding-bottom:42px}
+.cupon_area .cupon{width:100%;max-width:1140px;display:inline-block}
+.cupon_area .cupon .main_title{width:100%;float:left;margin-top:43px}
+.cupon_area .cupon form{width:100%;float:left;margin-top:40px}
+.cupon_area .cupon form fieldset legend{display:none}
+.cupon_area .cupon form dl{width:100%;display:block;text-align:center}
+.cupon_area .cupon form dl dt{width:39.3%;display:inline-block;margin-right:2%}
+.cupon_area .cupon form dl dt input{width:100%;height:59px;border:2px solid #959595;background:#fff url(../images/input_text_bg.gif) no-repeat 24px center;padding-left:24px;font-size:20px;line-height:56px;font-weight:bold}
+.cupon_area .cupon form dl dd{width:14.3%;display:inline-block}
+.cupon_area .cupon form dl dd input{width:100%;height:59px;background:#fb833b url(../images/ok_btn.gif) no-repeat center center;border:none;cursor:pointer}
+.cupon_area .cupon .cupon_list{width:93.2%;display:inline-block;background:#fff;border:2px solid #bdd8e0;margin-top:52px}
+.cupon_area .cupon .cupon_list .cupon_list_title{width:100%;float:left;margin-top:16px;margin-bottom:43px}
+.cupon_area .cupon .cupon_list ul{width:100%;float:left;text-align:center;margin-bottom:33px}
+.cupon_area .cupon .cupon_list ul li{display:inline-block;margin:0 12px}
+.down_info{width:100%;display:block;background:#d8eaec;padding:60px 0 77px 0}
+.down_info .down_title{width:100%;text-align:center;display:block}
+.down_info ul{width:100%;text-align:center;display:block;margin-top:54px}
+.down_info ul li{display:inline-block;margin:0 17px}
+.bottom{width:100%;display:block;background:#fff;padding:39px 0 56px 0}

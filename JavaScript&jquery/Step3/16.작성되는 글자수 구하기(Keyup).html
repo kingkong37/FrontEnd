@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('textarea').keyup(function(){//keyup은 입력장치로 선택요소에 입력될때 
+				var aa = $(this).val().length;//this(textarea)의 val(입력된 글자 수)의 갯수를 aa에 대입
+				var bb = 50 - aa;//카운팅 요소를 만들기 위해 bb에 입력한계 - 입력된 글자의 수 대입
+				$('h1').html(bb);//출력하고자 하는 위치에 연산된 값을 출력
+			})
+        });
+    </script>
+</head>
+<body>
+	<h1>50</h1>
+	<textarea cols="70" rows="5"></textarea>
+</body> 
+</html>

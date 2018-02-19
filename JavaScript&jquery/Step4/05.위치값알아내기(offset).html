@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//offset함수는 해당 선택요소의 위치값(top,left)을 알아내기 위한 함수이다.
+			//변수에 offset을 적용한 방식
+			$('button').click(function(){
+				var aa = $('div').offset();
+				alert("Top" + aa.top + "left" + aa.left)
+			})
+			//바로 작성하는 방식
+			alert("h1-top:" + $('h1').offset().top + "h1-left:" + $('h1').offset().left)
+        });
+    </script>
+</head>
+<body>
+	<div>가나다라마</div>
+	<button>왼쪽</button>
+	<h1>오른쪽</h1>
+</body>
+</html>

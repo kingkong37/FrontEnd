@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+	<!--Jquery UI-->
+	<script src="jquery-ui/jquery-ui.min.js"></script>
+	<link href="jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
+	<!--//Jquery UI-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.layer_popup').dialog({
+				title : '안내창',//팝업창 제목
+				resizable : false,//리사이즈 여부(true기본)
+				width : 800,
+				height : 'auto',
+				modal : true,//배경이 포함되서 보임(false기본)
+				buttons : {
+					'확인' : function(){
+						$(this).dialog('close');
+					},
+					'취소' : function(){
+						$(this).dialog('close');
+					}
+				}
+			});
+        });
+    </script>
+</head>
+<body>
+	<div class="layer_popup">
+		<p>팝업내용</p>
+	</div>
+	fsadfasdfsadf
+</body>
+</html>

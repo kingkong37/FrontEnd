@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	//팝업내용을 직접 입력
+	function aa(){
+		var popup = window.open('', "직접입력한내용", "width=400,height=500");
+		popup.document.write("<p>"+"팝업내용"+ popup.name + "</p>")
+	}
+  </script>
+ </head>
+ <body>
+	<button onclick="aa()">팝업창 띄우기</button>
+ </body>
+</html>

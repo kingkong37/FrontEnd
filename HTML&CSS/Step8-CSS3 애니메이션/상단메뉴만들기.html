@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href="../reset.css" rel="stylesheet" type="text/css"/>
+  <style type="text/css">
+	body{font-family: "Nanum Gothic", sans-serif;font-size:14px}
+	header{width:100%;height:40px;display:block;background:linear-gradient(gray,black);z-index:9}
+	nav{width:600px;display:inline-block}
+	nav ul.one_depth{width:100%;display:inline-block}
+	nav ul.one_depth > li{width:200px;height:40px;float:left;line-height:40px;overflow:hidden;position:relative}
+	nav ul.one_depth > li > a{color:#fff;width:100%;display:block}
+	nav ul.one_depth > li > ol{width:100%;height:170px;background:black;position:absolute;left:0;top:40px}
+	nav ul.one_depth > li > ol li{width:100%;float:left}
+	nav ul.one_depth > li > ol li a{width:100%;float:left;color:#fff;text-align:left;text-indent:10px}
+
+	nav ul.one_depth > li:hover{height:210px}
+
+	nav ul.one_depth > li:hover ol{
+		animation-name:two_depth;
+		animation-duration:1s;
+	}
+	@keyframes two_depth{
+		from{height:0}
+		to{height:170px}
+	}
+	
+	nav ul.one_depth > li:hover ol li{
+		animation-name:two_depth_li;
+		animation-duration:3s;
+	}
+	@keyframes two_depth_li{
+		from{opacity:0}
+		to{opacity:1}
+	}
+
+
+  </style>
+ </head>
+ <body>
+	<div id="wrap">
+		<header>
+			<nav>
+				<ul class="one_depth">
+					<li>
+						<a href="#">메뉴1</a>
+						<ol>
+							<li><a href="#">m1</a></li>
+							<li><a href="#">m2</a></li>
+							<li><a href="#">m3</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#">메뉴2</a>
+						<ol>
+							<li><a href="#">m1</a></li>
+							<li><a href="#">m2</a></li>
+							<li><a href="#">m3</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#">메뉴3</a>
+						<ol>
+							<li><a href="#">m1</a></li>
+							<li><a href="#">m2</a></li>
+							<li><a href="#">m3</a></li>
+						</ol>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<img src="images/effect.jpg"/>
+	</div>
+ </body>
+</html>

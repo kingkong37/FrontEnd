@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+
+	var aa = {}
+	var bb = {}
+
+	function sw_ca(){
+		switch(this){
+		case aa : alert('aa의 this');
+			break;
+		case bb : alert('bb의 this');
+			break;
+		case window : alert('window의 this');
+			break;
+		}
+	}
+	sw_ca();//return = window
+	sw_ca.apply(aa);//return = aa의 this
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

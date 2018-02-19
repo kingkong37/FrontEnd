@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+		div{width:100px;height:100px;}
+		div.aa{background:orange;position:absolute;top:200px}
+		div.bb{background:green}
+	</style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.btn1').click(function(){
+				$('.aa').animate({//animate를 작성하는 방법은 객체처럼 작성하면 된다.
+					left : '500px',
+					top : '500px',
+					height: '+=200px'//클릭할때 마다 애니메이션을 동작하고 싶다면 +=로 작성한다.
+				})
+			})
+
+			$('.btn2').click(function(){
+				$('.bb').animate({
+					height: 'toggle'//animate의 값에 toggle이 들어가면 변형하거나 원래상태로 돌아가는 설정이다.
+				})
+			})
+        });
+    </script>
+</head>
+<body>
+	<div class="aa">Hello1</div>
+	<div class="bb">Hello2</div>
+	<a href="#" class="btn1">버튼클릭1</a>
+	<a href="#" class="btn2">버튼클릭2</a>
+</body> 
+</html>

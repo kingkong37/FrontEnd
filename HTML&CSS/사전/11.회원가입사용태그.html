@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>메뉴</title>
+ </head>
+ <body>
+	<form><!--입력양식을 만들기 위한 태그-->
+		<fieldset><!--입력영역을 표시-->
+			<legend>회원가입 폼</legend><!--입력폼의 설명-->
+			<input type="text"/><!--일반적인 텍스트 입력폼(한줄)-->
+			<input type="text" value="아이디" readonly="readonly"/>
+			<input type="text" placeholder="아이디" maxlength="12"/>
+			<!--placeholder설정은 상위브라우져(IE8이하사용불가)에서만 가능-->
+			<!--maxlength 작성가능한 글자의 수-->
+			<!--readonly 읽기만 가능-->
+
+			<input type="password"/><!--패스워드 입력폼-->
+
+			<input type="checkbox" checked="checked"/><!--다중선택이 가능한 체크박스-->
+			<input type="checkbox"/>
+
+			<!--라디오 버튼은 같은설정끼리 name으로 묶여있어야한다.-->
+			<input type="radio" name="aa" checked="checked" /><!--단일선택 라디오버튼-->
+			<!--checked설정은 처음부터 체크가 되어있게함-->
+			<input type="radio" name="aa"/>
+			<input type="radio" name="aa" />
+
+			<input type="button" value="완료"/><!--버튼요소 value로 버튼의 내용을 넣을수 있음-->
+
+			<textarea></textarea><!--텍스트 입력폼(여러줄)-->
+
+			<input type="file"/><!--첨부파일-->
+
+			<button>완료</button><!--버튼-->
+			
+			<select>
+				<option>010</option>
+				<option>011</option>
+				<option>016</option>
+				<option>017</option>
+			</select>
+
+		</fieldset>
+	</form>
+ </body>
+</html>

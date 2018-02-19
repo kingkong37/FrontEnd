@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+	<style type="text/css">
+		body{text-align:center}
+		/*body의 설정에 text-align:center가 설정되면 사이트의 모든 요소가 가운데 정렬함*/
+		div{width:300px;height:300px;background:orange}
+		div.aa{float:left}/*.대상은 class명을 뜻함*/
+		.bb{display:inline-block}
+		.cc{float:right}
+		.aa2{background:green}
+		.bb.aa2{background:blue}/*.bb와.aa2을 동시에 가지고있는 요소만 적용*/
+	</style>
+ </head>
+ <body>
+	<div class="aa">왼쪽</div>
+	<div class="aa aa2">왼쪽2</div><!--클래스명은 몇개든 추가가 가능하다.-->
+	<div class="bb aa2">가운데</div>
+	<div class="cc aa2">오른쪽</div>
+
+	<p class="aa">클래스</p>
+		
+ </body>
+</html>

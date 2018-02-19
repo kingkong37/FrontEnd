@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('button.aa').click(function(){
+				alert($('div').height());//div = 문서(document)의 내용(고정된 수치 - 제작된 내용)
+			})
+			$('button.bb').click(function(){
+				alert($(window).height());//window = 브라우져(가변의 수치 - 사용자 환경)
+			})
+        });
+    </script>
+</head>
+<body>
+    <div style="border:1px solid black;width:200px;height:300px;">
+
+    </div>
+    <button class="aa">DIV의 Height?</button>
+	<button class="bb">브라우져의 Height?</button>
+</body>
+</html>

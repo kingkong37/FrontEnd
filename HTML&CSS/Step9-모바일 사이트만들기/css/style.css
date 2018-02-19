@@ -1,0 +1,72 @@
+@import url(../../reset.css);
+/*noto체는 기준이 되는 font-weight값을 설정해준다. (보통 400,500을 기준점으로 설정)*/
+body{font-family: "Noto Sans KR";font-weight:400;font-size:1em;color:#666}
+#wrap{width:100%;height:100%;display:inline-block;max-width:640px;position:relative}
+
+/*header*/
+header{width:100%;position:absolute;left:0;top:0;background:rgba(0,0,0,0.2);padding:10px 0;z-index:9}
+/*로고가 가운데 정렬이고 메뉴버튼이 좌,우측에 배치 될 경우 float의 속성대신 absolute를 사용하여 위치를 맞춘다.*/
+header h1{display:inline-block}
+header a.menu_open{position:absolute;left:2%;top:30%}
+
+/*Common*/
+section , article{width:100%;display:inline-block;position:relative}
+img.w100{width:100%}
+img.w50{width:50%}
+section > h2{color:#ab9958;font-size:2em}
+section > h3{font-weight:100}
+section > h3:before{content:"";width:60px;height:1px;background:gray;vertical-align:middle;margin-right:5px;display:inline-block}
+section > h3:after{content:"";width:60px;height:1px;background:gray;vertical-align:middle;margin-left:5px;display:inline-block}
+
+.mt_10{margin-top:10px}
+.mt_20{margin-top:20px}
+.mt_30{margin-top:30px}
+.mt_40{margin-top:40px}
+.mb_10{margin-bottom:10px}
+.mb_20{margin-bottom:20px}
+.mb_30{margin-bottom:30px}
+.mb_40{margin-bottom:40px}
+
+#container{width:100%;display:block}
+.menu{margin-top:-5px}
+.menu a{width:50%;float:left;position:relative;line-height:0}
+.menu a span{width:100%;position:absolute;left:0;bottom:0;color:black;font-size:1em;text-align:left;font-weight:500;text-indent:2%;
+line-height:2.4em;background:rgba(255,255,255,0.6)}
+
+.introduce article:last-child{padding:0 5%}
+.introduce article:last-child h3{font-size:1.4em;text-align:left}
+.introduce article:last-child h3:before{content:"";width:10px;height:30px;float:left;margin-right:10px;background:gray}
+.introduce article dl{text-align:left;margin-top:20px}
+.introduce article dl dt{font-weight:600;font-size:1.2em;margin-bottom:5px;color:black}
+.introduce article dl dd{margin-bottom:30px}
+
+.gallery h2{margin-bottom:20px}
+.gallery img{float:left}
+
+.map{background:url(../images/haneul/map_bg.jpg) no-repeat center center fixed;background-size:cover;padding:50px 0;margin-top:50px}
+.map > h3{color:#fff}
+.map > h3:before, .map > h3:after{background:#fff}
+.map article{margin-top:30px;text-align:left}
+.map article h4{width:100%;display:inline-block;color:#fff;font-size:1.4em}
+.map article h4:before{content:'';width:30px;height:1px;background:#ab9958;float:left;margin-top:29px}
+.map article h4:after{content:'';width:30px;height:30px;background:#ab9958;float:left;margin-right:10px}
+.map ul{width:100%;display:block;padding:0 11%;margin-top:20px}
+.map ul li{width:100%;display:block;color:#fff}
+.map ul li a{color:#fff}
+.map ul li:last-child{margin-top:20px}
+
+.about_us{padding:50px 5%;background:#232323}
+.about_us h4{width:100%;text-align:left;color:#ab9958;border-bottom:1px solid #555;padding-bottom:10px;margin-bottom:10px}
+.about_us h4 span{border-bottom:1px solid #ab9958;padding-bottom:10px}
+.about_us div.text{text-align:justify;color:#888}
+
+footer{width:100%;display:block;background:#1a1a1a;padding:5px 0}
+
+/*미디어쿼리*/
+@media all and (min-width:320px) and (max-width:414px){
+	header{padding:5px 0}
+	header h1{width:15%}
+	header h1 img{width:100%}
+	section > h2{font-size:1.6em}
+	section > h3{font-size:0.8em}
+}

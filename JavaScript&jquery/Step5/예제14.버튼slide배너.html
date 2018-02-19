@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        .slide_banner{width:800px;height:500px;position:relative;overflow:hidden}
+        .slide_img{width:4000px;position:relative}
+        .slide_img li{width:800px;float:left}
+        .controller{width:100%;position:absolute;bottom:10px;left:0;height:15px}
+        .controller a{width:15px;height:15px;display:inline-block;background:url(images/point_button.png) no-repeat;background-position:0 0}
+        .controller a:hover{background-position:0 -15px}
+        .controller a.on{background-position:0 -15px}
+    </style>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			function moveSlider(aa){//aa(index-data값) 생성하여 컨트롤러 갯수에 선언 배열의 값
+				var Moveleft = -(aa*800);//배열의 키값이 4000px배너가 왼쪽으로 이동하기위해서 -값으로 변수에 대입
+				$('.slide_img').animate({left:Moveleft},'slow');//left의 수치에 변수에 적용된 값이 대입
+			}
+			//컨트롤러 연결
+			$('.controller a').each(function(index){//배열의 숫자를 구하기 위해 index작성
+				$(this).attr('data-index', index);//태그의 설정을 하기위해 attr로 'data-index'작성(일반적인 설정)
+			}).click(function(){
+				$('.controller a').removeClass('on');
+				$(this).addClass('on');
+				var bb = $(this).attr('data-index');//data-index로 만들어진 배열의 값을 bb에 대입
+				moveSlider(bb);//moveSlider 인자(aa)에 수치를 대입
+			});
+			//좌우컨트롤러
+			$('.left').click(function(){
+				$('.slide_img').animate({left: '-=' + '800px' },500)
+				//현재수치에 800의 단위가 들어가야하므로 대입연산으로 작성한다.
+			});
+			$('.right').click(function(){
+				$('.slide_img').animate({left: '+=' + '800px' },500)
+			});
+			moveSlider();//실행
+        });
+    </script>
+</head>
+<body>
+    <div class="slide_banner">
+        <ul class="slide_img">
+            <li><img src="images/paris_01.jpg" /></li>
+            <li><img src="images/paris_02.jpg" /></li>
+            <li><img src="images/paris_03.jpg" /></li>
+            <li><img src="images/paris_04.jpg" /></li>
+            <li><img src="images/paris_05.jpg" /></li>
+        </ul>
+        <div class="controller">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </div>
+	<div><a href="#" class="left">왼쪽</a><a href="#" class="right">오른쪽</a></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+		//실무에서 사용되는 최근게시물 작성법
+        $(document).ready(function () {
+			//li생성
+			for(i=0; i<3; i++){
+				$('<li></li>').appendTo('ul.potal_list');
+			}
+			//목록
+			var potal = [
+				{name: '네이버', url:'http://www.naver.com', target:'_blank'},
+				{name: '다음', url:'http://www.daum.net', target:'_blank'},
+				{name: '구글', url:'http://www.google.com', target:'_blank'}
+			];
+			//요소 추가
+			$('ul.potal_list li').append(function(index){
+				var item = potal[index];
+				var output = '';
+				output += '<a href="' + item.url + '" target="' + item.target + '">' + item.name + '</a>';
+				return output;
+			});
+        });
+    </script>
+</head>
+<body>
+	<ul class="potal_list">
+	</ul>
+</body>
+</html>

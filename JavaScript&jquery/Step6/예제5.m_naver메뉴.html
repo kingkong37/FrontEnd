@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <link href="jquery-ui/jquery-ui.min.css" type="text/css" rel="stylesheet" />
+    <link href="jquery-ui/jquery-ui.structure.min.css" type="text/css" rel="stylesheet" />
+    <link href="jquery-ui/jquery-ui.theme.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/reset.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+        .m_naver{width:414px;overflow:hidden;display:inline-block;position:relative}
+        a.menu_open{width:20px;height:16px;position:absolute;left:15px;top:17px}
+        a.menu_open img{width:100%;height:100%}
+        .menu_area{width:100%;height:100%;background:#fff;position:absolute;left:-100%;bottom:0}
+        .top_img{width:100%;display:block;position:relative}
+        .top_img a.menu_close{width:19px;height:19px;position:absolute;top:27px;right:23px}
+        ul.menu_data{width:100%;display:inline-block}
+        ul.menu_data li{float:left}
+        ul.menu_data li img.move{display:none}
+        .btn_area{width:100%;padding:15px 4%;display:inline-block;border-top:1px solid #dfe1e3}
+        .btn_area a.refresh{float:left}
+        .btn_area a.refresh img{margin-right:3px}
+        .btn_area a.save{width:50px;height:18px;background:#2c2c2c;color:#fff;float:right;line-height:18px}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a.menu_open').click(function () {
+                $('.menu_area').animate({ left: '0' })
+            })
+            $('a.menu_close').click(function () {
+                $('.menu_area').animate({ left: '-100%' })
+            })
+
+            $('a.refresh').click(function () {
+                $('.menu_data').sortable({
+                    revert: true
+                });
+                $('.menu_data li img.fix').hide();
+                $('.menu_data li img.move').show();
+            })
+            $('a.save').click(function () {
+                $('.menu_data').sortable('disable');
+                $('.menu_data li img.fix').show();
+                $('.menu_data li img.move').hide();
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="m_naver">
+        <a href="#" title="메뉴열기" class="menu_open"><img src="images/blank.png" /></a>
+        <!--Menu Start-->
+        <div class="menu_area">
+            <!--Top Start-->
+            <div class="top_img">
+                <a href="#" title="메뉴닫기" class="menu_close"><img src="images/blank.png" /></a>
+                <img src="images/m_naver_top.jpg" />
+            </div>
+            <!--Top End-->
+            <!--Drag Area Start-->
+            <ul class="menu_data">
+                <li><img src="images/menu_01.jpg" class="fix" /><img src="images/menu_01_move.jpg" class="move" /></li>
+                <li><img src="images/menu_02.jpg" class="fix" /><img src="images/menu_02_move.jpg" class="move" /></li>
+                <li><img src="images/menu_03.jpg" class="fix" /><img src="images/menu_03_move.jpg" class="move" /></li>
+                <li><img src="images/menu_04.jpg" class="fix" /><img src="images/menu_04_move.jpg" class="move" /></li>
+                <li><img src="images/menu_05.jpg" class="fix" /><img src="images/menu_05_move.jpg" class="move" /></li>
+                <li><img src="images/menu_06.jpg" class="fix" /><img src="images/menu_06_move.jpg" class="move" /></li>
+                <li><img src="images/menu_07.jpg" class="fix" /><img src="images/menu_07_move.jpg" class="move" /></li>
+                <li><img src="images/menu_08.jpg" class="fix" /><img src="images/menu_08_move.jpg" class="move" /></li>
+                <li><img src="images/menu_09.jpg" class="fix" /><img src="images/menu_09_move.jpg" class="move" /></li>
+                <li><img src="images/menu_10.jpg" class="fix" /><img src="images/menu_10_move.jpg" class="move" /></li>
+                <li><img src="images/menu_11.jpg" class="fix" /><img src="images/menu_11_move.jpg" class="move" /></li>
+                <li><img src="images/menu_12.jpg" class="fix" /><img src="images/menu_12_move.jpg" class="move" /></li>
+            </ul>
+            <!--//Drag Area End-->
+            <div class="btn_area">
+                <a href="#" class="refresh"><img src="images/refresh.gif" />순서변경</a>
+                <a href="#" class="save">저장</a>
+            </div>
+
+            <img src="images/m_naver_bottom.jpg" />
+        </div>
+        <!--//Menu End-->
+        <img src="images/m_naver.jpg" />
+    </div>
+</body>
+</html>

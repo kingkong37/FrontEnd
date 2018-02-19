@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    /*
+    for(i=0; i<10; i++){
+	    for(j=1; j<10; j++){//j를 1로 초기화하면 뒷자리 0의 조건을 만들 수 없다.
+		   document.write("자바스크립트" + i + j + "<br/>")
+		}
+	}
+	*/
+    for(i=0; i<10; i++){
+	    for(j=0; j<10; j++){
+		   if(!(i+j)) continue;//처음 실행할 때 i가 0이고 j이가 0일 때 00인 상황을 false로 변경(! /부정문) 실행 안되고 skip 시켜줌
+		   document.write("자바스크립트" + i + j + "<br/>")
+		}
+	}
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

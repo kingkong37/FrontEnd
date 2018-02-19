@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!--J쿼리 홈페이지에 있는 스크립트 모듈을 다운받아 로드시킨다.-->
+  <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+	//제이쿼리는 $()안에 선택자(요소)를 지칭한다.
+	//1번
+	$(document).ready(function(){
+			//Jquery함수 작성
+	});
+
+	//2번
+	$(function(){
+		//Jquery함수 작성
+	})
+
+	//3번
+	(function($){
+		//Jquery함수 작성
+	})(jQuery);
+
+	//4번
+	$(window).on('load',function(){
+		//Jquery함수 작성
+	});
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

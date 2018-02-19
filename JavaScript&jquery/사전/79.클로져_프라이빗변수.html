@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	//프라이빗변수를 이용한 클로져
+	//공식을 만들어 놓고 호출하는 명령문에 데이터를 입력하는 방식
+	function movie_name(title){
+		return {//return값을 객체로 선언 
+			get_title : function(){
+				return title
+			},
+			get_title2 : function(aa){
+				title = aa
+			}
+		}
+	}
+	
+	koreamovie = movie_name("범죄도시");//호출시키는 명령문에 데이터를 입력하여 변수(koreamovie)에 대입
+	japanmovie = movie_name("너의이름은");
+	alert(koreamovie.get_title());//movie_name함수안에 get_title 함수를 호출
+	alert(japanmovie.get_title());
+
+	koreamovie.get_title2('베테랑');
+	alert(koreamovie.get_title());
+	
+
+
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

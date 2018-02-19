@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+	<style type="text/css">
+		html, body{width:100%;height:100%;margin:0;padding:0;text-align:center}
+		*{box-sizing:border-box}
+		#warp{width:100%;height:100%;display:block}
+		.naver_info{width:760px;display:inline-block;margin-bottom:30px}
+		.top_img{width:100%;display:block}
+		/*사이즈가 100%라도 안의 요소에 float을 사용한다면 display:inline-block을 줘야한다.*/
+		.info_text{width:100%;display:inline-block}
+		.text_data{width:370px;height:150px;text-align:justify;/*박스안에 텍스트를 자동정렬*/margin-bottom:15px;font-size:14px;line-height:18px}
+		.text_data span{width:30px;height:30px;background:black;
+			color:#fff;
+			float:left;
+			font-size:20px;
+			text-align:center;
+			font-weight:bold;
+			line-height:30px;
+		}
+		.text_data span.green{background:green}
+		.al_left{float:left}
+		.al_right{float:right}
+		.table_list{width:100%;display:block}
+		.table_list table{width:100%;border-collapse:collapse;border-top:1px solid gray;font-size:12px}
+		.table_list table tr{border-bottom:1px solid gray}
+		.table_list table th{width:25%;text-align:left;text-indent:15px;background:#dcdcdc;padding:10px 0;border-right:1px solid gray}
+		.table_list table .img_tit{text-indent:0;background:none;border-right:none}
+		.table_list table td{width:75%;text-align:left;padding-left:15px}
+	</style>
+ </head>
+ <body>
+	<div id="wrap"><!--통상적으로 wrap은 사이트 시작을 의미함-->
+		<div class="naver_info">
+			<div class="top_img"><img src="images/corp_main.png" alt="상단 지도이미지"/><div>
+			<!--Text-->
+			<div class="info_text">
+				<div class="text_data al_left">
+					<span class="green">네</span>이버는 사람과 사람,   오늘과 내일,   네트워크와 네트워크가 연결되는 더 큰 세상을 만들어왔습니다. 이제 국내뿐 아니라 전 세계 이용자들에게 새로운 경험과 가치를 전하는 새로운 기술을 통해 한 단계 진화된 연결을 만들어가고자 합니다.
+				</div>
+
+				<div class="text_data al_right">
+					<span>수</span>많은 개인과 소상공인, 창작자들이 네이버와 함께 새로운 기회와 지속 가능한 성장을 함께 만들고 있습니다. 이미 많은 사람들이 네이버의 다양한 플랫폼과 서비스를 통해 손쉽게 창업하고 사업의 경쟁력을 높이며 성과를 보이고 있으며, 창작자들도 네이버 플랫폼을 통해 자신만의 콘텐츠를 국내외 이용자들과 공유하며 수익을 창출하고 창작활동의 영역을 넓혀가고 있습니다.
+				</div>
+
+				<div class="text_data al_left">
+					<span>모</span>두가 연결된 인터넷 세상에서 네이버는 전 세계 사람들이 사용하는 다양한 플랫폼과 서비스를 만들고 있습니다. LINE, SNOW, V LIVE, 네이버 웹툰 등은 이미 수많은 해외 이용자들의 사랑을 받으며 글로벌 시장에서 성장해나가고 있습니다.
+				</div>
+
+				<div class="text_data al_right">
+					<span class="green">네</span>이버는 미래 기술을 누구나 손쉽게 사용할 수 있도록 기술플랫폼으로서의 변화를 추구하며, 수많은 개인 및 다양한 파트너들이 성공의 꽃을 피울 수 있도록, 경쟁력을 키우며 다가올 미래를 준비하겠습니다.
+				</div>
+			</div>
+			<!--//Text-->
+			<div class="table_list">
+				<table>
+					<tr>
+						<th colspan="2" class="img_tit"><img src="images/n_text2.png" alt="company profile"/></th>
+					</tr>
+					<tr>
+						<th>설립연도</th>
+						<td>1999년 6월</td>
+					</tr>
+					<tr>
+						<th>본사위치</th>
+						<td>경기도 성남시 분당구</td>
+					</tr>
+					<tr>
+						<th>주요서비스</th>
+						<td>온라인 검색포털, 모바일 메신저 플랫폼</td>
+					</tr>
+					<tr>
+						<th>주요사업	</th>
+						<td>온라인 광고 및 콘텐츠 사업</td>
+					</tr>
+					<tr>
+						<th>해외법인	</th>
+						<td>일본, 미국, 영국, 중국, 베트남, 대만, 태국</td>
+					</tr>
+					<tr>
+						<th>매출액</th>
+						<td>4조 226억 원(2016년)</td>
+					</tr>
+					<tr>
+						<th>전체인력</th>
+						<td>2,533명 (자회사 인력은 별도 집계, 2017.03 기준)</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+
+	function funCall(){
+		var aa = "내부함수 외부함수2"//외부함수에 변수를 지정
+		return function(){
+			alert(aa);
+		}
+	}
+	
+	funCall();//해당 호출만으로는 return의 function을 불러올 수 없다. 
+
+	bb = funCall();//변수에 외부함수를 대입시켜준 후 
+	bb();//대입된 외부함수에 ()를 해줘  return의 function을 호출한다.
+
+	//위와같은 방식이 클로져의 독특한 방식중에 하나로 외부함수가 종료되었어도 다시 호출하여 사용 할 수있다.
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

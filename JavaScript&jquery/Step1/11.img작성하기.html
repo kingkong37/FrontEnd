@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	window.onload = function(){
+		var aa = document.createElement('img');
+		aa.src= 'images/aa.jpg';//해당 태그에 설정값으로 넣을 수 있는 요소를 .src와 같이 작성해준다. (<a>라면 .href)
+		aa.width = 500;//사이즈가 설정 되어야 할 경우 px단위는 넣지 않는다.
+		aa.height = 200;
+		aa.alt ='이미지 설명'
+
+		document.body.appendChild(aa);
+
+		/*실무 사용방법
+		var aa = document.getElementById('아이디명');
+		aa.src='DB 업로드경로'
+		aa.alt='DB상 입력된 값' 예)게시판 제목, 관리자에서 작성된 값, 파일명
+		//웹접근성에서 빈값으로 넘기고자 할때 
+		aa.alt =''//빈값처리
+		*/
+	}
+
+  </script>
+ </head>
+ <body>
+ </body>
+</html>

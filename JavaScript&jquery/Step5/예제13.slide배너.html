@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        .banner_area{width:745px;height:465px;position:relative;overflow:hidden}
+        .banner_area div{position:absolute;top:0}
+        .banner_area .banner1{left:0}
+        .banner_area .banner2{left:745px}
+        .banner_area .banner3{left:745px}
+    </style>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.b_data').each(//갯수를 구하기 위해 공통 클래스 작성
+				function(index){//갯수를 배열로 만들어 순서대로 시간을 대입하기위한 index인자
+				$(this).delay(index * 3000)	.animate({
+					left:0
+				},'slow');
+			})
+        });
+    </script>
+</head>
+<body>
+    <div class="banner_area">
+        <div class="banner1 b_data"><img src="images/banner_01.jpg" /></div>
+        <div class="banner2 b_data"><img src="images/banner_02.jpg" /></div>
+        <div class="banner3 b_data"><img src="images/banner_03.jpg" /></div>
+    </div>
+</body>
+</html>

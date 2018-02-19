@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+		div{width:100px;height:100px;}
+		div.aa{background:orange;position:absolute;top:200px}
+		div.bb{background:green}
+	</style>
+    <script type="text/javascript">
+		//attr을 갯수가 증가하면 크기가 증가되어 만들경우
+        $(document).ready(function () {
+			$('img').attr('width', function(aa){//설정값에 함수를 적용하여 return반복시켜준다.
+				return (aa + 1) *100;//처음 시작하는 인자의 값이 0이므로 1로 시작하게 만들고 100을 곱한다.
+			})
+        });
+    </script>
+</head>
+<body>
+		<img src="images/captain_america.jpg"/>
+		<img src="images/ironman.jpg"/>
+</body> 
+</html>

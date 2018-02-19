@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+	div{
+		width:300px;
+		height:300px;
+		position:absolute;/*움직이는 요소를 만들기위해서는 position이 absolute나 fixed여야한다.*/
+		animation-name:aa;
+		animation-duration:3s;
+		animation-iteration-count:infinite;
+	}
+	@keyframes aa{
+		/*애니메이션을 반복적으로 연결하기 위해서는 처음(0%)와끝(100%)의 설정이 같아야 한다.*/
+		0%{left:0;top:0;background:red}
+		25%{left:500px;top:0}
+		50%{left:500px;top:500px;background:green}
+		75%{left:0;top:500px}
+		100%{left:0;top:0;background:red}
+	}
+  </style>
+ </head>
+ <body>
+	<div></div>
+ </body>
+</html>

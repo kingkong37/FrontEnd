@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="modules/jquery.flexslider-min.js" type="text/javascript"></script>
+	<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+	<style>
+		ul{display:inline-block;left:0}
+	</style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.photo').flexslider({
+				slideshow : true,
+				animation : '',//'slide'설정을 빼도 사용가능
+				animationLoop : true,
+				slideshowSpeed: 1000,//다음동작 시간
+				animationSpeed : 600,//등장속도
+				controlNav : true,//해당배너로 이동하는 버튼생성
+				directionNav : true,//이전,다음 이동버튼
+				keyboard : true,//키보드로 컨트롤
+				touch : true,//모바일 터치가능
+				pauseOnHover : true//마우스가 배너위에 올라와있을때 동작을 멈춤
+			})
+        });
+    </script>
+</head>
+<body>
+	<div class="photo">
+		<ul class="slides">
+			<li><img src="images/flex_banner_01.jpg" /></li>
+			<li><img src="images/flex_banner_02.jpg" /></li>
+			<li><img src="images/flex_banner_03.jpg" /></li>
+			<li><img src="images/flex_banner_04.jpg" /></li>
+		</ul>
+	</div>
+</body>
+</html>

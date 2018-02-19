@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	function aa(){
+		alert("Hi")	
+	}
+	//aa();//가장 많이 사용되는 함수호출 방법
+	window.aa();//window안에 aa함수를 호출
+	/*
+	window는 우리가 사용할때 생략하는 요소이지만 문서가 열리면서 바로 실핼되야 할 명령문이 있다면 명시를 해준
+	*/
+
+	var T = {
+		'aa' : function(){
+			alert('안녕');
+		}
+	}
+	T.aa();
+	window.T.aa();
+	//window는 전역객체라고한다.
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

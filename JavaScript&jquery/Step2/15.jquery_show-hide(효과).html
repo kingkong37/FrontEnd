@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('a.btn1').click(function(){
+				$('h1').show(1000);//나타나거나 사라지는 시간(효과)을 적용 할 수 있다.(1000 =1초) 
+			})
+			$('a.btn2').click(function(){
+				$('h1').hide('fast');//fast,show로 나타나거나 사라지는 시간을 설정할 수 있음
+			})
+        });
+    </script>
+</head>
+<body>
+	<h1>제이쿼리</h1>
+	<a href="#" class="btn1">보이기</h1>
+	<a href="#" class="btn2">숨기기</h1>
+</body> 
+</html>

@@ -1,0 +1,134 @@
+﻿/*TYPE A*/
+#wrap{width:100%;height:100%;position:relative;text-align:left;font-family:'Malgun Gothic'}
+#header{width:100%;position:relative}
+    /*Member Menu*/
+    .member_menu_area{width:100%;border-bottom:1px solid #f4f4f4;float:left}
+        .member_menu{width:1000px;margin:0 auto}
+        .member_menu h1{width:132px;float:left}
+        .member_menu ul{float:right;margin-top:15px}
+        .member_menu ul li{float:left}
+        .member_menu ul li a{color:#000;line-height:30px;text-decoration:underline}
+        .member_menu ul li.log{background:#b2b2b2 url(../images/member_menu_icon1.gif) no-repeat 10px center;margin-left:15px;text-indent:20px;margin-left:30px;padding:0 10px}
+        .member_menu ul li.log a{color:#fff;font-weight:bold;text-decoration:none}
+        .member_menu form{float:right;margin-left:5px;margin-top:3px}
+        .member_menu form .search{width:167px;height:14px;border:1px solid #ddd;margin-top:12px;padding:7px 10px 7px 10px}
+        .member_menu form .search input.search_enter{width:145px;float:left;border:none;color:#a9a9ab}
+        .member_menu form .search a{float:left}
+    .header_content_area{width:100%;height:50px;float:left}
+        .header_content{width:1000px;height:50px;margin:0 auto}
+        
+        /*Main Menu*/
+        div.main_menu{width:550px;float:left}
+        div.main_menu > ul{width:550px;float:left}
+        div.main_menu > ul > li{float:left;height:50px;position:relative}
+        div.main_menu > ul > li > a{padding:0 25px;height:50px;line-height:50px;color:#3c3c3c;display:block;font-weight:bold;font-size:14px}    
+        div.main_menu > ul li > a:hover{color:#0a2267}
+        div.main_menu > ul li > a.on{color:#0a2267}
+        /*2depth*/
+        div.main_menu ul li ul{position:absolute;z-index:999;display:none;top:47px;left:0;border-top:3px solid #0a2267}
+        div.main_menu ul li:hover ul{display:block}
+        div.main_menu ul li ul li{width:100%;height:35px;float:left;border-bottom:1px solid #e9e9e9;}
+        div.main_menu ul li ul li a{height:35px;background:#fff;color:#555;display:block;line-height:35px;letter-spacing:-1px;text-indent:15px;border-left:1px solid #e9e9e9;border-right:1px solid #e9e9e9}
+        div.main_menu ul li ul li a:hover{background:#0a2267;color:#fff;border-color:#0a2267}
+        div.main_menu ul li ul.TwoDepth1{width:155px}
+        div.main_menu ul li ul.TwoDepth2{width:265px}
+        div.main_menu ul li ul.TwoDepth3{width:215px}
+        div.main_menu ul li ul.TwoDepth4{width:175px}
+        /*Search*/
+        div.content_search{float:right}            
+            div.search_other_btn{float:left;margin-top:7px;margin-left:5px}
+            div.search_other_btn a{width:108px;height:36px;background:#0053c8 url(../images/search_other_btn.gif) no-repeat 15px center;color:#fff;float:left;line-height:36px;text-indent:32px;font-weight:bold;letter-spacing:-1px}
+/*content*/
+#container{width:100%;position:relative;text-align:left;background:#ebebeb url(../images/top_visual_bg.gif) repeat-x top;float:left}
+    /*상단 비쥬얼*/
+    div.visual_area{width:1000px;height:344px;margin:0 auto}
+        /*배너*/
+        .main_banner{width:680px;height:344px;float:left;overflow:hidden;position:relative}
+        .main_banner ul{width:100%;height:344px;float:left;overflow:hidden}
+        .main_banner ul li{width:100%;height:344px}
+        .main_banner ol.flex-control-nav{position:absolute;left:0;bottom:10px;z-index:999;text-align:center;width:100%}
+        .main_banner ol.flex-control-nav li{width:14px;height:14px;display:inline-block;margin:0 3px;cursor:pointer}
+        .main_banner ol.flex-control-nav li a{width:14px;height:14px;background:url(../images/bullet.png) no-repeat 0 -14px;text-indent:-99999px;display:block}
+        .main_banner ol.flex-control-nav li a.flex-active{background-position:0 0}
+        /*달력 및 현황*/                  
+        .infomation_area{width:320px;height:344px;float:right;position:relative}
+            /*달력*/
+            .calendar{width:320px;height:344px;float:left;background:#474f70}
+            .calendar .title{width:320px;height:56px;background:#000;color:#fff;font-size:16px;font-weight:bold}
+            .calendar .title ul{float:left;margin-left:37px;margin-top:20px}
+            .calendar .title ul li{float:left}
+            .calendar .title ul li.previous_month{margin-top:5px;cursor:pointer}
+            .calendar .title ul li.next_month{margin-top:5px;cursor:pointer}
+            .calendar .title ul li.this_month{width:243px;text-align:center}
+            .calendar .calendar_date{width:287px;float:left;color:#fff;margin-left:15px;margin-top:40px}
+            .calendar .calendar_date table{width:287px;float:left}
+            .calendar .calendar_date table thead tr th{width:41px;text-align:center;height:30px;font-family:Arial;font-weight:bold}
+            .calendar .calendar_date table tbody tr td{width:40px;height:40px;text-align:center;background:#545e85;border:1px solid #474f70;cursor:pointer}
+            .calendar .calendar_date table tbody tr td div{width:40px;height:40px;position:relative;line-height:40px}
+            .calendar .calendar_date table tbody tr td.date_on{background:#343c5b}
+            .calendar .calendar_date table tbody tr td.date_today{background:#000}
+            .calendar .calendar_date table tbody tr td.date_schedule{background:#fff;color:#999}
+            .calendar .calendar_date table tbody tr td.date_schedule div span{background:url(../images/date_schedule.png) no-repeat 0 0;width:22px;height:22px;position:absolute;right:-10px;top:-10px;line-height:22px;color:#fff;font-family:Arial;font-weight:bold;text-align:center}
+    /*컨텐츠 데이터*/
+    #container div.content_area{width:100%;float:left;position:relative;background:#ebebeb}
+        .contents{width:1000px;margin:0 auto}
+            /*중간 OVER메뉴*/
+            .content_menu_section{width:1000px;float:left;margin:30px 0}
+                .content_menu_section .menu_data{width:227px;height:212px;float:left;position:relative;overflow:hidden}
+                .content_menu_section .menu_data > span{width:22px;height:22px;line-height:22px;text-align:center;background:url(../images/content_number.png) no-repeat;position:absolute;right:72px;top:53px;z-index:99;color:#fff;font-family:Arial;font-weight:bold;font-size:13px}
+                .content_menu_section .menu_data div.icon-text{width:227px;position:absolute;left:0;bottom:49px;z-index:98}
+                .content_menu_section .menu_data div.icon-text ul li{width:227px;text-align:center}
+                .content_menu_section .menu_data div.icon-text ul li.icon{margin-bottom:35px}
+                .content_menu_section .menu_data div.icon-text ul li.text{color:#fff;font-size:16px;font-weight:bold}
+                .content_menu_section .MyStudyCurrent{background:#a7a7a7}
+                .content_menu_section .MyGradeCurrent{background:#75787d}
+                .content_menu_section .Notice{background:#5c6065}
+                .content_menu_section .menu_data .over_details{float:left;position:absolute;background:#1ba1e2;height:212px;width:100%;z-index:99;opacity:.8;top: 220px;left: 0;filter: Alpha(Opacity=80)}
+                .content_menu_section .menu_data .over_details ul{color:#fff;font-size:12px;font-weight:bold;width:197px;padding:0 15px;position:absolute;top:10px}
+                .content_menu_section .menu_data .over_details ul li{line-height:18px;text-align:justify;width:197px;float:left}
+                .content_menu_section .menu_data .over_details ul li.head_title{font-size:16px;font-weight:bold;line-height:36px;margin-bottom:20px}
+                .content_menu_section .menu_data .over_details ul li.head_title span{float:left;margin-right:5px}
+                .content_menu_section .menu_data .over_details ul li.text{margin-bottom:5px}
+                .content_menu_section .menu_data .over_details ul li.text span{float:right}
+                /*전체교육체계도*/
+                .content_menu_section .education{width:320px;height:212px;float:left;position:relative;background:#0040a1 url(../images/education_search_bg.png) no-repeat center center}
+                .content_menu_section .education a{width:320px;height:212px;display:block}
+                .content_menu_section .education a span{width:100%;color:#fff;font-size:14px;position:absolute;text-align:center;bottom:50px}
+            /*과정메뉴*/
+            .education_process{width:1000px;float:left;padding-bottom:40px;border-bottom:3px solid #0053c8}
+                .education_process .process_data{width:320px;height:379px;float:left;margin-right:20px;position:relative}
+                .education_process .process_data_last{margin-right:0}
+                .education_process .process_data > h2{width:320px;height:35px;float:left;line-height:35px;font-size:14px;color:#fff;background:#252525;text-indent:20px;font-weight:normal}
+                .education_process .process_data > h2 span{font-size:12px}
+                .education_process .process_data .education_info{width:280px;height:304px;padding:20px;background:#fff;float:left}
+                .education_process .process_data .education_info ul{width:100%;float:left}
+                .education_process .process_data .education_info ul li{width:100%;float:left;color:#666;font-size:11px}
+                .education_process .process_data .education_info ul li.link{margin-bottom:8px;margin-top:40px}
+                .education_process .process_data .education_info ul li.link a{text-decoration:underline;color:#333;font-size:12px}
+                .education_process .process_data .education_info a.more{position:absolute;right:20px;bottom:20px;color:#0040a1}
+/*Footer*/
+#footer{width:100%;height:48px;float:left;position:relative;border-top:1px solid #ddd}
+    .footer_menu_area{width:100%;height:43px;border-bottom:1px solid #e0e0e0}
+        .footer_menu{width:1000px;margin:0 auto}
+        .footer_menu ul.left_m{float:left}
+        .footer_menu ul.left_m li{float:left;list-style:square;line-height:43px;letter-spacing:-1px}
+        .footer_menu ul.left_m li.menu1{margin-left:25px}
+        .footer_menu ul.left_m li.menu1 a{color:#000}
+        .footer_menu ul.left_m li.menu2{margin-left:60px;color:#0053c8;line-height:45px}
+        .footer_menu ul.left_m li.menu2 a{color:#0053c8;text-decoration:underline}
+        .footer_menu div.right_m{float:right;margin-right:10px}
+        .footer_menu div.right_m .list{width:128px;height:25px;padding:0 10px;line-height:22px;float:left;border:1px solid #ccc;color:#000;font-weight:bold;margin-top:9px;background:url(../images/footer_menu_list.gif) no-repeat 130px center}
+        .footer_menu div.right_m a.admin{width:78px;height:27px;text-align:center;color:#fff;background:#b2b2b2;float:left;margin-top:9px;line-height:25px;margin-left:5px;font-weight:bold}
+    .copyright{width:100%;line-height:52px;text-align:center;float:left;color:#888}
+
+
+
+
+
+
+
+
+
+
+
+

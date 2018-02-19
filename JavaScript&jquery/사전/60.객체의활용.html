@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    var homepage = {
+		'make' : {1:'기획', 2:'벤치마킹', 3:'디자인', 4:'퍼블리싱', 5:'개발', 6:'테스트', 7:'사이트 오픈', 8:'유지보수'},
+
+        "list_view" : function(){
+	
+	    for(var aa in this.list){
+	       document.write(aa + ":" + this.list[aa] + "<br/>");
+		}
+	  }
+	}
+    homepage.list_view();
+
+    var login = {
+		"list" : {1'page':'약관동의', 2'page':'Ipin인증', 3'page':'기본정보입력', 4'page':'추가정보입력', 5'page':'완료'},
+
+        "list_view" : function(){
+	
+	    for(var bb in this.list){
+	       document.write(bb + ":" + this.list[bb] + "<br/>");
+		}
+	  }
+	}
+    login.list_view();
+
+
+  </script>
+ </head>
+ <body>
+
+ </body>
+</html>

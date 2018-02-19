@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Upgrade Your Life - 11번가</title>
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/11st.css" />
+    <link type="text/css" rel="stylesheet" href="css/ui_script.css" />
+	<script src="scripts/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="scripts/flexslider.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Search Input
+            $('.search_area input').click(function () {
+                $(this).css('background-image' , 'none');
+            });
+            //Top Banner
+            $('.top_banner').flexslider({
+                animation: 'slide',
+                slideshow: true,
+                slideshowSpeed: 4000,
+                controlsContainer: $('.control .p_num .now'),
+                customDirectionNav: $('.control .btn_area a')
+            })
+            //Category
+            $('.category ul li').hover(function () {
+                $(this).children('.cate_menu').show();
+                $(this).children('a').addClass('on');
+            }, function () {
+                $('.cate_menu').hide();
+                $('.category ul li a').removeClass('on');
+            })
+            //Banner
+            $('.banner').flexslider({
+                animation: 'fade',
+                slideshow: true,
+                slideshowSpeed: 4000,
+                namespace: "banner_",
+                selector: "ul > li",
+                pauseOnHover: true,
+                pausePlay: true,
+            })
+            $('.banner_control-nav li').eq(0).find('a').html('패션/뷰티');
+            $('.banner_control-nav li').eq(1).find('a').html('브랜드/패션');
+            $('.banner_control-nav li').eq(2).find('a').html('디지털/라이프');
+            $('.banner_control-nav li').eq(3).find('a').html('마트');
+            $('.banner_control-nav li').eq(4).find('a').html('HOT이벤트');
+            $('.banner_control-nav li').eq(5).find('a').html('추천이벤트');
+            $('.banner_control-nav li').eq(6).find('a').html('제휴이벤트');
+            //BannerMenuOver
+            $('.banner').hover(function () {
+                $('.banner_direction-nav').addClass('mouseover');
+            }, function () {
+                $('.banner_direction-nav').removeClass('mouseover');
+            })
+            //인기검색어
+            $('.ranking .next').click(function () {
+                $('.live_data .d1').animate({ 'left': '-245px' });
+                $('.live_data .d2').animate({ 'left': '0' });
+            });
+            $('.ranking .prev').click(function () {
+                $('.live_data .d1').animate({ 'left': '0' });
+                $('.live_data .d2').animate({ 'left': '245px' });
+            });
+            //인기상품
+            $(".public ul.tab li a").click(function () {
+                $(".public .data").hide();
+                $('.public ul.tab li a').removeClass('on')
+                $(this).addClass('on');
+                $($(this).attr("href")).show();
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <header>
+            <div class="top_menu"><img src="images/top_menu.gif" /></div>
+            <div class="search_area">
+                <div class="data">
+                    <input type="text" />
+                    <div class="top_banner">
+                        <ul class="slides">
+                            <li><img src="images/top_ban_01.jpg" /></li>
+                            <li><img src="images/top_ban_02.jpg" /></li>
+                            <li><img src="images/top_ban_03.jpg" /></li>
+                            <li><img src="images/top_ban_04.jpg" /></li>
+                        </ul>
+                        <div class="control">
+                            <div class="btn_area">
+                                <a href="#" class="pre_btn"><img src="images/prev_btn.gif" /></a>
+                                <a href="#" class="next_btn"><img src="images/next_btn.gif" /></a>
+                            </div>
+                            <div class="p_num"><span class="now"></span>/4</div>
+                        </div>
+                    </div>
+                    <img src="images/search_area.gif" />
+                </div>
+            </div>
+            <nav><img src="images/nav.gif" /></nav>
+        </header>
+        <!--//Header-->
+        <!--Contents-->
+        <div id="container">
+            <div class="top_contents">
+                <!--Category-->
+                <section class="category">
+                    <ul>
+                        <li>
+                            <a href="#">브랜드패션</a>
+                            <div class="cate_menu">
+                                <h3>브랜드패션</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">의류/잡화</a>
+                            <div class="cate_menu">
+                                <h3>의류/잡화</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">뷰티</a>
+                            <div class="cate_menu">
+                                <h3>뷰티</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">레저/자동차</a>
+                            <div class="cate_menu">
+                                <h3>레저/자동차</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">식품</a>
+                            <div class="cate_menu">
+                                <h3>식품</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">출산/육아</a>
+                            <div class="cate_menu">
+                                <h3>출산/육아</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">생활/건강</a>
+                            <div class="cate_menu">
+                                <h3>생활/건강</h3>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <!--//Category-->
+                <!--Banner-->
+                <section class="banner">
+                    <ul>
+                        <li><img src="images/banner_01.jpg" /></li>
+                        <li><img src="images/banner_02.jpg" /></li>
+                        <li><img src="images/banner_03.jpg" /></li>
+                        <li><img src="images/banner_04.jpg" /></li>
+                        <li><img src="images/banner_05.jpg" /></li>
+                        <li><img src="images/banner_06.jpg" /></li>
+                        <li><img src="images/banner_07.jpg" /></li>
+                    </ul>
+                </section>
+                <!--//Banner-->
+                <!--RightContent-->
+                <section class="RightContent">
+                    <!--최근인기검색어-->
+                    <article class="ranking">
+                        <h4>최근 인기 검색어</h4>
+                        <!--Prev&Next-->
+                        <div class="prev_next">
+                            <button class="prev">이전</button>
+                            <button class="next">다음</button>
+                        </div>
+                        <!--//Prev&Next-->
+                        <div class="live_data">
+                            <div class="d1">
+                                <a href="#"><span>1</span>Test</a>
+                                <a href="#"><span>2</span>Test</a>
+                                <a href="#"><span>3</span>Test</a>
+                                <a href="#"><span>4</span>Test</a>
+                                <a href="#"><span>5</span>Test</a>
+                                <a href="#"><span>6</span>Test</a>
+                                <a href="#"><span>7</span>Test</a>
+                                <a href="#"><span>8</span>Test</a>
+                                <a href="#"><span>9</span>Test</a>
+                                <a href="#"><span>10</span>Test</a>
+                            </div>
+                            <div class="d2">
+                                <a href="#"><span>11</span>Test</a>
+                                <a href="#"><span>12</span>Test</a>
+                                <a href="#"><span>13</span>Test</a>
+                                <a href="#"><span>14</span>Test</a>
+                                <a href="#"><span>15</span>Test</a>
+                                <a href="#"><span>16</span>Test</a>
+                                <a href="#"><span>17</span>Test</a>
+                                <a href="#"><span>18</span>Test</a>
+                                <a href="#"><span>19</span>Test</a>
+                                <a href="#"><span>20</span>Test</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!--//최근인기검색어-->
+                    <article class="public">
+                        <ul class="tab">
+                            <li><a href="#man" class="on">남자인기</a></li>
+                            <li class="line">|</li>
+                            <li><a href="#woman">여자인기</a></li>
+                        </ul>
+                        <ul class="data man" id="man">
+                            <li><img src="images/thum1.png" /><span>액션피규어</span></li>
+                            <li><img src="images/thum2.png" /><span>블록</span></li>
+                            <li><img src="images/thum8.png" /><span>SSD</span></li>
+                            <li><img src="images/thum6.png" /><span>스피커</span></li>
+                        </ul>
+                        <ul class="data woman" id="woman">
+                            <li><img src="images/thum5.png" /><span>이어폰</span></li>
+                            <li><img src="images/thum7.png" /><span>베이커리</span></li>
+                            <li><img src="images/thum3.png" /><span>인형</span></li>
+                            <li><img src="images/thum4.png" /><span>청소기</span></li>
+                        </ul>
+                    </article>
+                </section>
+                <!--//RightContent-->
+            </div>
+        </div>
+        <!--//Contents-->
+    </div>
+</body>
+</html>

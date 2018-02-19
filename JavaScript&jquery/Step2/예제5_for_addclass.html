@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+        .high-light-0 { color: yellow; }
+        .high-light-1 { color: orange; }
+        .high-light-2 { color: blue; }
+        .high-light-3 { color: green; }
+        .high-light-4 { color: red; }
+    </style>
+    <script type="text/javascript">
+		//반복적으로 클래스 명을 넣고자할때
+		//return으로 반복문을 작성 시 j쿼리 모듈이 1.4이상 버전에서 가능
+        $(document).ready(function () {
+            $('h1').addClass(function(aa){//addClass로 적용될 요소를 함수로 작성
+				return 'high-light-' + aa;//return에 for문 처럼 h1이 있는 만큼만 인자값이 적용
+				/*
+				return 'high-light-' + (aa+1);//return에 1부터 증가
+				*/
+			});
+        });
+    </script>
+</head>
+<body>
+    <h1>item - 0</h1>
+    <h1>item - 1</h1>
+    <h1>item - 2</h1>
+    <h1>item - 3</h1>
+    <h1>item - 4</h1>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+
+  </script> 
+ </head>
+ <body>
+	<!--
+		대상(img)의 id는 한개만 존재하고, script에서 id가 중첩되도 상관없다.
+	-->
+	<img src="images/turn_off.gif" id="myImg" />
+	<button onclick="document.getElementById('myImg').src='images/turn_on.gif'">불켜기</button>
+	<button onclick="document.getElementById('myImg').src='images/turn_off.gif'">불끄기</button>
+ </body>
+</html>

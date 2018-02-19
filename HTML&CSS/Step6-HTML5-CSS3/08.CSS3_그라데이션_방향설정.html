@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+		div, section{width:100px;height:100px}
+		div{
+			background:linear-gradient(-90deg,red,yellow);
+			/*
+				-90deg : red-왼쪽 , yellow-오른쪽
+				90deg : red-오른쪽 , yellow-왼쪽
+				180deg:상하의 색상반전
+			*/
+		}
+		section{
+			width:500px;height:300px;/*사이즈가 다를경우*/
+			background:radial-gradient(circle,white 5%, blue 30%, green 65%)
+			/*
+				circle설정으로 원의 찌그러지는것을 방지할 수 있다.
+				색상에 %를 적용하면 전체에서 해당수치의 비율로 들어간다.
+			*/
+		}
+  </style>
+ </head>
+ <body>
+	<div></div>
+	<section></section>
+ </body>
+</html>

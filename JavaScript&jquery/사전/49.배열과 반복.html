@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function text(){//배열을 함수 안에 담은 경우
+	   return ['aa' , 'bb' , 'cc' , 'dd' , 'ee' , 'ff']//return값으로 배열을 출력
+	}
+	var user = text();//변수의 데이터로 함수를 대입
+    
+	for(i=0; i < 4; i++){
+	  document.write("<p>"+user[i]+"</p>");
+	}
+    
+	/*배열의 갯수만큼 for문이 출력되어야 할 경우*/
+	for(j=0; j < user.length; j++){
+	  document.write(user[j]+"<br/>");
+	}
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

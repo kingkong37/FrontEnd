@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style type="text/css">
+        html,body{margin:0;padding:0;text-align:center;line-height:0}
+        .m_design{width:100%;margin:0 auto;position:relative;max-width:640px;display:inline-block,}
+        .m_design img.main_img{width:100%}
+        .m_design .bottom_btn{width:100%;position:fixed;left:0;bottom:0}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$(window).scroll(function(){
+				if($(window).scrollTop() == $(document).height() - $(window).height()){//스크롤 제일하단을 얻어내는 공식
+					/*$(document).height() : 문서의높이 - $(window).height():브라우져의높이
+					사용자에 의해 브라우져의 크기가 변할 경우에도 스크롤의 하단값을 다시 설정 할 수있는 방법이다.
+					*/
+					$('.bottom_btn').css('position','relative');
+				}else{
+					$('.bottom_btn').css('position','fixed');
+				}
+			})
+        });
+    </script>
+</head>
+<body>
+    <div class="m_design">
+        <img src="images/m_design.jpg" class="main_img" />
+        <div class="bottom_btn"><img src="images/m_bottom_menu.jpg" /></div>
+    </div>
+</body>
+</html>

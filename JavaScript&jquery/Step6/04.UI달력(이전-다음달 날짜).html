@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+	<!--Jquery UI-->
+	<script src="jquery-ui/jquery-ui.min.js"></script>
+	<link href="jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
+	<!--//Jquery UI-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('input').datepicker({
+				showOtherMonths : true,//이전달,다음달 날짜 보임
+				selectOtherMonths : true//이전,다음달 날짜 선택 가능
+			});
+        });
+    </script>
+</head>
+<body>
+	<input type="text"/>
+</body>
+</html>

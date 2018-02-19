@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <link href="jquery-ui/jquery-ui.min.css" type="text/css" rel="stylesheet" />
+    <link href="jquery-ui/jquery-ui.structure.min.css" type="text/css" rel="stylesheet" />
+    <link href="jquery-ui/jquery-ui.theme.min.css" type="text/css" rel="stylesheet"/>
+    <style type="text/css">
+        input{width:400px;height:30px;border:2px solid #0094ff;padding:0 10px}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			var aa = [
+				'aa',
+				'abc',
+				'agdfg',
+				'ggfdse',
+				'efd'
+			];
+			$('#tags').autocomplete({
+				source : aa
+			})
+        });
+    </script>
+</head>
+<body>
+    <input id="tags">
+</body>
+</html>

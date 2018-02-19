@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+		/*absolute를 사용한 요소가 부모의 영역안에서 움직이게하려면 부모요소에 relative를 넣어준다.*/
+		.area{width:500px;height:500px;background:yellow;position:relative}
+		.area div{width:100px;height:100px;background:green;position:absolute;right:0;top:0}
+
+		/*fixed(스크롤에 상관없이 고정)설정은 부모태그에 영향을 받지 않고 단독적으로 사용된다.*/
+		.area span{width:100px;height:100px;background:green;position:fixed;right:0;top:0}
+		
+  </style>
+ </head>
+ <body>
+	<div class="area">
+		<div></div>
+		<span>고정되는요소</span>
+	</div>
+	<p style="height:3000px"></p>
+ </body>
+</html>

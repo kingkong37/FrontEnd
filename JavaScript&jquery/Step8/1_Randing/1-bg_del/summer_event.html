@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>2016 Summer Event</title>
+    <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+    <script type="text/javascript" src="../../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('input[type=text]').click(function(){
+				$(this).css({'background-image' : 'none'})
+			});
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="top_img"><img src="images/top_img.jpg" alt="무더운 여름 지친당신을 위해 준비한 시원한 톡톡톡 혜택" /></div>
+        <!--쿠폰-->
+        <div class="cupon_area">
+            <div class="cupon">
+                <div class="main_title"><img src="images/cupon_text.png" alt="시럽 Wallet 모든 고객님께 지금 딱 필요한 쿠폰번호를 한번만 등록해도 추가 할인 쿠폰 3종 혜택 증정" /></div>
+                <!--쿠폰 번호 입력-->
+                <form>
+                    <fieldset>
+                        <legend>쿠폰번호 입력</legend>
+                        <dl>
+                            <dt><input type="text" /></dt>
+                            <dd><input type="button" title="확인" /></dd>
+                        </dl>
+                    </fieldset>                   
+                </form> 
+                <!--//쿠폰 번호 입력-->
+                <div class="cupon_list">
+                    <div class="cupon_list_title"><img src="images/cupon_list_title.gif" alt="톡톡톡 3종 쿠폰" /></div>
+                    <ul>
+                        <li><img src="images/list_01.gif" alt="톡 3만원 이상 구매 시 5,000원 " /></li>
+                        <li><img src="images/list_02.gif" alt="톡 10만원 이상 구매 시 10,000원 " /></li>
+                        <li><img src="images/list_03.gif" alt="톡 30만원 이상 구매 시 30,000원 " /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--//쿠폰-->
+        <div class="down_info">
+            <div class="down_title"><img src="images/down_title.png" alt="쿠폰사용방법" /></div>
+            <ul>
+                <li><img src="images/down_info_01.png" alt="Syrup 앱에서 쿠폰 발급" /></li>
+                <li><img src="images/down_info_02.png" alt="발급 받은 쿠폰번호를 직영몰에 등록" /></li>
+                <li><img src="images/down_info_03.png" alt="상품 구매 시 쿠폰 선택하여 주문 완료" /></li>
+            </ul>
+        </div>
+        <div class="bottom"><img src="images/bottom.gif" alt="꼭 확인하세요 지영몰(www.louisclub.com)에서만 사용가능합니다. 시럽활인쿠폰은 ID당 1회 다운로드 가능합니다. 시럽할인 쿠폰은 상품쿠폰과 중복 사용이 가능합니다. 쿠폰 유효기간은 7월31일까지 사용합니다. 취소 및 반품 시에는 쿠폰 재발급이 되지 않습니다." /></div>
+    </div>
+</body>
+</html>

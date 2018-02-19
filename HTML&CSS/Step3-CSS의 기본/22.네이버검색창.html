@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+	<style type="text/css">
+		.search_text{
+			width:400px;
+			height:45px;
+			border:5px solid #00c73c;
+			padding:10px;
+			font-size:16px;
+			box-sizing:border-box;
+			float:left;
+			outline:none;/*크롬에서 생성되는 파란색 라인을 없앰*/
+		}
+		.search_btn{
+			width:45px;
+			height:45px;
+			background:url(images/search_btn.gif);
+			border:none;
+			text-indent:-9999999px;
+			float:left;
+			outline:none;
+			cursor:pointer
+		}
+	</style>
+ </head>
+ <body>
+	<form>
+		<input type="text" class="search_text" placeholder="검색어를 입력하세요."/>
+		<input type="button" value="검색" class="search_btn"/>
+	</form>
+ </body>
+</html>

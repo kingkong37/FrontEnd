@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    var count = [10, 8, 4, 2, 1, 5, 3, 9, 7, 6];
+    count.sort(
+	   function(a,b){
+	      return a-b
+	   }
+	);
+	/*
+	1은 모든 수에 연산되도 -(음수)를 가지므로 제일 작은 수이다.
+	2는 1과 연산되었을 때 양수값으로 1개를 가지게 된다.
+	3은 ....
+	.
+	.
+	반대의 경우 (b-a)
+	b-a를 작성해서 대입되는 a의 연산이 뒤로 가므로 양수가 많은 요소가 앞으로 부터 정렬된다.
+	1은 모든 수를 만났을 때, 음수만 가지므로 맨 뒤로 가게 된다.
+
+	*/
+
+	alert(count)
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

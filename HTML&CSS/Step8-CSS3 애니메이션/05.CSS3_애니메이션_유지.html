@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+	div{
+		width:300px;
+		height:300px;
+		background:orange;
+		position:absolute;
+		left:20px;
+		top:20px;
+		animation-name:aa;
+		animation-duration:3s;
+		animation-fill-mode:forwards;
+		/*forwards 마지막키프레임유지*/
+		/*처음화면에 보이다가 사라지는 애니메이션을 만들때 사용한다.*/
+	}
+	@keyframes aa{
+		0%{left:0;top:0}
+		100%{left:300px;top:300px}
+	}
+
+  </style>
+ </head>
+ <body>
+	<div></div>
+ </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	function movie_name(title){
+		return {
+			get_title : function(){
+				return title
+			},
+			get_title2 : function(aa){
+				if(typeof aa == 'string'){//typeof는 입력되는 양식을 구분하여 string:문자열, number:숫자를 구분한다.
+					title = aa;
+				}else{
+					alert('숫자 아님')
+				}
+			}
+		}
+	}
+	
+	koreamovie = movie_name();
+	koreamovie.get_title2("문자열");
+	alert(koreamovie.get_title());
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

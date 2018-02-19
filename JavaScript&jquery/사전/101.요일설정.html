@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	//요일가져오기
+	var nowtime = new Date();
+	
+	var week = new Array('일요일','월요일','화요일','수요일','목요일','금요일','토요일');
+	//week변수에 새롭게 배열을 선언
+
+	var aa = week[nowtime.getDay()]
+	//Date의 요일 기본 출력값이 배열의 Key값이므로 value값으로 week의 배열을 넣어준다.
+	
+	document.write(aa);
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

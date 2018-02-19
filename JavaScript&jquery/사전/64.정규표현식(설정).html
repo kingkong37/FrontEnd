@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    var pattern = /a/;
+	var str = "Abcde";
+	alert(str.match(pattern));//return = null , 대소문자를 구분하는 게 패턴의 기본형식
+    
+	var pattern2 = /a/i;//패턴에 i가 포함되면 대소문자를 무시
+	var str2 = "Abcde";
+	alert(str2.match(pattern2));//return = A
+
+	var pattern3 = /a/g;//g(global)는 문자열의 a를 전부 표시 
+	var str3 = "AbcaAdsasdAdasdadssaAerefdfaAgrgdbdvadaAadsdeAsdwvrjhjutyaa";
+	alert(str3.match(pattern3));
+
+	var pattern4 = /a/ig;//ig는 대소문자 무시하고 전부 표시 
+	var str4 = "AbcaAdsasdAdasdadssaAerefdfaAgrgdbdvadaAadsdeAsdwvrjhjutyaa";
+	alert(str4.match(pattern4));
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    var baseball = {'LG':2, 'SK':3, '한화':10, '두산':4}
+    /* 
+	for(var aa in baseball){//for문에 변수(aa)선언하고 in을 사용하여 객체(baseball)를 대입
+	   document.write(aa);//Key값만 출력
+	   document.write(baseball[aa]);//value값을 호출
+	}
+    */
+    var baseball = {'LG':2, 'SK':3, '한화':10, '두산':4}
+
+	for(var aa in baseball){
+	   document.write(aa + ":" + baseball[aa] + "위" + "<br/>");
+	}    
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

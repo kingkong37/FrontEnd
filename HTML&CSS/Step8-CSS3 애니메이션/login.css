@@ -1,0 +1,69 @@
+@import url(../reset.css);
+body{font-family: "Nanum Gothic", sans-serif;font-size:1emfont-size:1em;background:rgba(0, 0, 0, 0.8)}
+#wrap{width:100%;height:100%;position:relative;display:block}
+.intro{width:100%;height:100%;position:fixed;left:0;bottom:0;background:#f7eecd url(images/logo_coupang.png) no-repeat center center;background-size:60%;z-index:9}
+/*.intro{display:none}*/
+.intro{
+	animation-name:intro;
+	animation-delay:3s;/*인트로화면이 보여지는 시간*/
+	animation-duration:1s;/*인트로화면이 사라지는 시간*/
+	animation-fill-mode:forwards;
+}
+@keyframes intro{
+	0%{opacity:1}
+	100%{opacity:0;bottom:-100%;height:0}
+}
+.login_area{width:100%;height:100%;position:relative}
+.login_area form{width:90%;left:5%;border:1px solid #fff;position:absolute;top:25%;border-radius:5px;padding:15px 2%}
+.login_area form fieldset,
+.login_area form dl,
+.login_area form dt,
+.login_area form dd,
+.login_area form input{width:100%;display:block}
+
+.login_area form dt{color:#fff;font-weight:700;text-align:left;font-size:1.2em;margin-bottom:10px}
+.login_area form dd input{border:none;background:#fff;font-size:1.2em;line-height:2em;padding:0 1%;margin-bottom:10px}
+.login_area form dd:last-child{margin-top:30px}
+.login_area form dd:last-child input[type=button]{height:50px;font-size:1.6em;color:#fff;background:linear-gradient(#dc4c42, #552110);font-weight:800}
+
+.bottom_menu{width:100%;position:fixed;left:0;bottom:0}
+.bottom_menu li{width:50%;float:left}
+.bottom_menu li a{color:#fff;width:100%;line-height:3em;display:block}
+.bottom_menu li:first-child a{background:#193356}
+.bottom_menu li:nth-child(2) a{background:#364b78}
+
+@media all and (max-width:1024px){/*아이패드 가로*/
+	.intro{background-size:40%}
+	.login_area form{width:60%;left:20%}
+	.login_area form dt, .login_area form dd input{font-size:1.4em}
+	.bottom_menu li a{font-size:1.6em}
+}
+@media all and (min-width:320px) and (max-width:768px){/*아이패드 세로~아이폰5*/
+	.intro{background-size:60%}
+	.login_area form{width:90%;left:5%}
+	.login_area form dt, .login_area form dd input{font-size:1.2em}
+
+	.bottom_menu li a{font-size:1em}
+}
+
+@media all and (max-width:320px){/*아이폰5*/
+	.login_area form dt, .login_area form dd input{font-size:0.8em}
+	.login_area form dd:last-child input[type=button]{font-size:1em;height:35px}
+	.bottom_menu li a{font-size:0.7em}
+}
+/*가로 View media Query로*/
+@media all and (max-height:320px){
+	.login_area{height:auto;margin-bottom:20px;padding:20px}
+	.login_area form{position:relative;display:inline-block;margin:0 auto;left:0}
+	.bottom_menu{position:relative;display:inline-block}
+}
+
+
+
+
+
+
+
+
+
+

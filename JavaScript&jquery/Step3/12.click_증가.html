@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function () {
+			$('h1').click(function(){
+				$(this).html(function(index, aa){
+					//index는 header안에 텍스트(내용)를 지칭
+					return aa + '+';//aa는 내용에 문자열 +를 추가하기 위함이다.
+				})
+			});
+        })
+    </script>
+</head>
+<body>
+	<h1>내용</h1>
+	<h1>내용</h1>
+	<h1>내용</h1>
+</body>
+</html>

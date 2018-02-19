@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	function user(name){
+		this.name = name;//this는 user를 말함
+		this.popup = function(){
+			return 'My Mame is' + " " + this.name;
+		}
+	}
+
+	var peo1 = new user('스크립트');
+	//new를 사용해서 함수를 그룹화시켜주는 개념 똑같은 명령문을 값만 다르게하여 재사용이 가능하다.
+	var peo2 = new user('자바');
+
+	document.write(peo1.popup() + "<br/>");
+	document.write(peo2.popup());
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

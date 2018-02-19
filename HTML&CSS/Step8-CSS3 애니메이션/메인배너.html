@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        .banner_effect{width:100%;height:590px;position:relative;background:url(images/effect2.jpg) no-repeat center center;background-size:cover}
+        .banner_effect .img_data{position:absolute;left:25%;top:15%}
+        .banner_effect .text_data{position:absolute;right:30%;top:30%}
+        .img_data{
+            animation-name:img_e;
+            animation-duration:2s;
+			/*animation-iteration-count: infinite;*/
+        }
+        @keyframes img_e {
+            from{left:0;opacity:0}
+            to{left:25%;opacity:1}
+        }
+        .text_data{
+            animation-name: text_e;
+            animation-duration: 2s;
+			/*animation-iteration-count: infinite;*/
+        }
+        @keyframes text_e {
+            from{right:0;opacity:0}
+            to{right:30%;opacity:1}
+        }
+    </style>
+</head>
+<body>
+    <div class="banner_effect">
+        <div class="img_data"><img src="images/effect2_img1.png" /></div>
+        <div class="text_data"><img src="images/effect2_img2.png" /></div>
+    </div>
+</body>
+</html>

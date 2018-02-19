@@ -1,0 +1,32 @@
+<!doctype html><!--html5 태그를 사용하기 위해서는 다음과 같이 문서 상단이 정의되어야 한다.-->
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+	/*태그로 CSS가 작성되기 때문에 class구분문(.)이나 ID구분문(#)을 사용하면 안된다.*/
+	header{}
+	nav{}
+	section{}
+  </style>
+ </head>
+ <body>
+	<div id="wrap">
+		<header><!--사이트상단 공통영역-->
+			<nav></nav><!--메뉴-->
+		</header>
+		
+		<!--Contents-->
+		<section><!--컨텐츠 영역 section안에 section으로 작성 할 수 있다.-->
+			<article></article><!--section안에서만 존재할 수 있고 요소를 만드는 블럭-->
+			<aside></aside><!--보통 퀵메뉴나 광고에 사용되는 태그--> 
+		</section>
+		<!--//Contents-->
+		
+		<footer><!--사이트 하단 공통영역-->
+			<address></address><!--카피라이트나 주소를 작성할때-->
+		</footer>
+	</div>
+
+ </body>
+</html>

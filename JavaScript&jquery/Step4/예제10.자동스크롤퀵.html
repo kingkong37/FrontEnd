@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style type="text/css">
+        html,body{margin:0;padding:0;text-align:center;line-height:0}
+        .homepage_wrap{width:100%;display:inline-block}
+        .img_data{width:1349px;margin:0 auto}
+        .right_menu{width:95px;position:fixed;right:2%;top:80px}
+        .right_menu a{width:100%;float:left;background:url(images/quick2.gif);text-indent:-999999px}
+        .right_menu a.btn1{height:97px;background-position:0 0}
+        .right_menu a.btn2{height:96px;background-position:0 -97px}
+        .right_menu a.btn3{height:96px;background-position:0 -197px}
+        .right_menu a.btn1:hover{background-position:-95px 0}
+        .right_menu a.btn2:hover{background-position:-95px -97px}
+        .right_menu a.btn3:hover{background-position:-95px -197px}
+        .right_menu a.btn1.on{background-position:-95px 0}
+        .right_menu a.btn2.on{background-position:-95px -97px}
+        .right_menu a.btn3.on{background-position:-95px -197px}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.right_menu a.btn1').click(function(){
+				var move1 = $('#aa').offset().top;
+				$('html, body').animate({scrollTop:move1},400)
+			})
+			$('.right_menu a.btn2').click(function(){
+				var move2 = $('#bb').offset().top;
+				$('html, body').animate({scrollTop:move2},400)
+			})
+        });
+    </script>
+</head>
+<body>
+    <div class="homepage_wrap">
+        <div class="right_menu">
+            <a href="#aa" class="btn1">회사소개</a>
+            <a href="#bb" class="btn2">찾아오시느길</a>
+            <a href="#cc" class="btn3">제품소개</a>
+        </div>
+        <div class="img_data"><img src="images/site_d_01.jpg" /></div>
+        <div class="img_data" id="aa"><img src="images/site_d_02.jpg" /></div>
+        <div class="img_data" id="bb"><img src="images/site_d_03.jpg" /></div>
+        <div class="img_data" id="cc"><img src="images/site_d_04.jpg" /></div>
+        <div class="img_data"><img src="images/site_d_05.jpg" /></div>
+    </div>
+</body>
+</html>

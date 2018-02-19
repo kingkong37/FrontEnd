@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+	<!--Jquery UI-->
+	<script src="jquery-ui/jquery-ui.min.js"></script>
+	<link href="jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
+	<!--//Jquery UI-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.StartDay').datepicker({
+				dateFormat : 'yy-mm-dd',
+				onClose : function(selectedDate){//시작일을 선택하고 딛히는 순간
+					//종료일의 선택범위를 시작일부터 선택하게 설정
+					$('.EndDay').datepicker('option' , 'minDate' , selectedDate)
+				}
+			})
+			$('.EndDay').datepicker({
+				dateFormat : 'yy-mm-dd',
+				onClose : function(selectedDate){//종료일 선택하고 딛히는 순간
+					//시작일의 선택범위를 종료일을 넘지않게 설정
+					$('.StartDay').datepicker('option' , 'maxDate' , selectedDate)
+				}
+			})
+        });
+    </script>
+</head>
+<body>
+	조회기간:<input type="text" class="StartDay"/> ~ <input type="text" class="EndDay"/>
+</body>
+</html>

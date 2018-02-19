@@ -1,0 +1,20 @@
+html,body{background:#000;font-family:"Nanum Gothic", sans-serif;color:#fff}
+#wrap{width:414px;display:inline-block;overflow:hidden}
+header{width:100%;height:60px;line-height:60px;font-size:20px;font-weight:700;border-top:1px solid #626262;border-bottom:1px solid #000;background: linear-gradient(#4e4e4e, #111)}
+header span.blue{color:#005ee0}
+header span.red{color:#ae0000}
+header span.gray{color:#818181}
+nav{width:100%;height:50px;display:inline-block;background:#232323}
+nav ul{width:1200px;margin:0 auto;text-align:right}
+nav ul li{display:inline-block;margin-left:20px}
+nav ul li a{color:#8e8e8e;font-size:14px;font-weight:700;line-height:14px;margin-top:18px;display:block}
+nav ul li a.select{color:#fff}
+nav ul li a:hover{color:#fff}
+nav ul li img{vertical-align:top;margin-right:5px}
+.gallery_area{width:100%;display:inline-block;padding:30px 0;position:relative}
+#carousel{width:100%;display:block}
+#carousel div.flex-viewport{width:600px;display:inline-block}
+#mosaic{display:none;width:100%}
+#mosaic .mosaic{width:1000px;display:inline-block}
+#mosaic .mosaic_slide{width:600px;float:left}
+footer{width:100%;display:inline-block;height:32px;line-height:32px;background:#353535;font-size:12px;color:#646464;bottom:0;position:fixed;left:0}

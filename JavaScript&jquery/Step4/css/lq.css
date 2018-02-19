@@ -1,0 +1,67 @@
+﻿/*Event Reset*/
+        html,body{margin:0;padding:0}
+        .event_wrap{width:100%;position:relative;display:block;text-align:center;padding:0;margin:0;}
+        .event_wrap *{box-sizing:border-box;-moz-box-sizing:border-box}
+        .event_wrap div, .event_wrap div ul, .event_wrap ul li{padding:0;margin:0;list-style:none}
+        #top_menu{width:100%;display:block;text-align:center;border-bottom:1px solid #808080;background:#fff}
+        .move{position:fixed;left:0;top:0;z-index:99}
+        /*Event CSS*/
+        .hangawi_gift{width:100%;display:inline-block;position:relative;margin:0 auto}
+            .hangawi_gift .img_data{width:100%;text-align:center;padding:0;margin:0;position:relative}
+            .hangawi_gift .top_area{background:url(../images/top_bg.jpg);background-size:cover}
+            .hangawi_gift .top_area .top_date{position:absolute;right:2%;top:60px}
+            .hangawi_gift .section2{background:url(../images/section2_l_bg.gif) no-repeat left bottom,url(../images/section2_r_bg.gif) no-repeat right top}
+
+            .hangawi_gift .section3{background:#fafafa;border-top:5px solid #ad6886}
+            .hangawi_gift .section3 .sec_img{width:1200px;margin:0 auto;position:relative}
+            .hangawi_gift .section3 .sec_img span{position:absolute;top:-5px;left:50%;margin-left:-117px;z-index:9}
+            .hangawi_gift .section3 .sec_img a.coupon_down{width:26.7%;height:9.8%;position:absolute;left:36.7%;top:78.3%}
+            .hangawi_gift .section3 .sec_img a.coupon_down img{width:100%;height:100%}
+            .hangawi_gift .section3 .sec_img a.info{width:7.5%;height:16.3%;position:absolute;left:83.2%;top:11.6%}
+
+            .hangawi_gift .section4{background:url(../images/section4_bg.jpg);background-size:cover}
+            .hangawi_gift .section4 .sec_img{width:1200px;margin:0 auto;position:relative}
+            .hangawi_gift .section4 .sec_img a{width:19.7%;height:16.8%;position:absolute}
+            .hangawi_gift .section4 .sec_img a img{width:100%;height:100%}
+            .hangawi_gift .section4 .sec_img a.link1{left:6.8%;top:28.8%}
+            .hangawi_gift .section4 .sec_img a.link2{left:51%;top:28.8%}
+            .hangawi_gift .section4 .sec_img a.link3{left:6.8%;top:62.6%}
+            .hangawi_gift .section4 .sec_img a.link4{left:51%;top:62.6%}
+            .hangawi_gift .section4 .sec_img a.more_btn{width:20.3%;height:5.6%;left:39.4%;top:85.7%}
+
+            .hangawi_gift .section5{background:#fafafa;border-top:5px solid #d5b593}
+            .hangawi_gift .section5 .sec_img{width:1200px;margin:0 auto;position:relative}
+            .hangawi_gift .section5 .sec_img span{position:absolute;top:-5px;left:50%;margin-left:-117px;z-index:9}
+            .hangawi_gift .section5 .sec_img a.entry{width:26.7%;height:9.8%;position:absolute;left:36.7%;top:82.6%}
+            .hangawi_gift .section5 .sec_img a.entry img{width:100%;height:100%}
+            .hangawi_gift .section5 .sec_img a.info{width:7.5%;height:16.3%;position:absolute;left:83.2%;top:12.8%}
+
+            .hangawi_gift .section6{background:url(../images/section6_bg.jpg);background-size:cover}
+            .hangawi_gift .section6 .sec_img{width:1200px;margin:0 auto;position:relative}
+            .hangawi_gift .section6 .sec_img a{position:absolute}
+            .hangawi_gift .section6 .sec_img a img{width:100%;height:100%}
+            .hangawi_gift .section6 .sec_img a.link1{width:29.2%;height:16.2%;left:6.8%;top:24%}
+            .hangawi_gift .section6 .sec_img a.link2{width:22.9%;height:20.8%;left:6.8%;top:43.8%}
+            .hangawi_gift .section6 .sec_img a.link3{width:22.9%;height:20.8%;left:35.9%;top:43.8%}
+            .hangawi_gift .section6 .sec_img a.link4{width:22.9%;height:20.8%;left:67%;top:43.8%}
+            .hangawi_gift .section6 .sec_img a.more_btn{width:18.1%;height:5.1%;left:40.8%;top:87.7%}
+
+            .hangawi_gift .section7{background:#fafafa;border-top:5px solid #7ab4c0}
+            .hangawi_gift .section7 .sec_img{width:1200px;margin:0 auto;position:relative}
+            .hangawi_gift .section7 .sec_img span{position:absolute;top:-5px;left:50%;margin-left:-117px;z-index:9}
+            .hangawi_gift .section7 .sec_img a.write{width:26.7%;height:9.8%;position:absolute;left:36.7%;top:78.9%}
+            .hangawi_gift .section7 .sec_img a.write img{width:100%;height:100%}
+            .hangawi_gift .section7 .sec_img a.info{width:7.5%;height:16.3%;position:absolute;left:83.2%;top:12.1%}
+            /*quick*/
+            .hangawi_gift ul.menu_quick{width:130px;position:absolute;right:2%;z-index:9;top:200px}
+            .hangawi_gift ul.menu_quick li{width:100%;height:120px;float:left;margin-bottom:20px}
+            .hangawi_gift ul.menu_quick li a{width:100%;height:120px;float:left;text-indent:-99999px;background:url(../images/quick_menu.png) no-repeat}
+            .hangawi_gift ul.menu_quick li.link1 a{background-position:0 0}
+            .hangawi_gift ul.menu_quick li.link2 a{background-position:0 -120px}
+            .hangawi_gift ul.menu_quick li.link3 a{background-position:0 -240px}
+            .hangawi_gift ul.menu_quick li.link1 a:hover{background-position:-130px 0}
+            .hangawi_gift ul.menu_quick li.link2 a:hover{background-position:-130px -120px}
+            .hangawi_gift ul.menu_quick li.link3 a:hover{background-position:-130px -240px}
+            .hangawi_gift ul.menu_quick li.link1 a.on{background-position:-130px 0}
+            .hangawi_gift ul.menu_quick li.link2 a.on{background-position:-130px -120px}
+            .hangawi_gift ul.menu_quick li.link3 a.on{background-position:-130px -240px}

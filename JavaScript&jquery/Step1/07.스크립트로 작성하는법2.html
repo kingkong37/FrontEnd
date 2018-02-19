@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	function myfun(){
+		document.getElementById("text").innerHTML = ('5+6 =' + (5+6));
+		//문자열과 연산이 같이 들어갈경우 ()를 사용한다.
+	}
+  </script>
+ </head>
+ <body>
+	<div id="text">5+6 = ?</div>
+	<button onclick="myfun()">정답은?</button>
+ </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        table{width:70%;border-top:1px solid #808080;font-size:12px;padding:0;margin:0;border-spacing:0}
+        table th{border-bottom:1px solid #808080;padding:5px 0;border-right:1px solid #808080;margin:0}
+        table th:last-child{border-right:none}
+        table td{padding:10px 0;text-align:center;border-bottom:1px solid #808080;border-right:1px solid #808080}
+        table tr:nth-child(odd){background:#e5e5e5}
+        table tr td:nth-child(2){text-align:left;padding:10px}
+        table tr td:last-child{border-right:none}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('#all-check').change(function(){
+				if(this.checked){//cehcked는 체크박스나 라디오버튼의 체크를 하거나 해지할때 사용한다.
+					$('td').children('input').prop('checked',true);
+					//prop함수는 개발자가 DB에 값을 전달하기 위해 사용한다.
+					$('td').children('input').attr('checked', 'checked');
+				}else{
+					$('td').children('input').prop('checked',false);
+					$('td').children('input').removeAttr('checked', '');
+				}
+			})
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col style="width:5%" />
+            <col style="width:35%" />
+            <col style="width:15%" />
+            <col style="width:15%" />
+            <col style="width:15%" />
+        </colgroup>
+        <tr>
+            <th><input type="checkbox" id="all-check" /></th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>등록일</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" /></td>
+            <td>Alfreds Futterkiste</td>
+            <td>clearlee</td>
+            <td>Jun.20.2017</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" /></td>
+            <td>7th KIAS Conference on Statistical Physics</td>
+            <td>kevin hartnett</td>
+            <td>Jun.19.2017</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" /></td>
+            <td>Seoul Conference on Frontiers in Quantum Info. Science</td>
+            <td>rebecca boyle</td>
+            <td>Jun.18.2017</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" /></td>
+            <td>The 8th KIAS CAC Summer School</td>
+            <td>natalie wolchover</td>
+            <td>Jun.18.2017</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" /></td>
+            <td>Predicting the Values of the Leptonic CP Violation Phases</td>
+            <td>rebecca boyle</td>
+            <td>Jun.17.2017</td>
+        </tr>
+    </table>
+</body>
+</html>

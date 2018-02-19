@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .faq_data{width:100%;background:#fff;border-top:1px solid #e1e1e1;padding:40px 18px 55px 18px;text-align:left;margin-top:-1px} 
+        .frequently_questions form.search_area{width:100%;display:inline-block}
+        .frequently_questions form.search_area fieldset{width:100%;display:inline-block}
+        .frequently_questions form.search_area select{width:129px;height:37px;float:left;padding:0 10px}
+        .frequently_questions form.search_area input.search_text{width:623px;height:37px;margin-left:10px;float:left;padding:0 1%}
+        .frequently_questions form.search_area input.black_btn_st{margin-left:10px;float:left;margin-top:4px;font-weight:100}
+        .frequently_questions dl.questions_list{width:100%;height:361px;display:inline-block;margin-top:12px;font-family: 'Noto Sans KR';font-size:12px}
+        .frequently_questions dl.questions_list dt{width:100%;padding:13px 10px 13px 46px;text-align:left;border-bottom:1px solid #f0f0f0;background:url(images/q_mark.gif) no-repeat 16px 13px}
+        .frequently_questions dl.questions_list dt span{cursor:pointer;color:#373737}
+        .frequently_questions dl.questions_list dd{width:100%;padding:10px 10px 10px 46px;text-align:left;border-bottom:1px solid #f0f0f0;background:#fafafa url(images/a_mark.gif) no-repeat 16px 13px;color:#373737;line-height:20px;display:none}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('dt span').click(function(){//dt가 아닌 span을 선택자로 넣어준 이유는 글자를 클릭했을때 나오게 하기 위해
+				$('.questions_list dd').slideUp(300);
+				//모든 dd를 닫게 만들지만 하단의 슬라이드 토글에 의해 본인은 계속 나오게 된다.
+				$(this).parent('dt').next('dd').slideToggle(300);
+			})
+        });
+    </script>
+</head>
+<body>
+    <!--자주하는 질문-->
+    <div class="faq_data frequently_questions" id="frequently_questions">
+        <dl class="questions_list">
+            <dt><span>FAQ TEST LIST1</span></dt>
+            <dd>답변내용입니다. 답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.</dd>
+            <dt><span>FAQ TEST LIST2</span></dt>
+            <dd>답변내용입니다. 답변3내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.</dd>
+            <dt><span>FAQ TEST LIST4</span></dt>
+            <dd>답변내용입니다. 답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.</dd>
+            <dt><span>FAQ TEST LIST5</span></dt>
+            <dd>답변내용입니다. 답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.답변내용입니다.</dd>
+        </dl>
+    </div>
+</body>
+</html>

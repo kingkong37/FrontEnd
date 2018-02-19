@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>HMG Learning System</title>
+    <link href="css/hd_motor.css" rel="stylesheet" type="text/css"/>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="modules/jquery.flexslider-min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+			$('.main_banner').flexslider({
+				animation : '',
+				controlNav : true,
+				slideshow : true,
+				slideshowSpeed : 1000,
+				animationLoop : true,
+				pauseOnHover : true,
+				easing : 'swing',//움직임의 형태(swing:부드럽게 도착)
+			})
+			$('.menu_data').hover(function(){
+				$(this).find('.over_details').stop().animate({top : '0px'});
+			},function(){
+				$(this).find('.over_details').stop().animate({top : '220px'});
+			})
+        });   
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <div id="header">
+            <!--Member-->
+            <div class="member_menu_area">
+                <div class="member_menu">
+                    <h1><a href="index.html"><img src="images/logo.gif" alt="현대 자동차그룹" /></a></h1>
+                    <form>
+                        <fieldset>
+                            <legend>검색</legend>
+                            <div class="search">
+                                <input type="text" class="search_enter" value="Search" />
+                                <a href="#"><img src="images/search_btn.gif" /></a>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <ul>
+                        <li><a href="#">신승식(greg.shin@hyundai.com)</a>&nbsp;님</li>
+                        <li class="log"><a href="#">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//Member-->
+            <div class="header_content_area">
+                <div class="header_content">
+                    <!--Menu-->
+                    <div class="main_menu">
+                        <ul class="gnb_menu">
+                            <li>
+                                <a href="#" class="btn1">Course Catalog</a>
+                                <ul class="TwoDepth1">
+                                    <li><a href="#">교육체계도</a></li>
+                                    <li><a href="#">수강신청(과정검색)</a></li>
+                                    <li><a href="#">수강신청확인/취소</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="btn2"><span>My Learning</span></a>
+                                <ul class="TwoDepth2">
+                                    <li><a href="#">나의강의실(1:1차수변경, 차수변경, 평가/설문)</a></li>
+                                    <li><a href="#">교육 신청/결과등록</a></li>
+                                    <li><a href="#">E-TEST</a></li>
+                                    <li><a href="#">교육점수(어학, 자격증, 교육점수)</a></li>
+                                    <li><a href="#">현업적용코칭</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="btn3"><span>팀교육정보</span></a>
+                                <ul class="TwoDepth3">
+                                    <li><a href="#">교육결재</a></li>
+                                    <li><a href="#">팀진단</a></li>
+                                    <li><a href="#">팀IDP</a></li>
+                                    <li><a href="#">팀교육점수현항(어학, 자격증, 교육점수)</a></li>
+                                    <li><a href="#">현업적용코칭</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="btn4"><span>진단/IDP</span></a>
+                                <ul class="TwoDepth4">
+                                    <li><a href="#">진단개요</a></li>
+                                    <li><a href="#">진단실시</a></li>
+                                    <li><a href="#">시물레이션진단</a></li>
+                                    <li><a href="#">IDP개요</a></li>
+                                    <li><a href="#">IDP계획</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//Menu-->
+                    <!--Search-->
+                    <div class="content_search">
+                        <div class="search_other_btn">
+                            <a href="#">Knowledge+</a>
+                        </div>
+                    </div>
+                    <!--//Search-->
+                </div>
+            </div>
+        </div>
+        <!--//Header-->
+
+        <!--Content-->
+        <div id="container">
+            <!--Top Visual-->
+            <div class="visual_area">
+                <!--Banner-->
+                <div class="main_banner flexslider">
+                    <ul class="slides">
+                        <li><img src="images/main_banner01.jpg" alt="" /></li>
+                        <li><img src="images/main_banner02.jpg" alt="" /></li>
+                        <li><img src="images/main_banner03.jpg" alt="" /></li>
+                    </ul>
+                </div>
+                <!--//Banner-->
+                <!--Top Visual Data-->
+                <div class="top_visual_data">
+                    <!--Info-->
+                    <div class="infomation_area">
+                        <!--calendar-->
+                        <div class="calendar info-data" id="calendar">
+                            <div class="title">
+                                <ul>
+                                    <li class="previous_month"><img src="images/previous_month.gif" alt="이전달" /></li>
+                                    <li class="this_month">2015년 8월</li>
+                                    <li class="next_month"><img src="images/next_month.gif" alt="다음달" /></li>
+                                </ul>
+                            </div>
+                            <div class="calendar_date">
+                                <table cellspacing="0" cellpadding="0">
+                                    <thead>
+                                        <tr>
+                                            <th>SUN</th>
+                                            <th>MON</th>
+                                            <th>TUE</th>
+                                            <th>WED</th>
+                                            <th>THU</th>
+                                            <th>FRI</th>
+                                            <th>SAT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div></div></td>
+                                            <td><div></div></td>
+                                            <td><div></div></td>
+                                            <td><div></div></td>
+                                            <td class="date_on"><div>1</div></td>
+                                            <td class="date_on"><div>2</div></td>
+                                            <td class="date_on"><div>3</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date_on"><div>4</div></td>
+                                            <td class="date_on"><div>5</div></td>
+                                            <td class="date_schedule"><div>6<span>2</span></div></td>
+                                            <td class="date_on"><div>7</div></td>
+                                            <td class="date_on"><div>8</div></td>
+                                            <td class="date_on"><div>9</div></td>
+                                            <td class="date_on"><div>10</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date_on"><div>11</div></td>
+                                            <td class="date_on"><div>12</div></td>
+                                            <td class="date_on"><div>13</div></td>
+                                            <td class="date_today"><div>14</div></td>
+                                            <td class="date_on"><div>15</div></td>
+                                            <td class="date_on"><div>16</div></td>
+                                            <td class="date_on"><div>17</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date_on"><div>18</div></td>
+                                            <td class="date_on"><div>19</div></td>
+                                            <td class="date_on"><div>20</div></td>
+                                            <td class="date_on"><div>21</div></td>
+                                            <td class="date_on"><div>22</div></td>
+                                            <td class="date_on"><div>23</div></td>
+                                            <td class="date_on"><div>24</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date_on"><div>25</div></td>
+                                            <td class="date_on"><div>26</div></td>
+                                            <td class="date_on"><div>27</div></td>
+                                            <td class="date_on"><div>28</div></td>
+                                            <td class="date_on"><div>29</div></td>
+                                            <td class="date_on"><div>30</div></td>
+                                            <td class="date_on"><div>31</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--//calendar-->
+                    </div>
+                    <!--//Info-->
+                </div>
+                <!--//Top Visual Data-->
+            </div>
+            <!--//Top Visual-->
+
+            <!--Content area-->
+            <div class="content_area">
+                <div class="contents">
+                    <div class="content_menu_section">
+                        <!--Menu1-->
+                        <div class="menu_data MyStudyCurrent">
+                            <span>4</span>
+                            <div class="icon-text">
+                                <ul>
+                                    <li class="icon"><img src="images/content_menu_icon1.png" alt="" /></li>
+                                    <li class="text">나의 학습현황</li>
+                                </ul>
+                            </div>
+                            <div class="over_details over_details1">
+                                <ul>
+                                    <li class="head_title"><span><img src="images/content_menu_i.png" alt="" /></span>나의 학습현황</li>
+                                    <li class="text">그룹공통교육1<br />2015-01-01~2015-01-10</li>
+                                    <li class="text">그룹공통교육2<br />2015-01-11~2015-01-20</li>
+                                    <li class="text">그룹공통교육3<br />2015-02-01~2015-02-10</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--//Menu1-->
+                        <!--Menu2-->
+                        <div class="menu_data MyGradeCurrent">
+                            <span>10</span>
+                            <div class="icon-text">
+                                <ul>
+                                    <li class="icon"><img src="images/content_menu_icon2.png" alt="" /></li>
+                                    <li class="text">나의 학점이수현황</li>
+                                </ul>
+                            </div>
+                            <div class="over_details over_details2">
+                                <ul>
+                                    <li class="head_title"><span><img src="images/content_menu_i.png" alt="" /></span>나의 학점이수현황</li>
+                                    <li class="text">2015년 필수과정 : 100개</li>
+                                    <li class="text">수료과정 : 75개</li>
+                                    <li class="text">미수료과정 : 25개</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--//Menu2-->
+                        <!--Menu3-->
+                        <div class="menu_data Notice" style="width:226px">
+                            <span>6</span>
+                            <div class="icon-text">
+                                <ul>
+                                    <li class="icon"><img src="images/content_menu_icon3.png" alt="" /></li>
+                                    <li class="text">공지사항</li>
+                                </ul>
+                            </div>
+                            <div class="over_details over_details3">
+                                <ul>
+                                    <li class="head_title"><span><img src="images/content_menu_i.png" alt="" /></span>공지사항</li>
+                                    <li class="text">&middot; 2015년도 교육일정<span>2015-00-00</span></li>
+                                    <li class="text">&middot; 교육일정 변경<span>2015-00-00</span></li>
+                                    <li class="text">&middot; [일정변경]그룹 공통...<span>2015-00-00</span></li>
+                                    <li class="text">&middot; 임시 연락망<span>2015-00-00</span></li>
+                                    <li class="text">&middot; 장기간 미사용으로...<span>2015-00-00</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--//Menu3-->
+                        <!--Search-->
+                        <div class="education">
+                            <a href="#">
+                                <span>전체교육체계도</span>
+                            </a>
+                        </div>
+                        <!--//Search-->
+                    </div>
+                    <!--과정-->
+                    <div class="education_process">
+                        <div class="process_data">
+                            <h2>추천교육과정 - <span>4건</span></h2>
+                            <div class="education_info">
+                                <ul>
+                                    <li class="link"><a href="#">그룹공통 직무교육과정 01</a></li>
+                                    <li>[집합]그룹 공통 교육시스템 과정 추천해드립니다.</li>
+                                    <li class="link"><a href="#">그룹공통 직무교육과정 01</a></li>
+                                    <li>[집합]그룹 공통 교육시스템 과정 추천해드립니다.</li>
+                                    <li class="link"><a href="#">그룹공통 직무교육과정 01</a></li>
+                                    <li>[집합]그룹 공통 교육시스템 과정 추천해드립니다.</li>
+                                </ul>
+                                <a href="#" class="more">more</a>
+                            </div>
+                        </div>   
+                        <div class="process_data">
+                            <h2>인기교육과정 - <span>12건</span></h2>
+                            <div class="education_info">
+                                <ul>
+                                    <li class="link"><a href="#">파워포인트 2010 고급과정</a></li>
+                                    <li>[집합]그룹 공통 교육시스템 과정 추천해드립니다.</li>
+                                    <li class="link"><a href="#">파워포인트 2010 고급과정</a></li>
+                                    <li>[집합]그룹 공통 교육시스템 과정 추천해드립니다.</li>
+                                    <li class="link"><a href="#">파워포인트 2010 고급과정</a></li>
+                                    <li>[집합]그룹 공통 교육시스템 과정 추천해드립니다.</li>
+                                </ul>
+                                <a href="#" class="more">more</a>
+                            </div>
+                        </div>
+                        <div class="process_data process_data_last">
+                            <h2>그룹공통과정 - <span>8건</span></h2>
+                            <div class="education_info">
+                                <ul>
+                                    <li class="link"><a href="#">현대자동차그룹 공통과정 01</a></li>
+                                    <li>[집합]그룹 공통 교육시스템 과정 추천해드립니다.</li>
+                                    <li class="link"><a href="#">현대자동차그룹 공통과정 01</a></li>
+                                    <li>[집합]그룹 공통 교육시스템 과정 추천해드립니다.</li>
+                                    <li class="link"><a href="#">현대자동차그룹 공통과정 01</a></li>
+                                    <li>[집합]그룹 공통 교육시스템 과정 추천해드립니다.</li>
+                                </ul>
+                                <a href="#" class="more">more</a>
+                            </div>
+                        </div>            
+                    </div>
+                    <!--//과정-->
+                </div>
+            </div>
+            <!--//Content area-->
+        </div>
+        <!--//Content-->
+
+        <div id="footer">
+            <div class="footer_menu_area">
+                <div class="footer_menu">
+                    <ul class="left_m">
+                        <li class="menu1"><a href="#">개인정보처리방침</a></li>
+                        <li class="menu2"><a href="#">HELPDESK</a></li>
+                    </ul>
+                    <div class="right_m">
+                        <div class="list">
+                            <ul>
+                                <li>총괄관리자</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="admin">관리자</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">COPYRIGHT 2015 HYUNDAI MOTOR COMPANY. ALL RIGHTS RESERVED</div>
+        </div>
+
+    </div>
+</body>
+</html>

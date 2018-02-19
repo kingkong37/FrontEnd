@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.left').click(function(){
+				$('div').animate({'left' : '-=' + "50px"})
+			});
+			$('.right').click(function(){
+				$('div').animate({'left' : '+=' + "50px"})//CSS의 상황을 변경하는것이므로 right설정을 사용하면 안된다.
+			})
+        });
+    </script>
+</head>
+<body>
+	<div style="width:100px;height:100px;background:red;position:absolute;top:40px;left:40px"></div>
+	<button class="left">왼쪽</button>
+	<button class="right">오른쪽</button>
+</body>
+</html>

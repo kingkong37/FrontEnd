@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style type="text/css">
+        html,body{text-align:center;margin:0;padding:0}
+        ul,li{margin:0;padding:0;list-style:none}
+        header{width:100%;background:#2299d5}
+		/*CSS추가*/
+		header.move{position:fixed;left:0;top:0}
+		/*//CSS추가*/
+        header div{width:1000px;position:relative;margin:0 auto}
+        header div h1{padding:5px 0;margin:0;display:inline-block}
+        nav{width:100%;height:40px;display:inline-block;background:#55bbee;border-bottom:1px solid #4eafe0}
+        nav div{width:1000px;margin:0 auto;display:inline-block}
+        nav div a{float:left}
+        .banner, footer.{width:100%;display:inline-block;margin-top:-7px} 
+        .content{width:1000px;margin:0 auto;display:inline-block}
+        .news1{float:left;border:1px solid #808080}
+        .news2{float:left;border:1px solid #808080}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$(window).scroll(function(){
+				if($(document).scrollTop() > 0){//스크롤의 시작 됐을때의 공식
+					$('header').addClass('move');//실행되는 함수 영역
+				}else{
+					$('header').removeClass('move');//원래상태로 돌아가는 함수 영역
+				}
+			})
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1><img src="images/logo.png" /></h1>
+        </div>        
+    </header>
+    <nav>
+        <div>
+            <a href="#"><img src="http://placehold.it/200x40" /></a>
+            <a href="#"><img src="http://placehold.it/200x40" /></a>
+            <a href="#"><img src="http://placehold.it/200x40" /></a>
+            <a href="#"><img src="http://placehold.it/200x40" /></a>
+            <a href="#"><img src="http://placehold.it/200x40" /></a>
+        </div>
+    </nav>
+    <div class="banner"><img src="http://placehold.it/1000x480" /></div>
+    <div class="content">
+        <div class="news1"><img src="http://placehold.it/498x300" /></div>
+        <div class="news2"><img src="http://placehold.it/498x300" /></div>
+        <div class="news1"><img src="http://placehold.it/498x300" /></div>
+        <div class="news2"><img src="http://placehold.it/498x300" /></div>
+    </div>
+    <div class="footer"><img src="http://placehold.it/1000x50" /></div>
+</body>
+</html>

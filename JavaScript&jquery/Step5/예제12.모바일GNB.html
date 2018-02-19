@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/m_gnb.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//Mibile GNB Open
+            $('.mobile a.m_open').click(function () {
+                $(".M_gnb_menu_area").animate({ left: '0' });
+                $(".black_bg").fadeIn(500);
+                return false;
+            });
+            //Mibile GNB Close
+            $('span.M_menu_close').click(function () {
+                $(".M_gnb_menu_area").animate({ left: '-100%' });
+                $(".black_bg").fadeOut(500);
+            });
+			//Menu Drop
+			$('li.d1_list > a').click(function(){
+				$('li.d1_list > a').removeClass('on');
+				$('ul.depth2').slideUp();
+				$(this).addClass('on');
+				$(this).next('ul.depth2').slideDown();
+				return false;
+			})
+			$('ul.depth2 li.d2_list > a').click(function(){
+				$('ul.depth3').slideUp();
+				$(this).next('ul.depth3').slideDown();
+			})
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="mobile">
+            <a href="#" class="m_open"><img src="images/m_menu_btn.gif" /></a>
+            <div class="M_gnb_menu_area">
+                <span class="M_menu_close"><img src="images/m_menu_close.png" class="w100"></span>
+                <div class="M_gnb_menu">
+                    <!--SNS Link-->
+                    <div class="sns_link">
+                        <img src="images/m_sns_link.gif" class="w100">
+                    </div>
+                    <!--//SNS Link-->
+                    <ul class="depth1">
+                        <!--사업소개-->
+                        <li class="d1_list">
+                            <a href="#">사업소개<img src="images/m_gnb_minus.png"></a>
+                            <ul class="depth2">
+                                <li class="d2_list">
+                                    <a href="#">문화예술</a>
+                                    <ul class="depth3">
+                                        <li class="d3_list"><a href="#">문화예술 나눔</a></li>
+                                        <li class="d3_list"><a href="#">예술인재 양성</a></li>
+                                        <li class="d3_list"><a href="#">일상 속 문화가치 확산</a></li>
+                                    </ul>
+                                </li>
+                                <li class="d2_list">
+                                    <a href="#">인재양성</a>
+                                    <ul class="depth3">
+                                        <li class="d3_list"><a href="#">장학</a></li>
+                                        <li class="d3_list"><a href="#">교육지원</a></li>
+                                        <li class="d3_list"><a href="#">교육재능기부</a></li>
+                                    </ul>
+                                </li>
+                                <li class="d2_list">
+                                    <a href="#">의료지원</a>
+                                    <ul class="depth3">
+                                        <li class="d3_list"><a href="#">국내의료</a></li>
+                                        <li class="d3_list"><a href="#">해외의료</a></li>
+                                    </ul>
+                                </li>
+                                <li class="d2_list">
+                                    <a href="#">사회복지</a>
+                                    <ul class="depth3">
+                                        <li class="d3_list"><a href="#">다문화가정·북한이탈주민</a></li>
+                                        <li class="d3_list"><a href="#">보호대상아동</a></li>
+                                        <li class="d3_list"><a href="#">청년 사회적기업가</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--//사업소개-->
+                        <!--재단소개-->
+                        <li class="d1_list">
+                            <a href="#">재단소개<img src="images/m_gnb_minus.png"></a>
+                            <ul class="depth2">
+                                <li class="d2_list">
+                                    <a href="#">재단소개</a>
+                                    <ul class="depth3">
+                                        <li class="d3_list"><a href="#">설립목적</a></li>
+                                        <li class="d3_list"><a href="#">이사장 인사말</a></li>
+                                        <li class="d3_list"><a href="#">이사진 소개 및 조직도</a></li>
+                                        <li class="d3_list"><a href="#">연혁</a></li>
+                                        <li class="d3_list"><a href="#">CI소개</a></li>
+                                    </ul>
+                                </li>
+                                <li class="d2_list">
+                                    <a href="#">재단운영</a>
+                                    <ul class="depth3">
+                                        <li class="d3_list"><a href="#">정관</a></li>
+                                        <li class="d3_list"><a href="#">경영공시</a></li>
+                                        <li class="d3_list"><a href="#">실적표</a></li>
+                                    </ul>
+                                </li>
+                                <li class="d2_list">
+                                    <a href="#">재단동향</a>
+                                    <ul class="depth3">
+                                        <li class="d3_list"><a href="#">보도자료</a></li>
+                                        <li class="d3_list"><a href="#">소식지</a></li>
+                                        <li class="d3_list"><a href="#">뉴스레터</a></li>
+                                        <li class="d3_list"><a href="#">발간물</a></li>
+                                    </ul>
+                                </li>
+                                <li class="d2_list"><a href="/com/fiMap.do">찾아오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <!--//재단소개-->
+                        <!--알림터-->
+                        <li class="d1_list">
+                            <a href="#">알림터<img src="images/m_gnb_minus.png"></a>
+                            <ul class="depth2">
+                                <li class="d2_list"><a href="#">공지사항</a></li>
+                                <li class="d2_list"><a href="#">사연남기기</a></li>
+                            </ul>
+                        </li>
+                        <!--//알림터-->
+                    </ul>
+                </div>
+            </div>
+            <div class="black_bg"></div>
+            <img src="images/mobile_menu.jpg" />
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="css/dropmenu.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+		//전체 드랍메뉴를 만들기위해서는 html의 태그 구조와 css를 확인한다.
+        $(document).ready(function () {
+			$('.drop_menu > ul > li > a').bind('mouseover' , function(){//a.depth1에 마우스가 올라간 상황이
+				if($('.drop_menu').height() < 71){//메뉴 전체를 감사는요소인(.drop_menu)가 70보다 작다면
+					$('.drop_menu').stop().animate({height:253},500);
+				}
+			})
+			$('.drop_menu').bind('mouseleave',function(){//사이즈가 늘어난 drop_menu에 마우스가 벗어나면
+				$('.drop_menu').stop().animate({height:70},500);
+			})
+			//부모요소의 on추가
+			$('li.d1 ul').hover(function(){
+				$(this).parent('li.d1').addClass('on');
+			});
+			$('li.d1 ul').mouseleave(function(){
+				$('li.d1').removeClass('on');
+			})
+        });
+    </script>
+</head>
+<body>
+    <div class="gnb_area">
+        <div class="gnb">
+            <h1 class="logo"><a href="/"><img src="images/logo.gif" alt="로고" /></a></h1>
+            <div class="drop_menu">
+                <ul class="main_menu">
+                    <li class="d1 mm1">
+                        <a href="#" class="depth1">MY ACCOUNT</a>
+                        <ul class="m1">
+                            <li><a href="#">마일리지 잔여현황</a></li>
+                            <li><a href="#">마일리지 적립/사용내역</a></li>
+                            <li><a href="#">서비스 이용현황</a></li>
+                            <li><a href="#">가족 마일리지</a></li>
+                            <li><a href="#">회원정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 mm2">
+                        <a href="#" class="depth1">멤버십 가이드</a>
+                        <ul class="m2">
+                            <li><a href="#">멤버십 소개</a></li>
+                            <li><a href="#">BLACK 멤버십</a></li>
+                            <li><a href="#">GOLD 멤버십</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 mm3">
+                        <a href="#" class="depth1">멤버십 서비스</a>
+                        <ul class="m3">
+                            <li><a href="#">차량케어 서비스</a></li>
+                            <li><a href="#">마일리지 서비스</a></li>
+                            <li><a href="#">VIP 컨시어지 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 mm4">
+                        <a href="#" class="depth1">제휴 서비스</a>
+                        <ul class="m4">
+                            <li><a href="#">제휴안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 mm5">
+                        <a href="#" class="depth1">고객지원</a>
+                        <ul class="m5">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">서비스 변경안내</a></li>
+                            <li><a href="#">이벤트 내역</a></li>
+                            <li><a href="#">고객상담/문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

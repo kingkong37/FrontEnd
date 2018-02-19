@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$(window).scroll(function(){
+				var winHeight = $(window).scrollTop() + $(window).height();
+				//브라우져의 스크롤 위치값(사용자가 움직인 수치-유동) + 브라우져의높이(사용자의 환경 - 유동적)
+				var docHeight = $(document).height();//고종된 수치(브라우져가 작아져도 문서의 크기는 변하지 않는다. - 고정)
+				
+				if(winHeight == docHeight){
+					for (i=0; i <1; i++){
+						$('<h1>스크롤텍스트</h1>').appendTo('body');
+					}
+				}
+				//브라우져의 스크롤은 문서의 길이, 브라우져의 크기에 따라 생성여부가 결정된다.
+				//그러므로 사용자의 환경과 문서의 길이가 스크롤 스크립트를 만들어내는 중요한 요소이다.
+			})
+        });
+    </script>
+</head>
+<body>
+    <div style="height:1000px;">
+
+    </div>
+</body>
+</html>

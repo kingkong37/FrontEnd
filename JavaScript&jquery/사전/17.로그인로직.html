@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    var user_id = prompt("아이디를 입력하세요.");
+
+    if(user_id == "admin"){
+	  //true start
+	  var user_pw = prompt("비밀번호를 입력");
+	  if(user_pw == 1234){
+	    //true start
+		alert("정상적으로 로그인 되었습니다."+ "\n" + user_id + "님 반갑습니다.")
+	  } else{//비밀번호 틀리면 실행
+	    alert("비밀번호가 잘못되었습니다.");
+	  }
+	} else{//아이디부터 틀리면 실행
+	   alert("ID가 일치하지 않습니다.");
+	}
+
+
+
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

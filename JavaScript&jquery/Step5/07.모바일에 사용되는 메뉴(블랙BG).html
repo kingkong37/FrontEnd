@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<style type="text/css">
+		.menu{width:90%;height:100%;background:#ff9900;position:fixed;bottom:0;right:-100%;z-index:9}
+		.black_bg{width:100%;height:100%;background:rgba(0,0,0,0.5);position:fixed;bottom:0;left:0;display:none}
+	</style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.open').click(function(){
+				$('.menu').animate({right:'0'})
+				$('.black_bg').fadeIn();
+			})
+			$('.close').click(function(){
+				$('.menu').animate({right:'-100%'})
+				$('.black_bg').fadeOut();
+			});
+			$('.black_bg').click(function(){
+				$('.menu').animate({right:'-100%'})
+				$(this).fadeOut();
+			})
+        });
+    </script>
+</head>
+<body>
+	<button class="open">메뉴열기</button>
+	<!--Menu-->
+	<div class="menu">
+		<button class="close">메뉴닫기</button>
+	</div>
+	<!--//Menu-->
+	<div class="black_bg"></div>
+</body>
+</html>

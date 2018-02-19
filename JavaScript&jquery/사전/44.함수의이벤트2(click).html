@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function start(){
+	   document.write('<a onclick="end();">다음</a>')//document.write는 body에 작성된 내용을 삭제하고 새롭게 작성하는 특징이 있음
+	}
+	function end(){
+	  alert("마지막페이지");
+	  prompt("이동할 페이지 입력")
+	}
+  </script>
+ </head>
+ <body>
+  <a href="#" onclick="start();">시작</a>
+ </body>
+</html>

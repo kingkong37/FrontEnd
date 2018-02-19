@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    var text = ['aa', 'bb', 'cc', 'dd'];
+    text.shift();//첫번째 배열 제거
+    text.pop();//마지막 배열 제거
+	alert(text);// return = bb, cc
+
+    var kor = ['가가', '나나', '다다', '라라', '마마'];
+	kor.splice(3);//3번째 부터 전부 삭제, splice(0)은 사용할 수 없다
+	alert(kor);// return = 가가 나나 다다
+
+    var number = ['1', '2', '3', '4', '5'];
+	number.splice(1,3);//배열[1]~배열[3]까지 삭제
+	alert(number)// return = 1,5
+
+	var number2 = ['11', '22', '33', '44', '55'];
+	number2.shift();//삭제나 추가로 선언해주면 배열이 다시 정렬된다
+	number2.splice(1,2);//다시 정렬된 배열로 삭제 및 추가가 된다
+	alert(number2)// return = 22,55
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

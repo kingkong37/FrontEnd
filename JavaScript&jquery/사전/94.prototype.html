@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	//프로토타입은 객체의 원형이라한다.
+
+	function aa(){}
+	aa.prototype.Topranking = true;
+	
+	function bb(){}
+	bb.prototype = new aa();//new aa()는 aa가 bb의 부모요가 될 수 있게 객체가 대입되게 한것
+	
+	function cc(){}
+	cc.prototype = new bb();
+	
+	var tt = new cc();
+
+	alert(tt.Topranking);
+	/*
+	tt요소에 원하는 데이터 값이 없으므로 상위 부모요소를 찾아 값이 나올때까지 검색한다.
+	prototype의 사용 목적은 해당 요소에 값이 없어도 사위요소에 값이 있다면 출력이 가능하게 만들 수있다.
+	*/
+
+
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

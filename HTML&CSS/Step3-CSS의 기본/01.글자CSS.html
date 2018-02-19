@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+		/*CSS의 기본 작성법 : 대상{Key:Value}*/
+		body{color:blue}/*글자의 색상*/
+		h1{color:red;
+			 text-align:center;/*글자의 정렬 : left,right,center*/
+			 font-family:"궁서" , Dotum;
+			 /*
+			 글꼴 - 글꼴이 한글일 경우 ""로 정의 ,를 이용하여 서체가 없을때 다른서체로 대체
+			 서체에 이름에 띄어쓰기가 있을경우 영문이어도 ""로 표기
+			 */
+		}
+		h2{text-indent:100px}/*텍스트 들여쓰기 한줄만가능*/
+		p{
+			font-size:20px;/*글자크기 em단위는 기본설정값에서 배수로 키움*/
+			font-weight:bold;/*글자의 두께 : 400-normal,700-bold,800-extraBold 단, 서체에 따라 다름*/
+			line-height:40px;/*텍스트의 줄높이*/
+			letter-spacing:30px;/*글자의 간격*/
+		}
+		
+		h4{text-transform:uppercase}/*대문자로 변환*/
+		h3{
+			text-transform:lowercase;/*소문자로 변환*/
+			word-spacing:20px;/*단어와 단어의 간격*/
+		}
+		h6{text-transform:capitalize}/*첫글자 대문자 변환*/
+		
+		h1{text-align:right;font-weight:normal}/*css의 순서상 상위에 명시했더라도 하단에서 다시 설정하면 변경됨*/
+
+		h1{color:orange!important}/*!important는 inline-style을 무시하고 설정함*/
+  </style>
+ </head>
+ <body>
+  <h1 style="color:yellow">스타일의 이해</h1><!--inline-style은 css를 무시하고 해당 설정으로 만들어짐-->
+  <h2>CSS알기</h2>
+  <p>태그로 css만들기<br/>줄바꿈</p>
+  <h4>abcdefg</h4>
+  <h3>ABC DE FG</h3>
+  <h6>red</h6>
+ </body>
+</html>

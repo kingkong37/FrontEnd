@@ -1,0 +1,192 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+/*Layout*/
+#wrap{width:100%;height:100%;font-family:'NanumSquare', sans-serif;position:relative;display:block;text-align:center}
+/*header*/
+.header{width:100%;display:inline-block}
+    /*Log*/
+    .header .user_log{width:1200px;margin:0 auto}
+        .header .user_log ul{float:right;padding:29px 0}
+        .header .user_log ul li{display:inline-block;margin-right:16px}
+        .header .user_log ul li a{color:#777;line-height:12px;font-family: 'Noto Sans KR'}
+        .header .user_log ul li a img{margin-right:3px;vertical-align:top}
+    /*Gnb*/
+    .gnb_area{width:100%;height:70px;background:#171817;display:inline-block}
+        .gnb_area .gnb{width:1200px;height:70px;margin:0 auto;position:relative;display:inline-block}
+        .gnb_area .gnb h1.logo{position:absolute;left:0;top:0;text-align:left;width:390px;z-index:9}
+        .gnb_area .gnb .drop_menu{width:100%;height:70px;position:absolute;right:0;top:0;z-index:8;overflow:hidden;background:#fff url(../images/drop_menu_bg.gif) no-repeat left top}
+        .gnb_area .gnb .drop_menu ul.main_menu{width:100%;display:inline-block;margin-right:30px;text-align:right;padding:0 15px}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1{display:inline-block;position:relative}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1 a.depth1{width:100%;line-height:70px;color:#fff;font-size:13px;display:block;text-align:center;font-family: 'Noto Sans KR'}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1 a.depth1:hover{background:#666}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1.on a.depth1{background:#666}
+        .gnb_area .gnb .drop_menu ul.main_menu li.mm1{width:170px}
+        .gnb_area .gnb .drop_menu ul.main_menu li.mm2{width:165px}
+        .gnb_area .gnb .drop_menu ul.main_menu li.mm3{width:165px}
+        .gnb_area .gnb .drop_menu ul.main_menu li.mm4{width:152px}
+        .gnb_area .gnb .drop_menu ul.main_menu li.mm5{width:138px}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1 ul{width:100%;position:absolute;left:0;top:85px}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1 ul li{width:100%;display:inline-block;text-align:left}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1 ul li a{font-size:13px;line-height:30px;font-family: 'Noto Sans KR'}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1 ul li a:hover{color:#000}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1 ul.m1{left:45px}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1 ul.m2 li{padding-left:45px}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1 ul.m3 li{padding-left:45px}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1 ul.m4 li{padding-left:45px}
+        .gnb_area .gnb .drop_menu ul.main_menu li.d1 ul.m5 li{padding-left:45px}
+
+/*Container*/
+.container{width:100%;display:inline-block;padding:0 0 15px 0}
+    .content{width:1200px;margin:0 auto;display:inline-block;position:relative;min-height:623px}
+    /*Common My Position*/
+    .my_position{width:100%;display:inline-block;padding:20px 0}
+    .my_position ul{width:1200px;display:inline-block;text-align:right;margin:0 auto}
+    .my_position ul li{display:inline-block;color:#777;line-height:12px;font-family: 'Noto Sans KR'}
+    .my_position ul li a{color:#777}
+    .my_position ul li.arrow{margin:0 5px}
+    /*Common Tab*/
+    div.com_tab{width:100%;display:inline-block;text-align:left}
+    div.com_tab ul{width:100%;display:inline-block}
+    div.com_tab ul li{width:180px;height:49px;float:left;text-align:center}
+    div.com_tab ul li a{width:100%;display:block;line-height:49px;font-size:14px;color:#373737;background:url(../images/common/tab_line.gif) no-repeat right center;font-family: 'Noto Sans KR', sans-serif;}
+    div.com_tab ul li a:hover{color:#373737;border-bottom:2px solid #6f7070}
+    div.com_tab ul li a.on{color:#373737;border-bottom:2px solid #6f7070}
+    /*Common Content Title*/
+    h3.con_tit{width:100%;text-align:left;display:inline-block;margin-top:20px;margin-bottom:25px}
+    /*Common Form*/
+    input.text_style{background:#fff;border:1px solid #d4d4d4;font-size:12px;font-family: 'Noto Sans KR', sans-serif;padding:0 5%}
+    textarea.textarea_style{background:#fff;border:1px solid #d4d4d4;font-size:12px;font-family: 'Noto Sans KR', sans-serif;padding:10px;color:#666}
+    select.select_style{background:#fff;border:1px solid #d4d4d4;font-size:12px;font-family: 'Noto Sans KR', sans-serif;color:#666;padding-left:3px}
+    .black_btn_st{width:78px;height:28px;background:#373737;border-radius:1px;border:none;color:#fff;font-family: 'Noto Sans KR', sans-serif;font-size:13px;text-align:center;font-weight:normal;line-height:26px;cursor:pointer}
+    .user_upload{position:relative;float:left}
+    .user_upload .fileField{width:100%;display:inline-block;text-align:left}
+    .user_upload .fileField input.file_input_textbox{height:28px;float:left;border:1px solid #d4d4d4;background:#fafafa;padding:0 2%}
+    .user_upload .fileField input.file_input_button{width:78px;height:28px;background:#373737;border-radius:1px;border:none;color:#fff;font-family: 'Noto Sans KR', sans-serif;font-size:13px;text-align:center;font-weight:normal;line-height:26px;cursor:pointer;margin-left:10px}
+    .user_upload .fileField div.file_input_div input.file_input_hidden{width:100%;height:42px;cursor:pointer;font-size:22px;position:absolute;right:0;top:0;opacity:0;filter:alpha(opacity=0);-ms-filter:"alpha(opacity=0"}
+    /*Common Table Style*/
+    table.table_style1{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;font-family: 'Noto Sans KR', sans-serif;font-size:12px;text-align:center}
+    table.table_style1 tr{border-bottom:1px solid #f0f0f0}
+    table.table_style1 th{padding:18px 0;font-weight:normal;background:#f0f0f0}
+    table.table_style1 td{padding:18px 0}
+    table.table_style1 th{color:#373737;background:#f0f0f0;border-right:1px solid #dedede}
+    table.table_style1 th:last-child{border-right:none}
+    table.table_style1 td{color:#373737;border-right:1px solid #f0f0f0}
+    table.table_style1 td a{color:#373737}
+    table.table_style1 td.last{border-right:none}
+    table.table_style2{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;font-family: 'Noto Sans KR', sans-serif;font-size:12px;text-align:left;border-top:1px solid #f0f0f0}
+    table.table_style2 tr{border-bottom:1px solid #f0f0f0}
+    table.table_style2 th{padding:18px 0 18px 20px;font-weight:normal;background:#fafafa;border-right:1px solid #f0f0f0}
+    table.table_style2 td{padding:18px 3%;text-align:left}
+    table.table_style2 td a{color:#383d41}
+    table.table_style3{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;font-family: 'Noto Sans KR', sans-serif;font-size:12px;text-align:left}
+    table.table_style3 tr{border-bottom:1px solid #f0f0f0}
+    table.table_style3 th{padding:12px 0;font-weight:normal;text-indent:15px;vertical-align:middle;color:#373737;text-align:left}
+    table.table_style3 td{padding:9px 0;font-size:12px;color:#666}
+    table.table_style3 td a{color:#666}
+    /*Common Paging*/
+    .com_paging{width:100%;display:inline-block;text-align:center;margin-top:30px}
+    .com_paging ul{width:100%;display:inline-block}
+    .com_paging ul li{width:28px;height:28px;display:inline-block;}
+    .com_paging ul li a{line-height:28px;color:#333;font-size:12px;font-weight:600}
+    .com_paging ul li a img{vertical-align:middle}
+    .com_paging ul li.now span{background:#373737;font-size:12px;color:#fff;line-height:28px;font-weight:700;display:block}
+    /*Index*/
+    .main_area{width:100%;height:623px;display:inline-block;background:#fff;position:relative;margin-top:54px}
+        /*20170907 배너수정*/
+        .grade_banner{width:592px;height:623px;border:1px solid #e1e1e1;border-right:none;float:left;margin-left:312px;position:relative;overflow:hidden}
+        .grade_banner span.banner_tit{width:100%;text-align:left;display:inline-block;margin-top:17px;padding:0 21px}
+        .grade_banner ul.slides{width:100%}
+        .grade_banner ul.slides li{width:100%;text-align:left}
+        .grade_banner ul.slides > li {
+            -webkit-transition: opacity 1s ease;
+            -moz-transition: opacity 1s ease;
+            transition: opacity 1s ease;
+        }
+        .grade_banner ul.slides li div.img_data{width:100%;background:#fff;text-align:center;margin-top:34px}
+        .grade_banner ul.slides div.info_text{width:100%;padding:0 42px}
+        .grade_banner ul.slides div.info_text h3{width:100%;text-align:left;font-family: 'Noto Sans KR', sans-serif;font-size:30px;font-weight:900;display:inline-block;margin-bottom:30px;text-transform:uppercase}
+        .grade_banner ul.slides div.info_text h3 span{padding-bottom:35px;display:inline-block;background:url(../images/grade_banner_line.gif) no-repeat left bottom}
+        .grade_banner ul.slides div.info_text h3.red_tit{color:#cf0027}
+        .grade_banner ul.slides div.info_text h3.gold_tit{color:#b8995b}
+        .grade_banner ul.slides div.info_text h3.silver_tit{color:#949496}
+        .grade_banner ul.slides div.info_text h3.white_tit{color:#b3b3b3}
+        .grade_banner ul.slides div.info_text h3.black_tit{color:#000}
+        .grade_banner ul.slides div.info_text div.text_area{width:100%;background:#fff;text-align:left;font-size:14px;color:#333;font-family: 'Noto Sans KR', sans-serif;line-height:26px;display:inline-block}
+        .grade_banner ul.flex-direction-nav{width:100%;position:absolute;top:172px;left:0;z-index:99}
+        .grade_banner ul.flex-direction-nav li{width:50%;float:left}
+        .grade_banner ul.flex-direction-nav li a{width:22px;height:42px;position:absolute;text-indent:-99999px}
+        .grade_banner ul.flex-direction-nav li a.flex-prev{left:10px;top:0;background:url(../images/big_arrow_left.png)}
+        .grade_banner ul.flex-direction-nav li a.flex-next{right:10px;top:0;background:url(../images/big_arrow_right.png)}
+
+        .other_area{width:296px;height:623px;border:1px solid #e1e1e1;float:right;position:relative}
+        .other_area .event_area{width:100%;height:325px;border-bottom:1px solid #e1e1e1;display:block;padding:0 18px;position:relative}
+        .other_area .event_area span.event_tit{width:100%;text-align:left;display:inline-block;margin-top:17px}
+        .other_area .event_area .flex-viewport{width:100%;display:inline-block;margin-top:32px;overflow:hidden;text-align:left}
+        .other_area .event_area ol.flex-control-nav{width:100%;text-align:center;margin-top:15px}
+        .other_area .event_area ol.flex-control-nav li{width:10px;height:10px;display:inline-block;margin:0 3px}
+        .other_area .event_area ol.flex-control-nav li a{width:10px;height:10px;background:url(../images/slides_bullet_off.gif);float:left;text-indent:-9999999px;cursor:pointer}
+        .other_area .event_area ol.flex-control-nav li a.flex-active{background:url(../images/slides_bullet_on.gif)}
+        .other_area .customer_center{width:100%;display:block;position:relative}
+        .other_area .customer_center span.center_tit{width:100%;text-align:left;display:inline-block;margin-top:17px;padding:0 18px}
+        .other_area .customer_center .center_link{width:265px;margin:32px auto 0 auto;display:inline-block;border:1px solid #e1e1e1}
+        .other_area .customer_center .center_link a{float:left;background:#f4f7f6;line-height:40px;text-align:center;color:#666;font-size:14px;font-family: 'Noto Sans KR'}
+        .other_area .customer_center .center_link a.faq_link{width:133px;border-right:1px solid #e1e1e1}
+        .other_area .customer_center .center_link a.one_on_one_link{width:130px}
+    /*로그인*/
+    .login_area{width:312px;height:100%;position:absolute;bottom:0;left:0;background:#fff;border:1px solid #e1e1e1;border-right:none}
+        .login_area span.mem_tit{width:100%;display:inline-block;margin-top:17px;text-align:left;padding:0 19px;margin-bottom:55px}
+        .login_area form.login_enter{width:100%;display:inline-block}
+        .login_area form.login_enter fieldset{width:100%;display:inline-block;text-align:left;padding:0 15px 0 13px}
+        .login_area form.login_enter span.login_tit{width:100%;display:inline-block}
+        .login_area form.login_enter ul{width:100%;display:inline-block;margin-top:20px}
+        .login_area form.login_enter ul li{width:100%;display:inline-block;margin-bottom:10px}
+        .login_area form.login_enter ul li.id_save{height:20px;text-align:right;font-size:14px;color:#94999c;font-weight:700;position:relative}
+        .login_area form.login_enter ul li.id_save input{visibility:hidden}
+        .login_area form.login_enter ul li.id_save span{height:20px;position:absolute;right:0;top:0;padding-left:25px;background:url(../images/check_off.gif) no-repeat left top;line-height:20px;cursor:pointer;font-size:12px}
+        .login_area form.login_enter ul li.id_save span.check{background:url(../images/check_on.gif) no-repeat left top}
+        .login_area form.login_enter ul li.user_enter{margin-bottom:10px}
+        .login_area form.login_enter ul li.user_enter span{width:69px;float:left;line-height:50px;font-size:14px;color:#373737}
+        .login_area form.login_enter ul li.user_enter input{width:214px;height:50px;border:1px solid #e1e1e1;background:#f4f7f6;font-size:14px;padding:0 10px}
+        .login_area form.login_enter ul li.login_btn{margin-top:10px}
+        .login_area form.login_enter ul li.login_btn input{width:214px;height:50px;line-height:50px;background:#666;color:#fff;border:none;float:right;cursor:pointer;font-size:14px}
+        .login_area form.login_enter ul li.mem_link{width:214px;float:right;margin-top:10px}
+        .login_area form.login_enter ul li.mem_link a{color:#94999c;font-size:12px;font-weight:700}
+        .login_area form.login_enter ul li.mem_link span{color:#94999c;font-size:12px;font-weight:700;margin:0 5px}
+ 
+/*하단 뉴스 - 공지사항*/
+.news_notice_latest{width:1200px;background:#fff;border:1px solid #e1e1e1;display:inline-block;padding:17px 25px;position:relative;margin:0 auto 30px auto}
+    .news_notice_latest .flex-viewport{width:350px;float:left}
+    .news_notice_latest .latest_tit{float:left;font-size:14px;color:#000;font-weight:700}
+    .news_notice_latest ul.latest_data{width:330px;height:14px;overflow:hidden;float:left;font-size:14px;margin-left:10px}
+    .news_notice_latest ul.latest_data li{width:100%;display:inline-block;color:#333}
+    .news_notice_latest ul.latest_data li a{width:220px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;float:left}
+    .news_notice_latest ul.latest_data li span{color:#ccc;margin:0 20px}
+    .news_notice_latest div.control{width:82px;position:absolute;right:25px;top:17px;text-align:center}
+    .news_notice_latest div.control .btn_area{width:100%;display:inline-block}
+    .news_notice_latest div.control a.pre_btn{float:left}
+    .news_notice_latest div.control a.next_btn{float:right}
+    .news_notice_latest div.control div.p_num{position:absolute;line-height:20px;left:30px;top:0}
+    .news_notice_latest div.control div.p_num span{display:inline-block;vertical-align:middle}
+	/*페이징처리를위한 CSS*/
+	div.control div.p_num span ol{width:12px;height:20px;float:left;overflow:hidden}
+	div.control div.p_num span ol li a{display:none}
+	div.control div.p_num span ol li a.flex-active{display:block}
+
+
+/*Footer*/
+.footer{width:100%;display:block;text-align:center}
+    .direct_site{width:100%;height:60px;background:#eaeaea;border-top:1px solid #ccc;border-bottom:1px solid #ccc;display:block}
+        .direct_site ul{width:1200px;margin:0 auto;display:inline-block}
+        .direct_site ul li{display:inline-block}
+        .direct_site ul li.tit{float:left}
+        .direct_site ul li.gj{float:left} 
+        .direct_site ul li.sj{float:right} 
+    .copyright{width:100%;display:block;background:#171817;padding:29px 0;font-family: 'Noto Sans KR'}
+        .copyright_con{width:1200px;margin:0 auto;display:inline-block}
+        .copyright_con h3.f_logo{float:left}
+        .copyright_con ul.page_url{width:710px;display:inline-block}
+        .copyright_con ul.page_url li{display:inline-block;margin:18px 30px 0 30px}
+        .copyright_con ul.page_url li a{font-size:14px;color:#fff}
+        .copyright_con ul.sns{float:right;margin-top:10px}
+        .copyright_con ul.sns li{display:inline-block;margin:0 15px}
+.copyright_text{width:1200px;display:inline-block;color:#999;font-size:14px;line-height:22px;text-align:left;margin-top:30px;padding:0 16px}
+.copyright_text span{font-size:12px}

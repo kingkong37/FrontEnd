@@ -1,0 +1,94 @@
+body{font-family:arial;font-size:14px;color:#39454b}
+#wrap{width:100%;height:100%;position:relative;display:block}
+
+/*Header*/
+header{width:100%;height:68px;display:block;background:#fff;padding:20px;text-align:left;position:relative}
+	header h1{display:inline-block;font-family:"Arial black";font-size:24px}
+	header nav{position:absolute;right:20px;top:30px}
+	header nav ul li{display:inline-block;margin-left:40px}
+	header nav ul li a{font-size:16px;color:#39454b}
+	header nav ul li a:hover{color:#000;text-decoration:underline}
+	/*모바일용 메뉴숨김*/
+	header a.m_menu{display:none}
+/*Container*/
+#container{width:100%;display:block}
+	/*Common*/
+	section{width:100%;display:inline-block;position:relative}
+	/*Top Img*/
+	.top_img {height:700px;background:url(../images/intro.jpg) no-repeat center center;background-size:cover}
+	.top_img article{width:100%;;display:inline-block;color:#fff;position:absolute;left:0;top:50%;margin-top:-70px}
+	.top_img article h2{font-family:"Arial black";font-size:70px}
+	.top_img article span{font-size:18px}
+	/*이미지영역*/
+	.img_data{height:700px;margin-top:-4px}
+	.img_data article{width:40%;position:absolute;background:#fff;padding:100px 30px;text-align:left;top:20%}
+	.img_data article h2{font-family:"Arial black";font-size:40px}
+	.img_data article span{font-size:18px}
+	.box1{background:url(../images/one.jpg) no-repeat center center fixed;background-size:cover}
+	.box1 article{right:0}
+	.box2{background:url(../images/two.jpg) no-repeat center center fixed;background-size:cover}
+	.box2 article{left:0}
+	/*My Work*/
+	.my_work{padding:50px 0}
+	.my_work article{width:1020px;display:inline-block}
+	.my_work article h2{font-family:"Arial black";font-size:40px}
+	.my_work article span{font-size:22px}
+	.my_work article ul{width:100%;display:inline-block;margin-top:20px}
+	.my_work article ul li{width:50%;float:left;line-height:0}
+	.my_work article ul li img{width:100%}
+	/*Say Hellow*/
+	.say_hellow{padding-top:50px;background:#f5f5f5}
+	.say_hellow article{width:1020px;display:inline-block}
+	.say_hellow article h2{font-family:"Arial black";font-size:40px}
+	.say_hellow article span{font-size:22px}
+	.say_hellow form{width:100%;display:inline-block;background:#fff;padding:30px 4%;margin-top:50px}
+	.say_hellow form ul{width:100%;display:inline-block}
+	.say_hellow form ul li{float:left}
+	.say_hellow form ul li.w50{width:50%;margin-bottom:20px}
+	.say_hellow form ul li.w100{width:100%;margin-bottom:10px}
+
+	.say_hellow form ul li input[type=text]{width:98%;border:2px solid #e5e6e7;font-size:16px;border-radius:5px;padding:15px 1%}
+	.say_hellow form ul li textarea{width:100%;height:300px;border:2px solid #e5e6e7;font-size:16px;border-radius:5px;padding:15px 1%;font-family:arial}
+	.say_hellow form ul li button{display:inline-block;color:#fff;font-size:18px;border-radius:30px;background:#98c593;padding:20px 100px;border:none}
+footer{width:100%;display:block;background:#39454b;color:#797f83;font-size:12px;padding:40px 0}
+
+/*반응형 미디어쿼리*/
+@media all and (max-width:1019px){
+	.my_work article{width:98%}
+	.say_hellow article{width:98%}
+}
+@media all and (min-width:320px) and (max-width:680px){
+	body{font-size:1em}
+	/*Header*/
+	header{position:fixed;top:0;left:0;z-index:99}
+	header nav{display:none}
+	header a.m_menu{padding:0.5em;background:black;color:#fff;border-radius:3px;position:absolute;right:2%;top:30%;display:block}
+	/*Container*/
+	#container{padding-top:68px}
+	.top_img article h2{font-size:3.6em}
+	.img_data article{width:70%;padding:1em;top:20%}
+
+	.box1 article{right:inherit;left:50%;margin-left:-35%}
+	.box2 article{left:50%;margin-left:-35%}
+
+	.say_hellow form ul li.w50{width:100%}
+	.say_hellow form ul li input[type=text]{width:100%}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

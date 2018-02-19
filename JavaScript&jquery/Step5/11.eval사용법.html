@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<style>
+		div{width:100px;height:100px;border:1px solid #000;position:relative}
+	</style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('button').click(function(){
+				var aa = $(this).html();//변수에 html의 내용을 대입
+				var bb = "$('div')."+aa;//변수에 선택와 aa를 대입
+ 				eval(bb)//$('div').stop()이 됨.
+			});
+
+			setInterval(function(){
+				$('div').animate({
+					left : '500'
+				},1000).animate({
+					left : '0'
+				},1000);
+			},2000)
+        });
+    </script>
+</head>
+<body>
+	<button>stop()</button>
+	<div></div>
+</body>
+</html>

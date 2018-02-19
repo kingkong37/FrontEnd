@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){//J쿼리 문법 사용준비
+			setTimeout(function(){//자바스크립트 문법 실행
+				var value = $('select > option:selected').val();//변수에 제이쿼리 선택자로 작성하여 대입
+				alert(value);
+			},5000);
+		});
+	</script>
+</head>
+<body>
+    <select>
+        <option>Apple</option>
+        <option>Bag</option>
+        <option>Cat</option>
+        <option>Dog</option>
+        <option>Elephant</option>
+    </select>
+
+</body>
+</html>

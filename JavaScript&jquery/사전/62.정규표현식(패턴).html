@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    /*
+	정규표현식은 문자열에 대해 특정문자를 찾아내거나 사이트가 정한 규칙에 따라 작성되었는가에 대한 필더링을 할 수도 있고,
+	문자가 들어갈 곳, 숫자가 들어갈 곳, 특수기호가 들어갈 곳을 구분하여 오류창을 출력할 수도 있다.
+	*/
+	var aa = /a/;//pattern 작성법 /패턴내용/
+	alert(aa.exec('abcde'));//return = a
+	alert(aa.exec('bcde'));//return = null(데이터 없음)
+	//exec(실행) : 패턴 내용을 확인하여 출력함
+
+	alert(aa.test('cad'))//return = true (a가 있으면 true)
+	alert(aa.test('cfd'))//return = false (a가 없으면 false)
+    //test(검사) : 패턴 내용이 있는지 판단하여 true와 false로 출력
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

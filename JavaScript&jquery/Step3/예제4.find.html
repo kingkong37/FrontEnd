@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        img.on{display:none}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+           $('a').mouseover(function(){
+				$(this).find('img.off').hide();
+				$(this).find('img.on').show();
+		   });
+		   $('a').mouseout(function(){
+				$(this).find('img.on').hide();
+				$(this).find('img.off').show();
+		   })
+        });
+    </script>
+</head>
+<body>
+    <a href="#">
+	<img src="images/site_btn_01_off.gif" class="off" />
+	<img src="images/site_btn_01_on.gif" class="on" />
+	</a>
+</body>
+</html>

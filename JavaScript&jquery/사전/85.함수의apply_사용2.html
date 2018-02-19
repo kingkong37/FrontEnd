@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+        m_save = { '신차구매': 10000, '중고차구매': 5000, '중고차판매': 3000 };
+        m_use = { '차량용품': 1000, '정비교환권': 1500, '선물하기': 3500};
+
+        function total_sum() {
+            var sum = 0;
+            for (name in this) {
+                sum += this[name];
+            }
+            return sum;
+        }
+        
+        function total_minus() {
+            var minus = 0;
+            for (name in this) {
+                minus -= this[name];
+            }
+            return minus;
+        }
+        document.write('적립 마일리지 : ' + total_sum.apply(m_save) + '<br/>');
+        document.write('사용 마일리지 : ' + "-" + total_minus.apply(m_use) + '<br/>');
+        document.write('잔여 마일리지 : ' + (total_sum.apply(m_save) - total_minus.apply(m_use)));
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

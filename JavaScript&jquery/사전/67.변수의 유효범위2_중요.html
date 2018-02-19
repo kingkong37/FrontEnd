@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    var scope1 = "가가가"
+	function Myfun(){
+	   var scope1 = "나나나"
+	   scope2 = "다다다"//함수 안에 var를 삭제하면 전역함수로 변환
+	   alert(scope2);
+	}
+    Myfun();
+	alert(scope2)
+    /*
+	var이 있으면 지역변수
+	var이 없으면 전역변수
+	*/
+	
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

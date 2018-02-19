@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>표만들기</title>
+ </head>
+ <body>
+		<table border="1">
+			<tr><!--표의 줄-->
+				<td>가가</td><!--표의 칸 cell이라고 부름-->
+				<td>나나</td>
+				<td>다다</td>
+				<td>라라</td>
+			</tr>
+		</table>
+		
+		<table border="1">
+			<tr>
+				<th>가가</th><!--Cell Header 표의 머리글-->
+				<td>나나</td>
+			<tr>
+		</table>
+		
+		<table border="1" width="700">
+			<colgroup><!--가상의 tr을 만들어 각 셀의 크기를 정한다-->
+				<col width="10%"/><!--가상의 셀-->
+				<col width="90%"/><!--가상의 셀-->
+			</colgroup>
+			<tr>
+				<th>가가</th>
+				<td>나나</td>
+			<tr>
+			<tr>
+				<th>가가</th>
+				<td>나나</td>
+			<tr>
+		</table>
+
+
+ </body>
+</html>

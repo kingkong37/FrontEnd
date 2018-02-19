@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+
+    //부정연산자 not(!)이 조건문 앞에 붙으면 조건의 반대로 인식한다.
+
+    if(!true && true){//실행안됨
+	   alert(1);
+	}
+    if(!false && true){//실행됨
+	   alert(2);
+	}
+    if(!false && !true){//실행안됨
+	   alert(3);
+	}
+    if(!false && !false){//실행됨
+	   alert(5);
+	}
+     
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

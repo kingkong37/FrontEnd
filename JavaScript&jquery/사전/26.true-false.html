@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    if(1){
+	   alert("실행");
+	}
+
+    if(''){//빈문자열인 경우, false로 인식
+	   alert("if문 빈문자열");//실행안됨
+	}
+
+    if(undefined){//false로 인식
+	   alert("실행");//실행안됨
+	}
+
+    if(null){//false로 인식
+	   alert("실행");//실행안됨
+	}
+
+    if(NaN){//false로 인식
+	   alert("실행");//실행안됨
+	}
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        ul{width:300px;padding:0;margin:0;list-style:none}
+        ul li{float:left;height:43px;background:url(images/radio_check.gif) no-repeat;margin:0;padding:0;list-style:none;cursor:pointer}
+        ul li input{visibility:hidden}
+        ul li.radio1{width:51px;background-position:0 0}
+        ul li.radio2{width:49px;background-position:-51px 0}
+        ul li.radio3{width:50px;background-position:-100px 0}
+        ul li.radio4{width:49px;background-position:-150px 0}
+        ul li.radio5{width:50px;background-position:-199px 0}
+        ul li.radio6{width:51px;background-position:-249px 0}
+        ul li.radio1.select{background-position:0 -43px}
+        ul li.radio2.select{background-position:-51px -43px}
+        ul li.radio3.select{background-position:-100px -43px}
+        ul li.radio4.select{background-position:-150px -43px}
+        ul li.radio5.select{background-position:-199px -43px}
+        ul li.radio6.select{background-position:-249px -43px}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('ul li').click(function(){
+				//Class
+				$('ul li').removeClass('select');
+				$(this).addClass('select');
+				//Check
+				$('ul li input').removeAttr('checked', '');//removeAttr은 설정된 attr의 값을 지울때 사용한다.
+				$('ul li input').children('input').prop('checked',false);
+
+				$(this).children('input').prop('checked',true);
+				$(this).children('input').attr('checked' , 'checked')
+			})
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li class="radio1 select"><input type="radio" name="ss" checked="checked" /></li>
+        <li class="radio2"><input type="radio" name="ss" /></li>
+        <li class="radio3"><input type="radio" name="ss" /></li>
+        <li class="radio4"><input type="radio" name="ss" /></li>
+        <li class="radio5"><input type="radio" name="ss" /></li>
+        <li class="radio6"><input type="radio" name="ss" /></li>
+    </ul>
+</body>
+</html>

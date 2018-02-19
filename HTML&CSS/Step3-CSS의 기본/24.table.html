@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+	<style type="text/css">
+		table{width:100%;border:1px solid #ff9900;border-collapse:collapse;/*테이블에 공간을 없애기위한 설정*/}
+		table th , table td{border:1px solid #ff9900}
+		table th{width:30%}
+		table td{width:70%}
+		table th.tit{vertical-align:top}/*상하정렬은 vertical-align으로 정렬하고 설정은 top,middle,bottom이 있음*/
+	</style>
+ </head>
+ <body>
+	<table>
+		<tr>
+			<th colspan="2">테이블표만들기</th>
+		</tr>
+		<tr>
+			<th rowspan="3" class="tit">셀헤더1</th>
+			<td>셀1</td>
+		</tr>
+		<tr>
+			<td>셀2</td>
+		</tr>
+		<tr>
+			<td>셀3</td>
+		</tr>
+		<tr>
+			<th>셀헤더2</th>
+			<td>셀4</td>
+		</tr>
+		<tr>
+			<th>셀헤더3</th>
+			<td>셀5</td>
+		</tr>
+	</table>
+ </body>
+</html>

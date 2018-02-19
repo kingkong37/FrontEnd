@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+	<!--Jquery UI-->
+	<script src="jquery-ui/jquery-ui.min.js"></script>
+	<link href="jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
+	<!--//Jquery UI-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('input').datepicker({
+				dateFormat : 'yy-mm-dd',
+				prevText : '이전 달',
+				nextText : '다음 달',
+				//월,일,요일의 설정은 UI테마 마다 설정값으로 사용하는 요소가 다르다. 
+				monthNames : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+				//monthNamesShort : ['1','2','3']
+				dayNames : ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+				dayNamesMin : ['일','월','화','수','목','금','토'],
+				//년도,월 리스트로 만들기
+			    showMonthAfterYear : true,
+				changeMonth : true,
+				changeYear : true,
+				yearSuffix : '년'
+			});
+        });
+    </script>
+</head>
+<body>
+	<input type="text"/>
+</body>
+</html>

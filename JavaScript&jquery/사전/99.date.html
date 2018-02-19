@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	/*
+	Date는 날짜를 나타내는 내장객체이다.
+	자바스크립트에서 시간은 사용자의 컴퓨터 시간을 기준으로 그리니치(GMT)로 1970년 1월1일 00:00:00를 기준으로 한다. 
+	*/
+	var aa = new Date();
+	document.write(aa + '<br/>')//시스템의 현재 시간을 나타냄
+
+	var bb = new Date(2008, 04, 05, 1000/1000, 3000/1000, 2000/1000);
+	document.write(bb + '<br/>')//내가 지정한 시간을 표시
+
+	var cc = aa.getYear();//년도의 데이터를 가져오는 방식이나 1999년 이후의 날짜는 계산하지 못하는 버그가 있다.
+	document.write(cc + '<br/>')//폐기된 방법
+
+	var cc= aa.getFullYear();
+	document.write(cc + '<br/>')//setFullYear
+
+	var dd = aa.getMonth();
+	document.write(dd + 1 + '월<br/>')
+	/*0
+	월은 배열상 1월=0, 2월=1, 3월=2.......으로 배열되어 있어 불러온 값에 1을 대해줘야한다.
+	*/
+	var ee = aa.getDate();
+	document.write(ee + '일<br/>')
+
+	var ff = aa.getDay();
+	document.write(ff + '요일<br/>')
+	//요일은 새로운 배열을 적용하여 불러올수있다.
+	//배열순서가 0 =일요일, 1=월요일....
+
+
+	var hh= aa.getHours();//시간
+	var mm= aa.getMinutes();//분(setMinurtes도 사용가능)
+	var ss= aa.getSeconds();//초(setSeconds도 사용가능)
+	document.write(hh+"시" + mm+"분" + ss+"초" + "<br/>")
+
+	var zz = aa.getTime();//기준시(1970년1월1일00시00분00초)로 부터 경과된 시간을 밀리언세컨즈로 표시(setTime도 있음)
+	document.write(zz);
+
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

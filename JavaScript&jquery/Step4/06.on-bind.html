@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//on,bind명령문은 묶음을 뜻하는 함수이다. 객체와 이벤트를 묶어주는 역할을한다.
+			$('p').on('click' , function(){
+				alert("on이벤트");
+			})
+			$('h1').bind('click' , function(){
+				alert("on이벤트");
+			})
+        });
+    </script>
+</head>
+<body>
+	<p>클릭</p>
+	<h1>클릭</h1>
+</body>
+</html>

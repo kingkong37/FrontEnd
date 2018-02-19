@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+        .high-light {background: yellow }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+           $('h1').addClass('high-light');
+		   //addClass를 작성 시 .을 찍으면 실행 안됨
+		   //Class라고 이미 명시했기때문에 필요 없음
+        });
+    </script>
+</head>
+<body>
+    <h1>item - 0</h1>
+    <h1>item - 1</h1>
+    <h1>item - 2</h1>
+</body>
+</html>

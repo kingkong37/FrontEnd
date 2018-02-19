@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('img').attr({
+				'width' : function(aa){return (aa + 1) *100;},//가로크기 증가
+				'height' : 100//높이 고정
+			})
+        });
+    </script>
+</head>
+<body>
+    <img src="images/ironman.jpg" />
+    <img src="images/captain_america.jpg" />
+    <img src="images/thor.jpg"/>
+</body>
+</html>

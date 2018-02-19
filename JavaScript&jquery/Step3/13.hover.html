@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .on{background:#000;color:#fff}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//hover의 조건은 항상 두개의 조건이 존재해야한다.
+			$('h1').hover(function(){//처음 함수는 마우스Over
+				$(this).addClass('on');
+			},function(){//두번째함수는 마우스Out
+				$(this).removeClass('on');
+			})
+			/*
+			$('h1').hover(
+				function(){$(this).addClass('on');},
+				function(){$(this).removeClass('on');}
+			)
+			*/
+        });
+    </script>
+</head>
+<body>
+	<h1>메뉴1</h1>
+	<h1>메뉴2</h1>
+	<h1>메뉴3</h1>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+	input[type=password]{
+		background:green
+	}
+	
+	/*CSS3 하위브라우져(IE8이하)에서는 적용안됨*/
+	input[type=checkbox]{
+		transform:scale(1.5);/*접두어사용해야함(브라우져대응.html참조)*/
+	}
+	
+	textarea{resize:none}/*textarea는 크롬에서 사이즈 조절이 가능하므로 차단해야함*/
+
+  </style>
+ </head>
+ <body>
+	<input type="text"/>
+	<input type="password"/>
+	<input type="button"/>
+
+	<input type="checkbox"/>
+	<input type="radio"/>
+
+	<!--placeholder줄바꿈 &#13;&#10;-->
+	<textarea placeholder="텍스트를&#13;&#10;입력하세요"></textarea>
+ </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<!--플렉스슬라이드-->
+	<script src="modules/jquery.flexslider-min.js" type="text/javascript"></script>
+	<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.photo').flexslider()
+        });
+    </script>
+</head>
+<body>
+	<div class="photo"><!--선택자로 사용하기위해 필요 슬라이드를 감싸주는 부모요소가 선택자가 된다.-->
+		<ul class="slides"><!--슬라이드를 사용하기 위해 ul이되는 대상의 class는 slides로 되어야한다.-->
+			<li><img src="images/flex_banner_01.jpg"/></li>
+			<li><img src="images/flex_banner_02.jpg"/></li>
+			<li><img src="images/flex_banner_03.jpg"/></li>
+			<li><img src="images/flex_banner_04.jpg"/></li>
+		</ul>
+	</div>
+</body>
+</html>

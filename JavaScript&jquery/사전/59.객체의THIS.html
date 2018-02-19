@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+
+    var movie = {
+	   "list" : {'어벤져스' : 100 + '만', '해리포터' : 110 + '만', '반지의제왕' : 200 + '만'},
+
+       "list_view" : function(){
+		   /*
+		   객체 안에 객체는 경로가 맞아야 하므로 제일 상위의 요소를 지정해 주어야 한다.
+		   this는 해당 명령문이 포함된 제일 상위요소(movie)를 지칭하게 된다.
+		   */
+          for(var aa in this.list){//this.list는 movie안에(.)list를 말한다.
+		     document.write(aa + ":" + this.list[aa] + "<br/>");
+		  }
+	   }
+	}
+    movie.list_view();//movie안에(.)list_view 안에 함수(괄호)
+
+  </script>
+ </head>
+ <body>
+
+ </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+
+  </script> 
+ </head>
+ <body>
+	<!--
+		한개의 문서(웹사이트 전체를 고려하는것이 더 좋다) 내에 같은 ID값은 한개만 존재할 수 있다.
+		Tag에 id는 자바스트립트를 넣기 위한 목적이고, Class는 디자인이 목적이때 보통사용한다.
+		Class를 스크립트로 사용할 수도 있다.
+	-->
+  <div id="event">JavaScript수업</div>
+  <button onclick="document.getElementById('event').innerHTML = '클릭완료'">클릭해보세요</button>
+  <!--innerHTML은 html의 내용을 변경-->
+  <div id="event2">JavaScript수업2</div>
+  <button onmouseover="document.getElementById('event2').innerHTML = '마우스Over'">마우스를 올려보세요</button>
+
+  <div id="event3">JavaScript수업3</div>
+  <button onmouseout="document.getElementById('event3').innerHTML = '마우스Out'">마우스가 나가면...</button>
+
+ </body>
+</html>
