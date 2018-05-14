@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /*
+         상속 :
+         - prototype 사용
+         */
+        function MyParent() {
+            this.property1 = "test1";
+        }
+
+        MyParent.prototype.method1=function(){
+            console.log("this.property1="+this.property1);
+        }
+
+
+        // 자식 클래스
+        function MyChild(){
+            MyParent.call(this);
+            this.property2 = "test2";
+        }
+
+        MyChild.prototype = new MyParent();
+        MyChild.prototype.constructor=MyChild;
+        MyChild.prototype.method2=function() {
+            this.method1();
+            console.log("this.property2="+this.property2);
+        }
+
+        var mychidl1 = new MyChild();
+        mychidl1.method2();
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>
+

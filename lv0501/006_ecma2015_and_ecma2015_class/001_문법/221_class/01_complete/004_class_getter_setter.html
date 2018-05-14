@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../libs/jquery-1.11.0.min.js"></script>
+    <script>
+        /*
+         getter, setter를 통한 데이터 유효 범위 설정 가능
+
+         */
+class User {
+    constructor(name, age) {
+        this._name = name;
+        this._age = age;
+    }
+
+    set age(age) {
+        if (age <= 30)
+            this._age = age;
+        else
+            this._age = 0;
+    }
+
+    get age() {
+        return this._age;
+    }
+}
+
+var user1 = new User();
+user1.age = 10;
+console.log("user1.age=", user1.age);
+
+user1.age = 50;
+console.log("user1.age=", user1.age);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

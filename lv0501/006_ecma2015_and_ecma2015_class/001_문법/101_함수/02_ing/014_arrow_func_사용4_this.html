@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../libs/jquery-1.11.0.min.js"></script>
+    <script>
+
+        /*
+
+         */
+
+
+        class TabMenu{
+
+            constructor(){
+                this.count=0;
+            }
+            addCount(){
+                this.count++;
+            }
+
+            startTimer(){
+               this.$items.click((e)=>{
+                 this.setSelecteItem(e.target);
+               })
+            }
+        }
+
+        $(document).ready(()=>{
+            console.log("사용할 준비완료");
+            // 한줄로 표현
+            let tabMenu = new TabMenu();
+            tabMenu.startTimer();
+        })
+
+
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+
+    </ul>
+</body>
+</html>

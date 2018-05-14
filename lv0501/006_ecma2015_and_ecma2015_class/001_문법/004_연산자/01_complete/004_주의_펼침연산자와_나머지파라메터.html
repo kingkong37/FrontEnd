@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="kr">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        /*
+            펼침연산자와 나머지 파레메터는 다름.
+         */
+        // 배열을 특정 배열 요소에 합치는 경우
+        var a=[10,20,30];
+        function test1(a,b){
+            console.log("a = ",a);
+            console.log("b = ",b);
+        }
+
+        test1(...a);
+
+
+        var a=[10,20,30];
+        function test2(a,...b){
+            console.log("a = ",a);
+            console.log("b = ",b);
+        }
+
+        test2(...a);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

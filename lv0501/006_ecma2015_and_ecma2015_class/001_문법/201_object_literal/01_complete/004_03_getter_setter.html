@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /*
+         setter : 쓰기 전용 처리 함수
+         -  유효한 값을 설정가능
+         */
+
+
+        // es2015
+        var obj1 = {
+            _data:10,
+            get data(){
+                return this._data;
+            },
+            set data(val){
+                // 100이하인 경우만 설정
+                if(val<=100)
+                    this._data=val;
+            }
+        }
+
+
+        obj1.data=40;
+        console.log(obj1.data);
+
+        obj1.data=140;
+        console.log(obj1.data);
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            border: 2px solid #000;
+        }
+
+        #banner1 {
+            top: 100px;
+            left: 100px;
+        }
+
+        #banner2 {
+            left: 550px;
+            top: 100px;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+    <script src="./libs/jquery-1.11.0.min.js"></script>
+    <script>
+        /*미션 02: 심플 이미지 배너 만들기
+                                                                                                        다음 살펴보면 다음 이미지 파일들을 순차적으로 출력하는 심플 이미지 배너입니다.
+                                                                                                                            logo_01.jpg ~ logo_08.jpg
+                                                                                                                            하지만 아쉽게도 이 코드는 출력할 수 있는 이미지가 반드시 logo_0으로 시작해야 하며
+                                                                                                                            이미지를 순차적으로 출력할 수밖에 없는 치명적인 단점을 가지고 있습니다.
+                                                                                                                            이번 미션은 바로 이런 단점을 가진 코드 배열을 활용해 좀더 유지보수하기 쉽게 변경하는 것입니다.
+                                                                                                                            */
+        /*
+
+
+         */
+        $(document).ready(function() {
+            var imageList = ["logo_01.jpg", "logo_02.jpg", "logo_03.jpg", "logo_04.jpg", "logo_05.jpg", "logo_06.jpg", "logo_07.jpg", "logo_08.jpg"];
+            var imageList2 = ["logo_02.jpg", "logo_04.jpg", "logo_05.jpg", "logo_06.jpg", "logo_08.jpg"];
+            var banner1 = new RollingBanner("#banner1", imageList, {});
+            var banner2 = new RollingBanner("#banner2", imageList, {
+                duration: 3000
+            });
+
+        });
+
+
+        function RollingBanner(selector, imageList, options) {
+            this._$banner = null;
+            this._currentIndex = 0;
+            this._timerID = 0;
+            this._selector = selector;
+            this._imageList = imageList;
+            this._options = options;
+
+            this._start();
+        }
+
+        RollingBanner.default_options = {
+            startIndex: 0,
+            duration: 1000
+        };
+
+
+        RollingBanner.prototype._start = function() {
+
+            if (this._imageList && this._imageList.length > 0) {
+                this._init();
+                this._initEvent();
+                this.showBannerAt(this._options.startIndex)
+                this.startAutoPlay();
+            } else {
+                console.log("이미지가 존재하지 않습니다.")
+            }
+        }
+
+
+        RollingBanner.prototype._init = function() {
+            this._$banner = $(this._selector);
+            let tempOtions = $.extend({}, RollingBanner.default_options);
+            this._options = $.extend(tempOtions, this._options);
+        }
+
+        RollingBanner.prototype._initEvent = function() {
+
+        }
+
+        RollingBanner.prototype.nextBanner = function() {
+            var index = this._currentIndex + 1;
+            if (index >= this._imageList.length)
+                index = 0;
+
+            this.showBannerAt(index);
+        }
+
+        RollingBanner.prototype.showBannerAt = function(index) {
+            this._currentIndex = index;
+            var imgName = this._imageList[index];
+            this._$banner.attr("src", "./images/" + imgName);
+        }
+
+        RollingBanner.prototype.startAutoPlay = function() {
+            if (this._timerID == 0) {
+                var self = this;
+                this._timerID = setInterval(function() {
+                    self.nextBanner();
+                }, this._options.duration);
+            }
+        }
+
+        function AutoPlayer(duration){
+          this._duration = duration;
+          this._tickListener = null;
+          this._timerID = 0;
+          this._playing = false;
+
+        }
+        AutoPlayer.prototype.setTickListener = function(callback){
+          this._tickListener = callback;
+
+        }
+
+        AutoPlayer.prototype.getState = function(){
+          return this._timerID!==0;
+        }
+
+        AutoPlayer.prototype.play = function(){
+          if(this._tickListener==null)
+            return;
+
+            if (this._timerID == 0) {
+              var self = this;
+              this._timerID = setInterval(function() {
+                self._tickListener();
+              }, this._options.duration);
+            }
+        }
+
+        AutoPlayer.prototype.stop = function(){
+          setTimeout(this._timerID);
+          this._timerID = 0;
+        }
+
+        // Test(){
+        //   this.list = new Array();
+        // }
+        //
+        // RollingBanner(){
+        //   this.autoPlayer = new autoPlayer();
+        // }
+    </script>
+
+</head>
+
+<body>
+    <img src="images/logo_01.jpg" class="banner" id="banner1">
+    <img src="images/logo_01.jpg" class="banner" id="banner2">
+</body>
+
+</html>

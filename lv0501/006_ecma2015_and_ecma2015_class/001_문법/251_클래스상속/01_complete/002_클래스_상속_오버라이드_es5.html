@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /*
+         상속 :
+         - prototype 사용
+         */
+        function MyParent(name,age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        MyParent.prototype.method1=function(){
+            console.log("this.name="+this.name, "this.age="+this.age);
+        }
+
+
+        // 자식 클래스
+        function MyChild(name,age,address){
+            MyParent.call(this,name,age);
+            this.address = address;
+        }
+
+        MyChild.prototype = new MyParent();
+        MyChild.prototype.constructor=MyChild;
+        MyChild.prototype.method2=function() {
+            this.method1();
+            console.log("this.address="+this.address);
+        }
+
+        var mychidl1 = new MyChild("ddandongne", 10, "금천구");
+        mychidl1.method2();
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>
+

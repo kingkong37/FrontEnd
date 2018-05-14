@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../libs/jquery-1.11.0.min.js"></script>
+    <script>
+
+        /*
+         메서드 단축 표현
+         */
+
+        // es5
+        var person = {
+            user:"ddanodngne",
+            age:10,
+            showInfo:function(){
+                console.log("1. es5", this.user, this.age);
+            }
+        }
+        person.showInfo();
+
+
+
+        // es2015
+        var person = {
+            user:"ddanodngne",
+            age:10,
+            showInfo(){
+                console.log("2. es2015", this.user, this.age);
+            }
+        }
+
+        person.showInfo();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

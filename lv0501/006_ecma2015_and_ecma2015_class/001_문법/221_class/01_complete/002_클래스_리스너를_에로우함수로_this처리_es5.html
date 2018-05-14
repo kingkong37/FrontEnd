@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../libs/jquery-1.11.0.min.js"></script>
+    <script>
+        /*
+         에로우 함수를 이용하는 경우 this를 설정할 수 있음
+         */
+function MyClass(name) {
+    this.name = name;
+}
+
+MyClass.prototype.start=function() {
+    var objThis =this;
+    setTimeout(function(){
+        alert("start() "+objThis.name);
+    },1000)
+}
+
+
+var my1 = new MyClass("ddandongne");
+my1.start();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

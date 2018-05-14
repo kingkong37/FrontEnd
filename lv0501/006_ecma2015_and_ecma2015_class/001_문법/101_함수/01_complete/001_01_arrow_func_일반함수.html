@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        /*
+         arrow 함수
+
+         var 함수이름 = ([매개변수1,매개변수2,..]0)=>{
+         실행구문;
+         return 값;
+         }
+         /*
+         ES 5
+         */
+
+        function test2(a,b,c){
+            var result = a + b + c;
+            return result;
+        }
+
+        var test2 = function (a, b, c) {
+            var result = a + b + c;
+            return result;
+        }
+
+
+        console.log("1. es5, ", test2(10, 20, 30));
+
+
+        // es2015
+        var test1 = (a, b, c) =>{
+            var result = a + b + c;
+            return result;
+        };
+        console.log("2. es6, ", test1(10, 20, 30));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

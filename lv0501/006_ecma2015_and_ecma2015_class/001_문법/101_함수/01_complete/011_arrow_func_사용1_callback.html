@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../libs/jquery-1.11.0.min.js"></script>
+    <script>
+
+        /*
+        arrow 함수 사용사용
+         */
+
+        // es5
+        $(document).ready(function(){
+            console.log("사용할 준비완료");
+
+            $("li").each(function(index){
+                console.log("es5, ", index);
+            })
+        })
+
+        // es2015
+        $(document).ready(()=>{
+            console.log("사용할 준비완료");
+
+            $("li").each(index=>{
+                console.log("es2015", index);
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+
+    </ul>
+</body>
+</html>

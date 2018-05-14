@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../libs/jquery-1.11.0.min.js"></script>
+    <script>
+        /*
+         static 메서드 추가 (클래스 메서드)
+         */
+class User {
+    constructor(name, age) {
+        this._name = name;
+        this._age = age;
+
+        if (User._count == undefined) {
+            User._count = 0;
+        }
+
+        ??
+    }
+
+    set age(age) {
+        if (age <= 30)
+            this._age = age;
+        else
+            this._age = 0;
+    }
+
+    get age() {
+        return "__" + this._age;
+    }
+
+    ??
+
+}
+
+var user1 = new User();
+console.log("count=", User.count());
+
+var user2 = new User();
+console.log("count=", User.count());
+
+    </script>
+</head>
+<body>
+<button id="btn1">시작</button>
+</body>
+</html>

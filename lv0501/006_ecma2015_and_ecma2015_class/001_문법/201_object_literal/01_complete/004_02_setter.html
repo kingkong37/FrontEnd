@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /*
+        메서드 단축 표현
+         */
+
+
+        // es2015
+        var obj2 = {
+            _data:10,
+            get data(){
+                return this._data;
+            },
+
+            set data(val){
+                if(val<=100)
+                    this._data=val;
+            }
+        }
+
+        console.log(obj2.data);
+        obj2.data=40;
+        console.log(obj2.data);
+
+        obj2.data=140;
+        console.log(obj2.data);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

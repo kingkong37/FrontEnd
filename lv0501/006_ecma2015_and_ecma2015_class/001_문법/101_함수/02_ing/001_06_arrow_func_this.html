@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+       /*
+        일반 함수와 에로우 함수에서 this는 다름.
+        */
+
+       // es5
+        var obj1={
+           a:10,
+           test:function(){
+               var objThis = this;
+               setTimeout(function(){
+                   console.log("1. es5", objThis.a);
+               },1000)
+           }
+        }
+        // es6
+        var obj2={
+           a:20,
+           test(){
+             var objThis = this;
+             setTimeout(()=>{
+                 console.log("1. es5", objThis.a);
+             },1000)
+           }
+        }
+
+obj2.test();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="kr">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        /*
+            펼침연산자 (spread operator)
+         */
+
+        // 배열을 특정 배열 요소에 합치는 경우
+        // 1. 배열 자체가 배열 요소로 저장됨.
+        var a=[10,20,30];
+        var b = ["a",a,"b"];
+        console.log("1.", b);
+
+        // 다음과 같이 합칠 수는 있지만 특정 위치에 넣을 수는 없음.
+        var a=[10,20,30];
+        var b = ["a","b"];
+        Array.prototype.push.apply(b, a);
+        console.log("2.", b);
+
+
+
+        // 2. 펼침연산자를 이용하는 방법
+        var a=[10,20,30];
+        var b = ["a",...a,"b"];
+        console.log("3. ",b);
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

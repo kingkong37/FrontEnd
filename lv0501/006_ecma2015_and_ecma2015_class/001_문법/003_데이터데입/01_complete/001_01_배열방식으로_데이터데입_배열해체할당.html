@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="kr">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        /*
+        속성 이름과 값을 단축해서 사용가능 .
+        배열 해체 할당(array destructing assignmenut)
+         */
+
+        // es5
+        var a=10, b =20, c=30;
+        console.log("1. es5", a,b,c);
+
+        // es2015
+        var [a,b,c] = [10,20,30];
+        console.log("2. es6", a,b,c);
+
+
+        // 마지막 값은 undefined
+        var [a,b,c] = [10,20];
+        console.log("3. es6", a,b,c);
+
+        // 문자열 값이 한 자씩 데입 됨.
+        var [a,b,c] = "test";
+        console.log("4. es6", a,b,c);
+
+        // 데이터 값을 건너 뛸수도 있음.
+        var [a,,b]=[10,20,30];
+        console.log("5. es6", a,b);
+
+        // 2번째 부터 c에 배열로 저장됨. 즉 c는 배열 변수가 됨.
+        var [a,b,...c]=[10,20,30,40,50];
+        console.log("6. es6", a,b,c);
+        // 배열 요소 접근
+        console.log("7. es6", c[0]);
+
+        //  기본값 설정 가능
+        var [a,b,c=30] = [10,20];
+        console.log("8. es6", a,b,c);
+
+        //  기본값 대신 일반 값 설정 가능
+        var [a,b,c=30] = [10,20,50];
+        console.log("9. es6", a,b,c);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
