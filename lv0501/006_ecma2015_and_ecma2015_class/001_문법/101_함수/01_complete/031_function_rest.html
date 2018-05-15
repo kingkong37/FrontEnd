@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+       /*
+      rest 파라메터 :
+        배열로 인수 불특정 다수를 표현
+
+        rest 파라메터와 arguments 객체 사이의 차이점
+        1. rest parameters는 다른 이름이 주어지지 않는 것뿐입니다.
+           arguments 객체는 함수에 전달 된 인수를 포함합니다. ;
+        2. arguments 객체는 실제 배열이 없습니다.
+            rest parameters는 Array 인스턴스입니다.
+            이것은 sort , map , forEach , pop 같은 메소드가
+            직접 적용 할 수 있다는 것을 의미합니다.
+        3. arguments 객체는 ( callee 속성처럼)
+        자신에 대한 추가 기능의 특정을 가지고 있습니다.
+        */
+
+
+        // es5
+       function test1(){
+           console.log("length="+ arguments.length);
+           for(var i=0;i<arguments.length;i++){
+               console.log("i="+i+", "+arguments[i]);
+           }
+       }
+
+       test1(20,30,40,"ddandongne");
+
+
+       // es2015
+       function test2(...x){
+           console.log("x="+ x);
+           console.log("length="+ x.length);
+           for(var [i,v] of x.entries()){
+               console.log(i, v);
+           }
+       }
+       test2(20,30,40,"ddandongne");
+
+       // rest 방식으로 호출
+       var data=[20,30,40,"ddandongne"];
+       test2(...data);
+
+       test2(...[20,30,40,"ddandongne"]);
+
+       // 아래 내용과는 완전히 다름.
+       var data=[20,30,40,"ddandongne"];
+       test2(data);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

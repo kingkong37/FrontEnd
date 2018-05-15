@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('input[type="text"]').val('아이디');
+		//input을 type으로 선택 시 ""를 이용하여 종류를 표시한다. (선택자의 따옴표와 구분하여 사용)
+		//Jquery의 val = value
+		$('input[type="button"]').val('확인');
+	});
+  </script>
+ </head>
+ <body>
+	<input type="text"/>
+	<input type="button"/>
+	<input type="password"/>
+ </body>
+</html>

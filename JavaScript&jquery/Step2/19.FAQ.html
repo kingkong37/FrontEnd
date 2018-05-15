@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+		li div{display:none}
+	</style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('span').click(function(){
+				$('div').slideUp();//열려있는 모든 div를 숨김
+				$(this).next('div').slideToggle();//클릭한 span의 다음요소인 div만 slide됨
+			});
+        });
+    </script>
+</head>
+<body>
+	<ul>
+		<li>
+			<span>질문1</span>
+			<div>답변</div>
+		</li>
+		<li>
+			<span>질문2</span>
+			<div>답변</div>
+		</li>
+		<li>
+			<span>질문3</span>
+			<div>답변</div>
+		</li>
+	</ul>
+</body> 
+</html>

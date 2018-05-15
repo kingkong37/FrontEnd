@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        ul,li{padding:0;margin:0;list-style:none}
+        li{float:left}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            for(i=0; i<4; i++){
+				$('<li></li>').appendTo('.img_list');
+			}
+			$('.img_list li').html(function(index){
+				return '<img src="images/menu_0' + (index+1) + '.gif" />';
+			})
+        });
+    </script>
+</head>
+<body>
+    <ul class="img_list">
+
+    </ul>
+</body>
+</html>

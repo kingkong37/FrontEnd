@@ -1,0 +1,49 @@
+@import url(../reset.css);
+
+
+.banner_effect{
+  width:100%;
+  height:590px;
+  position:relative;
+  background:url(images/effect2.jpg) no-repeat center center;
+  background-size:cover;
+}
+.banner_effect .img_data{
+  position: absolute;
+  left: 25%;
+  top: 15%;
+}
+.banner_effect .text_data{
+  position: absolute;
+  right: 30%;
+  top: 30%;
+}
+
+.img_data{
+  animation-name: img_ef;
+  animation-duration: 2s;
+}
+@keyframes img_ef {
+  from{
+    left: 0%;
+    opacity: 0;
+  }
+  to{
+    left: 25%;
+    opacity: 1;
+  }
+}
+.text_data{
+  animation-name: text_ef;
+  animation-duration: 2s;
+}
+@keyframes text_ef {
+  0%{
+    right: 0;
+    opacity: 0;
+  }
+  100%{
+    right: 30%;
+    opacity: 1;
+  }
+}

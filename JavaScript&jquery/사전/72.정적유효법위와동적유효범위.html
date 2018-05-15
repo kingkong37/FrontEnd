@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	/*자바스크립트는 함수가 선언된시점부터 유효 범위를 갖는다.*/
+	//정적유효범위
+	var i =10;
+	function aa(){
+		var i =5;
+		bb();
+	}
+	function bb(){
+		document.write(i)
+	}
+	aa();// return 10
+	/*
+	aa함수안에 bb를 호출했을때 동시에 선언이되었으므로 bb를 본인 영역에서 변수 i를 검색하고 없으면 전연변수를 호출한다.
+	*/
+	//동적유효범위
+	function cc(){//cc의 함수가 동작할때 dd가 동작하므로 동적유효범위라 한다.
+		var i =5;
+		dd();
+		function dd(){
+			document.write(i)
+		}
+	}
+	cc();
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

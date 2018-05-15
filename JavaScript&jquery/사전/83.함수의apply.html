@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+
+	function my(aa,bb){
+		return aa+bb;
+	}
+	//document.write(my());//NaN 데이터없음
+	//document.write(my.apply);//apply는 내장함수로 함수를 호출해서 데이터를 받을 준비를 한다.
+	
+	alert(my.apply(null, [3,5]));
+
+	//함수명.apply(변수명, [데이터])
+
+	//함수를 호출하는 내장함수는 apply와 call이있다.	
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style type="text/css">
+        html,body{text-align:center}
+        .site_img{width:736px;margin:0 auto;position:relative;display:inline-block}
+        .quick{width:120px;position:absolute;right:-120px}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			var q_menu = $('.quick');//변수에 퀵메뉴 대입
+			var q_top = 50;//스크롤 될때 위치하게될 top의 값
+			$(window).scroll(function(){
+				q_menu.stop().animate({"top": $(document).scrollTop() + q_top + "px"},500)
+				//스크롤이 되기 시작하면 애니미이션을 동작시켜 스크롤된 문서의 높이 + 스크롤top값
+			})
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="site_img">
+        <div class="quick"><img src="images/quick1.gif" /></div>
+        <img src="images/site_01.jpg" />
+    </div>
+</body>
+</html>

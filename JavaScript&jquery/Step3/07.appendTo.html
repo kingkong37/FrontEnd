@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+		//넣고자 하는 내용이 간단한경우
+        $(document).ready(function () {
+			//appendTo는 추가(생성) 넣고자하는 위치
+			$('<h1></h1>').html('텍스트').appendTo('body');
+			$('<h2>내용</h2>').appendTo('body');
+			$('<img/>').attr('src' , 'images/iphone.jpg').appendTo('body');
+        });
+		//넣고자 하는 내용이 복잡할경우
+		$(document).ready(function () {
+			$('<img/>',{
+				src : 'images/iphone.jpg',
+				width : 200,
+				height : 100,
+				alt : '이미지'
+			}).appendTo('body');
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

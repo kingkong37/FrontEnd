@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+	button{height:40px;border:2px solid gray;padding:0 40px;background:#fff;color:gray}
+
+	button:hover{
+		background:black;
+		color:#fff;
+		animation-name:btn_over;
+		animation-duration:2s;
+	}
+
+	/*버튼에 over효과를 주기위해서는 form은 기본형 그대로 작성, to는 hover의 상태를 작성해준다.*/
+	@keyframes btn_over{
+		from{color:gray;background:#fff}
+		to{background:black;color:#fff}
+	}
+
+
+  </style>
+ </head>
+ <body>
+	<button>버튼애니메이션</button>
+	<a>버튼애니메이션1</a>
+	<button>버튼애니메이션2</button>
+ </body>
+</html>

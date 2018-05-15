@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style type="text/css">
+        html,body{margin:0;padding:0;text-align:left;line-height:0}
+        .homepage_wrap{width:100%;display:inline-block}
+        .img_data{width:736px}
+        .go_top{position:fixed;left:690px;bottom:20px;display:none;cursor:pointer}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).scroll(function(){
+				if($(this).scrollTop() > 400){
+					$('.go_top').fadeIn();
+				}else{
+					$('.go_top').fadeOut();
+				}
+			})
+			//페이지 최상단으로 이동하는 공식
+			$('.go_top').click(function(){
+				$('html, body').animate({scrollTop:0},500);
+			})
+        });
+    </script>
+</head>
+<body>
+    <div class="homepage_wrap">
+        <div class="go_top"><img src="images/go_top.png" /></div>
+        <div class="img_data"><img src="images/m_design2.jpg" /></div>
+    </div>
+</body>
+</html>

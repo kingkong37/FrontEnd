@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+
+	var aa = {
+		bb : function (){
+		if(aa == this){//this는 aa를 말함
+				document.write("일치한다.");
+			}
+		}
+	}
+	//this는 한단계 상위요소를 가르키는 단위가 된다.
+	aa.bb();
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

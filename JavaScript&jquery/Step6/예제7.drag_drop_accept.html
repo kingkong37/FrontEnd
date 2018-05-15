@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <link href="jquery-ui/jquery-ui.min.css" type="text/css" rel="stylesheet" />
+    <link href="jquery-ui/jquery-ui.structure.min.css" type="text/css" rel="stylesheet" />
+    <link href="jquery-ui/jquery-ui.theme.min.css" type="text/css" rel="stylesheet"/>
+    <style type="text/css">
+        .drag_object1{width:100px;height:100px;border:1px solid #000;float:left;font-size:12px;text-align:center;background:#d3d943}
+        .drag_object2{width:100px;height:100px;border:1px solid #000;float:left;font-size:12px;text-align:center;background:#00ff90;margin-left:10px}
+        .drop_zone{width:300px;height:300px;border:1px solid #000;float:left;font-size:12px;text-align:center;margin-left:30px;margin-top:30px}
+        .drop_zone_aa{background:red}
+        .drop_zone_bb{background:blue}
+        .drop_zone_cc{background:yellow}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.obj').draggable();
+			$('.drop_zone').droppable({
+				//accept 연결대상
+				accept : '.drag_object2',
+				
+				//마우스 이벤트 상황
+				classes : {
+					'ui-droppable-active' : 'drop_zone_aa',//대상을 누르고 있을때
+					'ui-droppable-hover' : 'drop_zone_bb' //대상이 영역위로 올라오면
+				},
+				//완료 후
+				drop:function(){
+					$(this).addClass('drop_zone_cc')
+				}
+			});
+        });
+    </script>
+</head>
+<body>
+    <div class="drag_object1 obj">드래그 대상</div>
+    <div class="drag_object2 obj">드래그 대상</div>
+    <div class="drop_zone"><p>드래그 영역</p></div>
+</body>
+</html>

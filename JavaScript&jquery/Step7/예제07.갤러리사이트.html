@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <!--FlexSlider 기본JS-->
+    <script src="modules/flexslider.js" type="text/javascript"></script>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet" type="text/css" />
+    <link href="css/gallery.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		#carousel ul.flex-direction-nav{width:100%;position:absolute;left:0;top:180px}
+		#carousel ul.flex-direction-nav li a{width:28px;height:54px;text-indent:-9999999px;display:block}
+		#carousel ul.flex-direction-nav li.flex-nav-prev{float:left;margin-left:3%}
+		#carousel ul.flex-direction-nav li.flex-nav-prev a{background:url(images/flex_left_btn_white.png) no-repeat 0 0}
+		#carousel ul.flex-direction-nav li.flex-nav-next{float:right;margin-right:3%}
+		#carousel ul.flex-direction-nav li.flex-nav-next a{background:url(images/flex_right_btn_white.png)}
+
+		#mosaic .flex-control-nav{width:400px;float:right}
+		#mosaic .flex-control-nav li{display:inline-block;margin:10px}
+	</style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Tab
+            $("nav ul li a").click(function () {
+                $(".gallery_data").hide();
+                $($(this).attr("href")).show();
+                $('nav ul li a').removeClass('select')
+                $(this).addClass('select');
+                return false;
+            });
+            //Carousel
+            $('.carousel').flexslider({
+                animation: 'slide',
+                controlNav: false,
+                directionNav: true,
+                smoothHeight: true,
+                selector: ".carousel_slide > li"
+            });
+            //Mosaic
+            $('.mosaic').flexslider({
+                animation: 'fade',
+                controlNav: true,
+                directionNav: false,
+                slideshow: false,
+                controlNav: "thumbnails",
+                selector: ".mosaic_slide > li"
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header><span class="blue">F</span>R<span class="red">A</span><span class="blue">N</span>C<span class="red">E</span> Paris <span class="gray">GALLERY</span></header>
+        <!--Top Menu-->
+        <nav>
+            <ul>
+                <li><a href="#carousel" class="select"><img src="images/gallery_icon2.png" />Carousel</a></li>
+                <li><a href="#mosaic"><img src="images/gallery_icon1.png" />Mosaic</a></li>
+            </ul>
+        </nav>
+        <!--//Top Menu-->
+        <!--Gallery-->
+        <div class="gallery_area">
+            <!--Carousel-->
+            <div id="carousel" class="gallery_data">
+                <div class="carousel">
+                    <ul class="carousel_slide">
+                        <li><img src=images/paris_01.jpg /></li>
+                        <li><img src=images/paris_02.jpg /></li>
+                        <li><img src=images/paris_03.jpg /></li>
+                        <li><img src=images/paris_04.jpg /></li>
+                        <li><img src=images/paris_05.jpg /></li>
+                        <li><img src=images/paris_06.jpg /></li>
+                        <li><img src=images/paris_07.jpg /></li>
+                        <li><img src=images/paris_08.jpg /></li>
+                        <li><img src=images/paris_09.jpg /></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//Carousel-->
+            <!--Mosaic-->
+            <div id="mosaic" class="gallery_data">
+                <div class="mosaic">
+                    <ul class="mosaic_slide">
+                        <li data-thumb="images/paris_thumb_01.jpg"><img src=images/paris_01.jpg /></li>
+                        <li data-thumb="images/paris_thumb_02.jpg"><img src=images/paris_02.jpg /></li>
+                        <li data-thumb="images/paris_thumb_03.jpg"><img src=images/paris_03.jpg /></li>
+                        <li data-thumb="images/paris_thumb_04.jpg"><img src=images/paris_04.jpg /></li>
+                        <li data-thumb="images/paris_thumb_05.jpg"><img src=images/paris_05.jpg /></li>
+                        <li data-thumb="images/paris_thumb_06.jpg"><img src=images/paris_06.jpg /></li>
+                        <li data-thumb="images/paris_thumb_07.jpg"><img src=images/paris_07.jpg /></li>
+                        <li data-thumb="images/paris_thumb_08.jpg"><img src=images/paris_08.jpg /></li>
+                        <li data-thumb="images/paris_thumb_09.jpg"><img src=images/paris_09.jpg /></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//Mosaic-->
+        </div>
+        <!--//Gallery-->
+        <footer>글자로 웹을 그리다</footer>
+    </div>
+</body>
+</html>

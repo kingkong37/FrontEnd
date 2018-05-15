@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../reset.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body{font-family:"Nanum Gothic";font-size:14px}
+        #wrap{width:100%;height:100%;display:inline-block;position:relative}
+        nav{width:100%;height:40px;position:fixed;bottom:0;left:0;background:linear-gradient(#ebebeb,#757575)}
+        .home{width:50px;height:50px;position:absolute;left:50%;top:-10px;margin-left:-25px}
+        .home a.btn{width:100%;height:50px;float:left;background:#001b30 url(images/win_icon_off.png) no-repeat center center;text-indent:-999999px;border-radius:100%;z-index:99}
+        .home a.btn:hover{background:#193244 url(images/win_icon_on.png) no-repeat center center}
+
+        .home ul{width:200px;position:absolute;left:50%;margin-left:-100px;background:#001b30;bottom:-300px;padding:10px 0}
+        .home ul li{width:100%;display:inline-block}
+        .home ul li a{width:100%;line-height:32px;color:#fff;display:inline-block;font-size:14px}
+        .home ul li a:hover{background:#193244}
+
+        .home:hover > ul{
+            bottom:50px;
+            animation-name:menu_open;
+            animation-duration:1s
+        }
+        @keyframes menu_open{
+            from{bottom:-300px}
+            to{bottom:50px}
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <nav>
+            <div class="home">
+                <a href="/" class="btn">홈으로</a>
+                <ul>
+                    <li><a href="#">내 문서</a></li>
+                    <li><a href="#">내 컴퓨터</a></li>
+                    <li><a href="#">제어판</a></li>
+                    <li><a href="#">휴지통</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

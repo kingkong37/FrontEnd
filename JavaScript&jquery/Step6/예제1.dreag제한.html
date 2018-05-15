@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <link href="jquery-ui/jquery-ui.min.css" type="text/css" rel="stylesheet" />
+    <link href="jquery-ui/jquery-ui.structure.min.css" type="text/css" rel="stylesheet" />
+    <link href="jquery-ui/jquery-ui.theme.min.css" type="text/css" rel="stylesheet"/>
+    <style type="text/css">
+        .design{width:100px;height:100px;border:1px solid #000;display:inline-block;font-size:12px;line-height:100px;text-align:center}
+        .dreag_area{width:700px;height:500px;padding:20px;border:1px solid #000;margin-top:20px;display:block;overflow:auto}
+        .dreag_area .area_div{background:#6b6b6b;color:#fff}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//Y축으로만 이동
+            $('.y_move').draggable({
+				axis : 'y'//axis(중심선)
+			});
+			//X축으로만 이동
+			$('.x_move').draggable({
+				axis : 'x'//axis(중심선)
+			});
+			//영역안에서움직임
+			$('.area_div').draggable({
+				containment : '.dreag_area'//영역을 직접 지정하는방식(class나id,태그명 반드시 명시(.,#))
+			})
+			$('.area_div span').draggable({
+				containment : 'parent'//부모요소를 지정하는방식
+			})
+        });
+    </script>
+</head>
+<body>
+    <div class="y_move design">Y축으로만 이동</div>
+    <div class="x_move design">X축으로만 이동</div>
+
+    <div class="dreag_area">
+        <div class="area_div design">영역에서 이동</div>
+        <div class="area_div design"><span>영역에서 이동</span></div>
+    </div>
+</body>
+</html>

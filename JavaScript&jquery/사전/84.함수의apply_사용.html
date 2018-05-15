@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+		list1 = {val1: 1, val2: 2, val3: 3}
+		list2 = {v1: 10, v2: 20, v3: 30}
+
+		function total_sum(){
+			var sum = 0;//초기화
+			for(aa in this){//반복문을 이용해서 합계 연산을 선언(this의 지목은 호출하면서 결정됨)(56번 참조)
+				sum += this[aa]//대입연산을 통해 합계를 구해나감
+			}
+			return sum;//토탈값
+		}
+		
+		alert(total_sum.apply(list1));
+		/*
+		다음과 같이 total_sum함수를 호출하고 그안에 list1을 인자로 추가하여
+		this가 가르키는 요소가  total_sum을 말하고 해당 인자안에 데이터를 for in문으로 불러온다.
+		*/
+		alert(total_sum.call(list2));//call을 사용해도 결과값은 같다.
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

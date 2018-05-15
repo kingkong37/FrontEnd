@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style type="text/css">
+        .movie_tab{width:560px;height:400px;float:left}
+        .movie_tab ul{width:100%;padding:0;margin:0 0 10px 0;list-style:none;float:left}
+        .movie_tab ul li{float:left;margin-right:20px}
+        .movie_tab ul li a{color:#5b5b5b;text-decoration:none}
+        .movie_tab .movie_data{width:100%;height:315px;float:left}
+        .movie_tab .movie2{display:none}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//Tab
+			$('.tab li a').click(function(){
+				$('.movie_data').hide();
+				$($(this).attr('href')).show();
+			})
+			//위와같이 탭만 사용하면 영상의 사운드를 없앨 수 없다.
+			
+			//영상컨트롤
+			//1번영상
+			$('.tab li a.btn1').click(function(){
+				$('.movie1 iframe').attr('src' , 'https://www.youtube.com/embed/Dza-lHdf6GU');
+				$('.movie2 iframe').attr('src' , '');
+			});
+			//2번영상
+			$('.tab li a.btn2').click(function(){
+				$('.movie2 iframe').attr('src' , 'https://www.youtube.com/embed/jy_UiIQn_d0');
+				$('.movie1 iframe').attr('src' , '');
+			})
+        });
+    </script>
+</head>
+<body>
+    <div class="movie_tab">
+        <ul class="tab">
+            <li><a href="#movie1" class="btn1">MOVIE1</a></li>
+            <li><a href="#movie2" class="btn2">MOVIE2</a></li>
+        </ul>
+        <div class="movie_data movie1" id="movie1"><iframe width="560" height="315" src="https://www.youtube.com/embed/Dza-lHdf6GU" frameborder="0" allowfullscreen></iframe></div>
+        <div class="movie_data movie2" id="movie2"><iframe width="560" height="315" src="https://www.youtube.com/embed/jy_UiIQn_d0" frameborder="0" allowfullscreen></iframe></div>
+    </div>
+</body>
+</html>

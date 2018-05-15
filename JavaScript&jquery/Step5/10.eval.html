@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			var x = 10;
+			var y  = 20;
+
+			var a = eval('x*y') + '<br/>';//eval(평가)함수는 인수를 평가하거나 실행한다.
+			var b = eval('2+2') + '<br/>';//eval이 표현식으로 작성하여도 평가한다.
+			var c = eval('x+17') + '<br/>';
+
+			var zz = a + b + c //eval을 사용한 경우 +는 출력을 뜻한다.  
+			$('div').html(zz);//연산된 변수를 출력한 결과
+        });
+
+    </script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

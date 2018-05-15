@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    var baseball = {'LG':2, 'SK':3, '한화':10, '두산':4} //기본형
+    var baseball = {LG:2, SK:3, 한화:10, 두산:4} //Key 값에 따옴표가 없어도 됨
+    var baseball = {11:2, 22:3, 33:10, 44:4} //Key 값이 숫자여도 됨
+    var baseball = {"서울":"LG", "인천":"SK", "대전":"한화", "서울2":"두산"}
+	//Key와 Value가 문자여도 됨, 문자와 문자로 객체가 이루어질 경우, 따옴표로 구분한다.
+
+    /*작성법2*/
+	var baseball = {};
+	baseball['LG'] = 2;
+    baseball['SK'] = 3;
+
+    /*작성법3*/
+	var baseball = new object();//{}같은의미 (자주 사용)
+	baseball['LG'] = 2;
+    baseball['SK'] = 3;
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

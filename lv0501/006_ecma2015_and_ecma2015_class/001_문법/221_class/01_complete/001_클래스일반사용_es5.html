@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /*
+        기존에는 prototype을 활용해 클래스 선언
+         */
+// 생성자
+function MyClass(name){
+    // 프로퍼티
+    this.name=name;
+}
+// 메서드
+MyClass.prototype.showInfo=function(){
+    console.log("name =" + this.name);
+}
+
+// 인스턴스 생성
+var my1 = new MyClass("ddandongne");
+
+// 메서드/프로퍼티 호출
+my1.showInfo();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

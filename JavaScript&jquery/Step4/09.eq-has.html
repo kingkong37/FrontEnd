@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('ul li').eq(2).css('color','green')//eq는 요소의 순서를 선택하는 함수 0=첫번째
+			$('ul li').has('span').css('color','red')
+			//has는 반드시 선택요소가 명시되어여하고 그 선택요소를 가지고있는 것만 명령문을 넣을수있다.
+        });
+    </script>
+</head>
+<body>
+		<ul>
+			<li>첫번째</li>
+			<li><span>두번째</span></li>
+			<li>세번째</li>
+			<li><span>네번째<span></li>
+			<li>다섯번째</li>
+		</ul>
+</body>
+</html>

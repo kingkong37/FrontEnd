@@ -1,0 +1,25 @@
+body{font-family:arial;background:#232323}
+.header{width:100%;background:url(../site/header_bg.gif) repeat-x;display:block}
+.header_con{width:890px;display:inline-block}
+.header_con h1{float:left;padding:10px 0}
+.gnb{width:100%;height:29px;background:url(../site/menu_bg.gif);display:block}
+.gnb ul{width:890px;display:inline-block}
+.gnb ul li{width:20%;float:left}
+.gnb ul li a{width:100%;line-height:29px;color:#fff;text-align:center;font-size:14px;display:block}
+.gnb ul li a:hover{color:#000;background:yellow;font-weight:bold}
+.contents{width:890px;display:inline-block}
+.main_img{width:100%;display:block;margin-top:15px;position:relative}
+.main_img form{width:260px;position:absolute;right:20px;top:20px}
+.main_img form legend{width:100%;color:yellow;display:block;font-size:24px;border-bottom:1px solid yellow;text-align:left;padding-bottom:5px}
+.main_img form dl{width:100%;display:inline-block;margin-top:10px}
+.main_img form dl dt{width:35%;height:24px;line-height:24px;float:left;text-align:left;color:#fff;font-weight:bold;margin-bottom:5px}
+.main_img form dl dd{width:65%;float:left;margin-bottom:5px}
+.main_img form dl dd input , .main_img form dl dd select{width:100%;height:24px;border:none;background:#fff}
+.main_img form button{width:100%;height:40px;background:yellow;color:black;border:none;font-weight:bold}
+.gallery{width:100%;display:inline-block;margin:20px 0}
+.gallery li{width:282px;border:1px solid #68686a;padding:5px;display:inline-block}
+.gallery li span{width:100%;line-height:24px;background:yellow;color:#000;display:block;text-align:left;padding:0 5px}
+.gallery li.first{float:left}
+.gallery li.last{float:right}
+.info_text{width:100%;display:block;color:white;font-size:12px;line-height:22px;text-align:justify;border-top:1px solid yellow;border-bottom:1px solid yellow;}
+.footer{width:100%;color:white;font-size:12px;padding:10px 0}

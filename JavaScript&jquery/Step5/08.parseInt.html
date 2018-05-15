@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<style>
+		div{width:50px;height:50px;background:green}
+	</style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('div').click(function(){
+				var aa = $(this).css('width');
+				var bb = $(this).css('height');
+				$(this).animate({
+					width : parseInt(aa) + 50,
+					//parse(해석)함수는 문자열을 숫자와 구분하여 정수로 반환한다.(초기 값이 존재)
+					height : parseInt(bb) + 50 
+				},'slow');
+			})
+        });
+    </script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

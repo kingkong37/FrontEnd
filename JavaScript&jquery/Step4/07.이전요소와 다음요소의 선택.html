@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//$(선택자).next(선택자).실행문
+			$('li.aa').next().css('color','red');//다음요소
+			$('li.aa').prev().css('color','blue');//이전요소
+			$('li.bb').prevAll().css('color','green');//이전 모든요소(nextAll도 있음)
+
+			$('li.aa').next('li').next('li').css('color','yellow');
+
+        });
+    </script>
+</head>
+<body>
+	<ul>
+		<li>첫번째</li>
+		<li class="aa"><div class="bb">두번째</div></li>
+		<li>세번째</li>
+		<li class="bb">네번째</li>
+		<li>다섯번째</li>
+	</ul>
+</body>
+</html>

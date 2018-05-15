@@ -1,0 +1,24 @@
+@font-face{
+	font-family:'NG_Barun'	;
+	font-style:normal;
+	font-weight:400;
+	src:url('../font/NanumBarunGothicWeb.eot');
+	src:url('../font/NanumBarunGothicWeb.ttf') format('truetype');
+	src:url('../font/NanumBarunGothicWeb.woff') format('woff')
+}
+@font-face{
+	font-family:'NG_Barun'	;
+	font-style:normal;
+	font-weight:700;
+	src:url('../font/NanumBarunGothicWebBold.eot');
+	src:url('../font/NanumBarunGothicWebBold.ttf') format('truetype');
+	src:url('../font/NanumBarunGothicWebBold.woff') format('woff')
+}
+@font-face{
+	font-family:'NG_Barun'	;
+	font-style:normal;
+	font-weight:300;
+	src:url('../font/NanumBarunGothicWebLight.eot');
+	src:url('../font/NanumBarunGothicWebLight.ttf') format('truetype');
+	src:url('../font/NanumBarunGothicWebLight.woff') format('woff')
+}

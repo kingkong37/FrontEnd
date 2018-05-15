@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	//버튼을 이용한 팝업창 열기,닫기
+	function pop_open(){
+		aa = window.open("popup.html", "팝업창", "width=200,height=200");
+	}
+	function pop_close(){
+		aa.close();
+	}
+  </script>
+ </head>
+ <body>
+	<button onclick="pop_open()">팝업창 열기</button>
+	<button onclick="pop_close()">팝업창 닫기</button>
+ </body>
+</html>

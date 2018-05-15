@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>모바일초대장</title>
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" />
+    <link type="text/css" rel="stylesheet" href="css/birthday.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdFWHgPRJM4fZt58UrOl8DxaiD7TOUD7E&callback=initMap"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('.intro').fadeOut(500);
+            }, 3000);
+            //day popup
+            $('a.day_open').click(function () {
+                $('.day_popup').fadeIn();
+                return false
+            });
+            $('a.day_close').click(function () {
+                $('.day_popup').fadeOut();
+                return false
+            });
+            //Gallery
+            $('a.photo_open').click(function () {
+                $('.photo_popup').animate({ 'bottom': '0' });
+                return false;
+            });
+            $('a.photo_close').click(function () {
+                $('.photo_popup').animate({ 'bottom': '-100%' });
+                return false;
+            });
+            $('.photo_popup .roll').flexslider({
+                animation: "",
+                pauseOnAction: false,
+                pauseOnHover: true,
+                controlNav: false,
+                slideshow: false,
+                directionNav: false,
+                controlNav: "thumbnails",
+                animationSpeed: 1000,
+                smoothHeight:true,
+                slideshowSpeed: 5000,
+            });
+            //비디오
+            $('a.video_open').click(function () {
+                $('.video_popup').animate({ 'top': '0' });
+                return false;
+            });
+            $('a.video_close').click(function () {
+                $('.video_popup').animate({ 'top': '-100%' });
+                return false;
+            });
+            //지도
+            $('a.map_open').click(function () {
+                $('.map_popup').animate({ 'bottom': '0' });
+                return false;
+            });
+            $('a.map_close').click(function () {
+                $('.map_popup').animate({ 'bottom': '-100%' });
+                return false;
+            });
+        });
+        function initMap() {
+            var mymap = { lat: 37.482231, lng: 126.941452 };//지도의 위도와 경도 맵좌표에서 확인가능
+            var map = new google.maps.Map(document.getElementById('map'), {//맵이뿌려질 위치
+                zoom: 15,//처음화면에 대한 줌설정
+                center: mymap,
+                mapTypeControl: true,//맵종류선택 컨트롤러
+                scrollwheel: false,//휠 줌 컨트롤 여부
+            });
+            var marker = new google.maps.Marker({
+                position: mymap,
+                map: map,
+                icon: mm
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="intro"><img src="images/intro.jpg" /></div>
+        <div class="main_page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="#" class="day_open">
+                            <img src="images/icon_01.png" />
+                            <span>일정</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="photo_open">
+                            <img src="images/icon_02.png" />
+                            <span>사진</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="video_open">
+                            <img src="images/icon_03.png" />
+                            <span>비디오</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="map_open">
+                            <img src="images/icon_04.png" />
+                            <span>지도</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--일정-->
+            <div class="day_popup">
+                <div class="day_wrap">
+                    <a href="#" class="day_close"><img src="images/pop_close.png" /></a>
+                    <ul>
+                        <li class="t1">00월</li>
+                        <li class="t2">03</li>
+                        <li class="t3">(토요일)</li>
+                        <li class="t3">00:00</li>
+                    </ul>
+                </div>
+            </div>
+            <!--//일정-->
+            <!--사진-->
+            <div class="photo_popup">
+                <h3>카메라 롤<a href="#" class="photo_close">뒤로가기</a></h3>
+                <div class="roll">
+                    <ul class="slides">
+                        <li><img src="images/gallery/01.jpg" /></li>
+                        <li><img src="images/gallery/02.jpg" /></li>
+                        <li><img src="images/gallery/03.jpg" /></li>
+                        <li><img src="images/gallery/04.jpg" /></li>
+                    </ul>
+                </div>
+            </div>
+            <!--//사진-->
+            <!--비디오-->
+            <div class="video_popup">
+                <h3>비디오<a href="#" class="video_close">뒤로가기</a></h3>
+                <div class="video_list">
+                    <iframe src="https://www.youtube.com/embed/S1hSyRxy7lw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div> 
+            <!--//비디오-->
+            <!--지도-->
+            <div class="map_popup">
+                <h3>찾아오시는 길<a href="#" class="map_close">뒤로가기</a></h3>
+                <div id="map"></div>
+                <div class="info_text">
+                    <h4>엘레시안파티<span>(구.세렌체)</span></h4>
+                    <table class="way_01">
+                        <tr>
+                            <th>지하철</th>
+                            <td><span>2호선 문래역</span> 4번출구 오른쪽방면 홈플러스 주차장 방향 50미터</td>
+                        </tr>
+                        <tr>
+                            <th>버스</th>
+                            <td>
+                                <ul>
+                                    <li>광역버스 : 2300, 2400, 2500</li>
+                                    <li>간선버스 : 642</li>
+                                    <li>지선버스 : 6211, 6625, 6650</li>
+                                    <li>마을버스 : 영등포05</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="way_02">
+                        <tr>
+                            <th><span>주소</span></th>
+                            <td>서울 영등포구 문래로26길 6 벽산메가트리움 엘리시안</td>
+                        </tr>
+                        <tr>
+                            <th><span>지번</span></th>
+                            <td>서울 영등포구 문래동3가 55-4 벽산메가트리움 104 지하1층</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>   
+            <!--//지도-->
+        </div>
+    </div>
+</body>
+</html>

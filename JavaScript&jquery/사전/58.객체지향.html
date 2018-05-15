@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    /*
+	객체 안에 객체를 부여할 수 있고, value 값을 function으로 부여 할 수도 있다.
+	*/
+    var movie = {//가장 상위가 되는 변수
+	   "list" : {'어벤져스' : 100 + '만', '해리포터' : 110 + '만', '반지의제왕' : 200 + '만'},//객체 1번
+       "list_view" : function(){
+	      alert("영화목록")
+	   }//객체 2번
+	}
+
+	alert(movie['list']['어벤져스']);//객체 안에 객체를 불러오기 위해서는 해당 key값이 있는 경로를 전부 작성한다.    
+	movie["list_view"]();//객체 안에 함수를 호출하는 작성법
+  </script>
+ </head>
+ <body>
+
+ </body>
+</html>

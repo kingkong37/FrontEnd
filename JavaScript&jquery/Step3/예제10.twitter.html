@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style type="text/css">
+        html,body{margin:0;padding:0}
+        .twitter{width:560px;background:#efefef;padding:20px;display:inline-block}
+        .twitter .tit{width:100%;display:inline-block}
+        .twitter .tit div.count{font-size:14px;font-weight:bold;float:right;color:#cdcdcd;font-weight:normal}
+        .twitter .tit div.count span{font-size:20px}
+        .twitter textarea{width:540px;height:50px;padding:10px;overflow-y:scroll;background:#fff;border:1px solid #cdcdcd;resize:none;margin:10px 0;resize:none}
+        .twitter button{width:100px;height:30px;float:right;background:#767676;color:#fff;font-weight:bold;border:1px solid #6e6e6f;border-radius:3px;cursor:pointer}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.twitter textarea').keyup(function(){
+				var Enter_text = $(this).val().length;
+				var MaxText = 120 - Enter_text;
+				$('.text_count').html(MaxText);
+				//변수선언을 함수안에 선언(지역변수)했으므로 if문은 keyup함수 안에 있어야 한다.
+				if(MaxText <= 0){
+					alert('120자 넘음')
+				}
+			})
+        });
+    </script>
+</head>
+<body>
+    <div class="twitter">
+        <div class="tit"><img src="images/t_text.gif" />
+        <div class="count">
+            <span class="text_count">120</span>/120</div>
+        </div>
+        <textarea></textarea>
+        <button>글 올리기</button>
+    </div>
+</body>
+</html>

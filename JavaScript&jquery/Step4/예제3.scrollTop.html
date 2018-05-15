@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('button').click(function(){
+				alert($('div').scrollTop() + "px")
+				/*
+				scrollTop은 현재 스크롤의 위치를 나타내는 방법이나
+				실제적으로는 문서에서 얼마만큼 이동했는지의 수치를 말한다.
+				*/
+			})
+        });
+    </script>
+</head>
+<body>
+    <div style="border:1px solid black;width:200px;height:100px;overflow:scroll;">
+        It is perhaps surprising that we can make any progress at all in understanding the behavior of a collection of a large number of interacting particles, given that even the problem of three interacting particles resists exact solution. The trick is to guess, guided by experiment, the emergent principles. This talk will address the amazing phenomenon of the fractional quantum Hall effect and show how the emergence of topological particles called composite fermions provides a unified explanation for it, while also revealing a treasure trove of new phenomena. I will also report on recent progress, including the perhaps surprising that we can make any progress at all in understanding the behavior of a collection of a large number of interacting particles, given that even the problem of three interacting particles resists exact solution.
+    </div>
+    <button>현재위치는?</button>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /*
+        getter : 읽기 전용 처리 함수
+
+         */
+
+
+        // es2015
+        var obj1 = {
+            _data:10,
+            get data(){
+                return this._data;
+            }
+        }
+
+        console.log(obj1.data);
+
+        obj1.data=140; // 데이터 설정을 할 수 없음.
+        console.log(obj1.data);
+
+        // 단 다음과 같이 처리 가능
+        obj1._data = 120;
+        console.log(obj1._data);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

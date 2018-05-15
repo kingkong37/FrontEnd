@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <style type="text/css" >
+        html,body{margin:0;padding:0}
+        .latest{width:480px;position:relative}
+        .latest span{background:#f4f7f6;border:1px solid #e2e2e2;display:inline-block;border-bottom:none;display:inline-block;padding:10px 30px;font-size:14px;font-weight:bold}
+        ul,li{margin:0;padding:0;list-style:none}
+        ul#list{width:100%;border:1px solid #e2e2e2;display:block;padding:10px;box-sizing:content-box}
+        ul#list li{width:100%;display:inline-block;box-sizing:content-box;line-height:24px;font-size:14px}
+        ul#list li::before{content:"▪";margin-right:5px}
+    </style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var output='';
+			for(i=0; i < 5; i++){
+				output +='<li>최근게시물'+(i+1)+'</li>';
+			}
+			document.getElementById('list').innerHTML = output;
+			//실무작성법
+			/*
+			for(초기화; 리스트 갯수; 증가값){
+				output +='<li>'+DB값+'</li>';
+			}
+			*/
+		}
+	</script>
+</head>
+<body>
+    <div class="latest">
+        <span>공지사항</span>
+        <ul id="list">
+
+        </ul>
+    </div>
+</body>
+</html>

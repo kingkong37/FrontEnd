@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        html,body{text-align:center}
+        form{width:60%;display:inline-block}
+        iframe{width:100%;height:200px;border:1px solid #000000}
+        .policy_check{width:100%;padding:0 0 10px 0;display:block}
+        .policy_check p{width:100%;display:block;text-align:center;font-weight:bold;font-size:14px}
+        .policy_check span{width:15px;height:16px;display:inline-block;background:url(images/checkbox2_off.png);vertical-align:bottom;margin-right:3px;cursor:pointer}
+        .policy_check p span.on{background:url(images/checkbox2_on.png)}
+        .policy_check span input{visibility:hidden}
+        .policy_check input[type=submit]{width:200px;height:40px;background:#00bd39;color:#fff;font-size:14px;font-weight:bold;border:none;cursor:pointer;border-radius:3px}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+	<script src="scripts/toggleAttr.js"></script><!--toggleAttr 모듈-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('p span').click(function(){
+				$(this).toggleClass('on');
+				$(this).children().toggleAttr('checked', 'checked')
+			})
+			
+			$('.next_btn').click(function(){
+				if($('span input').is(':checked') == true){
+					//라디오버튼 이나 체크박스의 체크유무는 .is(':checked')로 작성한다.
+					//사용자에 의해 값이 설정되는 경우 true나 false로 if문을 구성한다.
+					alert('약관에 동의하셨습니다.')
+					return false;
+				}else{
+					alert('약관에 동의하세요.')
+				}
+			})
+				
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <iframe src="policy.html"></iframe>
+        <div class="policy_check">
+            <p><span><input type="checkbox" /></span>약관에 동의합니다.</p>
+            <input type="submit" value="다음 단계로" class="next_btn" />
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	function myfun(){
+		document.getElementById("text").innerHTML = "클릭완료";
+		//스크립트에 작성 시 .getElementById의 내장 함수는 ()가 아닌 =로 작성한다.
+	}
+  </script>
+ </head>
+ <body>
+	<div id="text">자바스크립트</div>
+	<button onclick="myfun()">클릭</button>
+ </body>
+</html>

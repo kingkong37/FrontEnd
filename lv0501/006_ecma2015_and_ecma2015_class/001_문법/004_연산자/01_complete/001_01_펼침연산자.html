@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="kr">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        /*
+            펼침연산자 (spread operator)
+         */
+
+        // 일반 배열 변수
+        var a=[10,20,30,40,50];
+        console.log("1. es6",a);
+
+        // 1번째 부터 b에 배열로 저장됨. 즉 b는 배열 변수가 됨.
+        var [a,...b]=[10,20,30,40,50];
+        console.log("2. es6",a, b);
+
+
+        // 에러
+        var [a,...b,c]=[10,20,30,40,50];
+        console.log("3. es6",a, b,c);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        *{box-sizing:border-box}
+        div.radio_select{width:750px;display:inline-block;padding:10px}
+        table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;font-size:14px;border-top:1px solid #a7a7a7;border-bottom:1px solid #a7a7a7}
+        table th{text-align:center;vertical-align:middle;border-right:1px solid #a7a7a7}
+        table td{padding:8px 5px}
+        table td p{display:inline-block;padding:0;margin:0 0 0 10px}
+        table td.mail_select{line-height:18px}
+        table td.mail_select input[type=text]{display:inline-block;width:150px;height:26px}
+        table td.mail_select span{width:18px;height:18px;background:url(images/radio_off.gif)no-repeat;float:left;margin-right:2px} 
+        table td.mail_select span.on{background:url(images/radio_on.gif)no-repeat} 
+        table td.mail_select span input[type=radio]{visibility:hidden}
+        table td.other{padding-left:15px}
+        table td.other input[type=text]{display:inline-block;width:150px;height:26px}
+        table td.other span{margin:0 5px}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.mail_select span').click(function(){
+				//on select
+				$('.mail_select span').removeClass('on');
+				$(this).addClass('on');
+				//radio Check
+				$('.mail_select span input').removeAttr('checked' , '');
+				$(this).children().attr('checked' , 'checked');
+				//disabled
+				$('td.other input').attr('disabled' , 'disabled');
+				$('td.other input').val('')
+			})
+			$('.mail_select p span.direct').click(function () {
+                $('.other input').removeAttr('disabled', '')//disabled 제거
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="radio_select">
+        <table>
+            <colgroup>
+                <col style="width:120px" />
+            </colgroup>
+            <tr>
+                <th rowspan="2">이메일</th>
+                <td class="mail_select">
+                    <p><input type="text"/></p>
+                    <p><span><input type="radio" name="mail" /></span>네이버</p>
+                    <p><span><input type="radio" name="mail" /></span>네이트</p>
+                    <p><span><input type="radio" name="mail" /></span>한메일</p>
+                    <p><span><input type="radio" name="mail" /></span>지메일</p>
+                    <p><span class="direct"><input type="radio" name="mail" /></span>직접입력</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="other"><input type="text" disabled="disabled" /><span>@</span><input type="text" disabled="disabled" /></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

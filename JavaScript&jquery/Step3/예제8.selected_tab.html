@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        *{box-sizing:border-box;-moz-box-sizing:border-box}
+        html,body{width:100%;height:100%;padding:0;margin:0;text-align:center}
+        ul,li{margin:0;padding:0;list-style:none}
+        .themecast{width:740px;height:580px;border:1px solid #dee3eb;display:inline-block;margin:0 auto;text-align:left;position:relative}
+        .themecast ul.tab_menu{width:100%;display:inline-block;border-bottom:1px solid #dee3eb;position:relative;padding-left:70px}
+        .themecast ul.tab_menu li.text_link{display:inline-block;line-height:44px;margin-right:25px}
+        .themecast ul.tab_menu li.text_link a{font-size:14px;font-weight:bold;text-decoration:none;color:#666;padding-bottom:10px}
+        .themecast ul.tab_menu li.text_link a.on{color:#829c00;border-bottom:3px solid #829c00}
+        .themecast ul.tab_menu li.menu_all{width:45px;height:44px;border-right:1px solid #dee3eb;position:absolute;left:0;top:0}
+        .themecast ul.tab_menu li.menu_all a.menu_close{display:none}
+        .themecast .all_menu_data{width:100%;text-align:center;position:absolute;top:45px;left:0;padding:10px;background:#fff;border:1px solid #dee3eb;display:none;z-index:99}
+        .themecast .tab_data{width:100%;text-align:center;padding:10px;display:none}
+		.themecast .tab_data.first_data{display:block}
+
+
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//Tab Selected
+			$('.text_link a').click(function(){
+				$('.text_link a').removeClass('on');
+				$(this).addClass('on');	
+				$('.tab_data').hide();
+				$($(this).attr('href')).fadeIn(500);
+				return false;
+			})
+			//All Menu
+			$('.menu_all a.menu_open').click(function(){
+				$('.all_menu_data').show();
+				$(this).hide();
+				$('.menu_all a.menu_close').show();
+				return false;	
+			});
+			$('.menu_all a.menu_close').click(function(){
+				$('.all_menu_data').hide();0
+				$(this).hide();
+				$('.menu_all a.menu_open').show();
+				return false;	
+			});
+			//Tab Click all Menu Hide
+			$('.text_link a').click(function(){
+				$('.all_menu_data').hide();
+				$('.menu_all a.menu_close').hide();
+				$('.menu_all a.menu_open').show();
+			})
+        });
+    </script>
+
+</head>
+<body>
+    <div class="themecast">
+        <!--Tab Menu-->
+        <ul class="tab_menu">
+            <li class="menu_all">
+				<a href="#" class="menu_open"><img src="images/tab_menu_btn.gif" /></a>
+				<a href="#" class="menu_close"><img src="images/tab_menu_btn_close.gif" /></a>
+			</li>
+            <li class="text_link"><a href="#aa" class="on">리빙</a></li>
+            <li class="text_link"><a href="#bb">푸드</a></li>
+            <li class="text_link"><a href="#cc">스포츠</a></li>
+            <li class="text_link"><a href="#dd">차&middot;테크</a></li>
+        </ul>
+        <!--//Tab Menu-->
+        <!--All Menu-->
+        <div class="all_menu_data"><img src="images/tab_all.jpg" /></div>
+        <!--Tab Data-->
+        <div class="tab_data first_data" id="aa">
+            <img src="images/tab_01.jpg" />
+        </div>
+        <div class="tab_data" id="bb">
+            <img src="images/tab_02.jpg" />
+        </div>
+        <div class="tab_data" id="cc">
+            <img src="images/tab_03.jpg" />
+        </div>
+        <div class="tab_data" id="dd">
+            <img src="images/tab_04.jpg" />
+        </div>
+        <!--//Tab Data-->
+    </div>
+</body>
+</html>

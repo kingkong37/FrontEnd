@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<style>
+		div{width:100px;height:100px;display:none;}
+		.aa{background:orange}
+		.bb{background:red}
+		.cc{background:blue}
+		.dd{background:black}
+		.ee{background:green}
+	</style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('button').click(function(){
+				$('.aa').delay(0).fadeIn();
+				$('.bb').delay(500).fadeIn();
+				$('.cc').delay(1000).fadeIn();
+				$('.dd').delay(1500).fadeIn();
+				$('.ee').delay(2000).fadeIn();
+			})
+        });
+    </script>
+</head>
+<body>
+	<button>클릭</button>
+	<div class="aa">1번</div>
+	<div class="bb">2번</div>
+	<div class="cc">3번</div>
+	<div class="dd">4번</div>
+	<div class="ee">5번</div>
+</body>
+</html>

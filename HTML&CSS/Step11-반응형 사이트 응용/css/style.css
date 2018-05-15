@@ -1,0 +1,128 @@
+body{background:#2F3238;font-family: "Nanum Gothic", sans-serif;font-size:1.2em;line-height:1.8em}
+
+/*Header*/
+header{width:100%;height:60px;background:#26292E;display:inline-block;padding:15px 2%}
+header h1{float:left}
+header nav{float:right}
+header nav a{color:#fff;font-size:0.8em;display:inline-block;margin-left:30px}
+header nav a:hover{color:#de5e60}
+
+/*Common*/
+section{width:100%;display:block}
+article{width:1170px;display:inline-block}
+h1, h2, h3, h4, h5, h6{font-weight:normal}
+h2.main_top_title{font-size:2.4em;color:#fff;line-height:2em}
+h3.main_top_sub_title{font-size:1.2em;color:#fff}
+h3.main_top_sub_title span{color:#de5e60}
+
+/*Contents*/
+#container{width:100%;display:block;position:relative}
+	/*Main Top Tilte*/
+	.top_title{padding:50px 0}
+	
+	/*LNB & Gallery*/
+	aside{width:270px;float:left;text-align:left}
+	aside h4{color:#fff;font-size:1.2em;margin-bottom:15px}
+	aside ul, aside li{width:100%;display:block}
+	aside li.m_img{display:none}
+	aside a{color:#7F8289;font-size:1em;line-height:2.6em}
+	aside a:hover{color:#de5e60}
+	.lnb_gallery ul.gallery{width:900px;float:right}
+	.lnb_gallery ul.gallery li{width:270px;float:left;position:relative;margin:15px}
+	.lnb_gallery ul.gallery li img{width:100%}
+	.lnb_gallery ul.gallery li a{position:absolute;left:0;bottom:0;background:rgba(222,94,96,0.8);width:100%;height:100%;display:none}
+	.lnb_gallery ul.gallery li a span{color:#fff;font-weight:700;position:absolute;width:100%;left:0;top:40%}
+	.lnb_gallery ul.gallery li:hover a{display:block}
+	.lnb_gallery ul.gallery li:first-child{margin-top:0}
+	.lnb_gallery ul.gallery li:nth-child(2){margin-top:0}
+	.lnb_gallery ul.gallery li:nth-child(3){margin-top:0}
+	/*About us*/
+	.about_us{background:#26292E;padding:50px 0}
+	.about_us ul{width:370px;display:inline-block;margin-top:30px;min-height:500px}
+	.about_us ul li{width:100%;display:block;text-align:left}
+	.about_us ul li.photo img{width:100%;max-width:370px}
+	.about_us ul li.user_name{color:#fff;font-size:1.2em}
+	.about_us ul li.text{color:#7F8289;font-size:0.8em;line-height:1.2em}
+	.about_us ul li.text span{color:#de5e60}
+	.about_us ul li.sns a{display:inline-block;margin:0 5px}
+	/*article 태그에서 ul의 태그 순서가 3번째에 있으므로 선택자에서 다음과 같이 작성해야한다.*/
+	.about_us article ul:nth-child(3){float:left}
+	.about_us article ul:last-child{float:right}
+	/*부모의 요소(div)를 만들고 ul태그를 작성하면 first-child로 작성 할 수있다.*/
+	
+	/*get it touch*/
+	.get_it_touch{padding:70px 0}
+	.get_it_touch form{width:870px;float:left;margin-top:30px}
+	.get_it_touch form fieldset{width:100%;display:block;background:#26292e}
+	.get_it_touch input[type=text]{width:100%;color:#fff;background:#26292e;border:none;border-bottom:1px solid #2f3238;line-height:3em;padding:0 5%}
+	.get_it_touch textarea{width:100%;height:200px;color:#fff;background:#26292e;border:none;line-height:2.6em;padding:0 5%;font-family: "Nanum Gothic", sans-serif}
+	.get_it_touch button{float:left;padding:10px 30px;color:#23262C;background:#3C3F45;border:none;margin-top:10px}
+	.get_it_touch button:hover{background:#de5e60;color:#fff}
+	.get_it_touch aside{float:right;margin-top:30px}
+	.get_it_touch aside li{color:#7F8289}
+	.get_it_touch aside li a.mail_link{color:#de5e60}
+	.get_it_touch aside li a.tel_link{color:#7F8289}
+	
+	.sns_link_area{width:100%;display:inline-block;margin-top:30px}
+	.sns_link_area a{display:inline-block;margin:0 15px}
+	/*Roll Over Image CSS방법*/
+	.sns_link_area a img.roll_on{display:none}
+	.sns_link_area a:hover img.roll_on{display:block}
+	.sns_link_area a:hover img.roll_off{display:none}
+	
+	footer{width:100%;padding:10px 0;font-size:0.6em;color:#fff;background:#26292E}
+    footer span{color:#de5e60}
+
+/*Media Query*/
+@media all and (max-width:1169px){
+	/*Common*/
+	article{width:100%}
+	/*LNB & Gallery*/
+	aside{width:100%;padding:0 2%}
+	aside h4{float:left}
+	aside ul{width:70%;float:right;text-align:right}
+	aside li{width:auto;display:inline-block;margin-left:2%}
+	.lnb_gallery ul.gallery{width:100%;padding:0 2%;float:inherit}
+	.lnb_gallery ul.gallery li{width:30%;float:inherit;display:inline-block;margin:0;margin-bottom:15px}
+	/*About us*/
+	.about_us{padding:50px 2%}
+	.about_us ul{width:33%}
+	/*get it touch*/
+	.get_it_touch{padding:70px 2%}
+	.get_it_touch form{width:100%;float:inherit}
+	.get_it_touch button{float:inherit;display:inline-block}
+	.get_it_touch aside h4{width:100%;float:inherit;display:block}
+	.get_it_touch aside ul{width:100%;float:inherit;display:block;text-align:left}
+	.get_it_touch aside ul li{margin-left:0;margin-right:2%}
+}
+/*tablet*/
+@media all and (min-width:320px) and (max-width:768px){
+	header nav{display:none}
+	header a.m_menu{display:block!important;float:right}
+	/*LNB & Gallery*/
+	.lnb_gallery aside h4{display:none}
+	.lnb_gallery aside ul{width:100%;text-align:left}
+	.lnb_gallery aside li.m_img{display:inline-block}
+	.get_it_touch button{width:100%;padding:25px 0}
+}
+/*Smart Phone*/
+@media all and (min-width:320px) and (max-width:414px){
+	h2.main_top_title{font-size:1.8em}
+	h3.main_top_sub_title{font-size:0.8em}
+	aside a{font-size:0.8em}
+	.lnb_gallery ul.gallery li{width:100%;margin-bottom:15px}
+	.about_us ul{width:100%;max-width:370px}
+	.about_us article ul:nth-child(3){float:inherit}
+	.about_us article ul:last-child{float:inherit}
+	.get_it_touch button{padding:20px 0}
+	.get_it_touch aside{text-align:center;border-top:1px dotted #3C3F45;padding-top:10px}
+	.get_it_touch aside li{width:100%;text-align:center}
+	.sns_link_area a{width:12%;margin:0 2%}
+	.sns_link_area a img{width:100%}
+}
+/*iPhone5, iPhone4*/
+@media all and (max-width:320px){
+	aside a{font-size:0.6em}
+	.get_it_touch aside li{font-size:0.6em}
+	footer{font-size:0.4em}
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	window.onload = function(){
+		var aa = document.createElement('div');//태그를 생성
+		aa.className = 'header'//Class명 선언
+		aa.id = 'top';//ID선언
+		var bb = document.createTextNode('자바스크립트')//텍스트를 생성	
+		aa.appendChild(bb);//aa는 문서상(소스) 존재하지 않으므로 document는 작성하지 않는다.
+		document.body.appendChild(aa);//append(추가)child(인자)=인자를 추가
+		//.body(변경가능요소) - 어디안에
+	}
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

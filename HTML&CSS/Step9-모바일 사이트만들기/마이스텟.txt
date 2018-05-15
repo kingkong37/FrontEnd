@@ -1,0 +1,9 @@
+header : #f3f3f3
+
+menu : color-#4c4243 , bg-#f2f2f2 , border-#e1e1e1
+
+footer : #477cab
+
+∏∂¿ÃΩ∫≈›
+COPYRIGHT(C) mystats.
+ALL RIGHTS RESERVED.

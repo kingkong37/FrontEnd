@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Starbucks Coffee Korea</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+        <style type="text/css">
+            body{font-family:"맑은고딕"}
+            #wrap{width:100%;height:100%;position:relative;display:block}
+            /*Header*/
+            header{width:100%;height:122px;background:#f6f5ef;border-top:2px solid black;position:fixed;left:0;top:0;z-index:9}
+            .h_con{width:1100px;height:120px;display:inline-block;position:relative}
+            .h_con h1{float:left;margin-top:20px}
+            .h_con a.event_btn{position:absolute;right:0;top:-1px}
+            ul.top_menu{float:right;margin-right:60px;margin-top:10px}
+            ul.top_menu li{display:inline-block;margin:0 5px}
+            ul.top_menu li a{color:#555;font-size:12px}
+            ul.top_menu li button{width:34px;height:34px;background:url(starbucks/find_store_btn.gif);overflow:hidden;border:none;text-indent:-9999px;}
+            nav{width:100%;text-align:right;position:absolute;right:0;top:72px}
+            nav ul.depth1{float:right}
+            nav ul.depth1 > li{width:150px;display:inline-block;position:relative}
+            nav ul.depth1 > li > a{width:100%;display:inline-block;font-size:14px;color:#555;padding:10px 20px 20px 20px;border-radius:5px 5px 0 0;text-align:center}
+            nav ul.depth1 > li > a:hover{color:#669900;background:#2c2a29}
+            nav ul.depth1 > li > a.on{color:#669900;background:#2c2a29}
+            nav ul.depth2{width:100%;background:#2c2a29;position:absolute;left:0;top:48px;padding:10px;border-radius:0 0 5px 5px;display:none}
+            nav ul.depth2 li{width:100%;text-align:left;line-height:32px}
+            nav ul.depth2 li a{width:100%;display:block;color:#fff;padding:0 10px}
+            nav ul.depth2 li a:hover{background:#000;color:#669900}
+        </style>
+		<script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+				$('nav ul.depth1 li').hover(function(){
+					//태그의 구조상 a에 hover에 스크립트를 적용하면 a의 out상태를 만들기때문에 hover의 대상을 li로 선택한다.
+					$(this).children('ul.depth2').stop().slideDown();
+					$(this).children('a').addClass('on');
+				},function(){
+					$(this).children('ul.depth2').slideUp();
+					$(this).children('a').removeClass('on');
+				})
+            });
+        </script>
+    </head>
+    <body>
+    <div id="wrap">
+	    <header>
+		    <div class="h_con">
+			    <h1><a href="/" title="메인 페이지로 이동"><img src="images/logo.png" alt="스타벅스 로고"/></a></h1>
+			    <a href="#" class="event_btn"><img src="images/event_btn.gif"></a>
+			    <ul class="top_menu">
+				    <li><a href="#">Sign In</a></li>
+				    <li><a href="#">My Starbucks</a></li>
+				    <li><a href="#">Customer Service & Ideas</a></li>
+				    <li><a href="#">Find a Store</a></li>
+				    <li><button>검색</button></li>
+			    </ul>
+			    <!--GNB-->
+			    <nav>
+				    <ul class="depth1">
+                        <li>
+                            <a href="#">COFFEE</a>
+                            <ul class="depth2">
+                                <li><a href="#">Menu1</a></li>
+                                <li><a href="#">Menu2</a></li>
+                                <li><a href="#">Menu3</a></li>
+                                <li><a href="#">Menu4</a></li>
+                                <li><a href="#">Menu5</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">MENU</a>
+                            <ul class="depth2">
+                                <li><a href="#">Menu1</a></li>
+                                <li><a href="#">Menu2</a></li>
+                                <li><a href="#">Menu3</a></li>
+                                <li><a href="#">Menu4</a></li>
+                                <li><a href="#">Menu5</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">STORE</a>
+                            <ul class="depth2">
+                                <li><a href="#">Menu1</a></li>
+                                <li><a href="#">Menu2</a></li>
+                                <li><a href="#">Menu3</a></li>
+                                <li><a href="#">Menu4</a></li>
+                                <li><a href="#">Menu5</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">RESPONSIBILITY</a>
+                            <ul class="depth2">
+                                <li><a href="#">Menu1</a></li>
+                                <li><a href="#">Menu2</a></li>
+                                <li><a href="#">Menu3</a></li>
+                                <li><a href="#">Menu4</a></li>
+                                <li><a href="#">Menu5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+			    </nav>
+			    <!--//GNB-->
+		    </div>
+	    </header>
+    </div>
+    </body>
+</html>

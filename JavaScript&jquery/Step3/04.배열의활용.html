@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			var Tcolor = ['red', 'white' , 'yellow'];
+			
+			$('h1').css({
+				'color' : function(index){return Tcolor[index]},
+				//배열로 만든 값에 key값을 적용하여 각각의 요소에 return
+				'background' : 'black'
+			})
+        });
+    </script>
+</head>
+<body>
+	<h1>aa</h1>
+	<h1>bb</h1>
+	<h1>cc</h1>
+</body>
+</html>

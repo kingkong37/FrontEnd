@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>bizRun</title>
+    <link rel="stylesheet" type="text/css" media="all" href="css/bizrun_reset.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/bizrun_ui.css" />
+    <script type="text/javascript" src="scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="scripts/jquery/easing.js"></script>
+    <script type="text/javascript" src="scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//Mainbanner
+			$('.main_banner').flexslider({
+				animation : '',
+				pauseOnHover : true,
+				directionNav : false,
+				slideshowSpeed : 5000
+			})
+			//m GNB
+			$('header a.menu_btn').click(function () {
+                $("div.gnb").animate({ left: '0' });
+                $('div.gnb nav').addClass('open');
+                return false;
+            });
+            $('nav .top span').click(function () {
+                $("div.gnb").animate({ left: '-100%' });
+                $('div.gnb nav').removeClass('open')
+            });
+			//List Menu
+            $('.menulist dl dt').click(function () {
+				if($(this).parent().hasClass('list_open')) return;
+                $('.menulist dl dd').slideUp();
+                $('.menulist dl').removeClass("list_open");
+                $(this).next('dd').slideToggle(500);
+                $(this).parent().toggleClass('list_open');
+            });
+			//Anchor Point Move
+			$('.menulist a , .main_btn a').click(function () {
+                var scmove = $($(this).attr('href')).offset().top;
+                $('html, body').animate({ scrollTop: scmove }, 400);
+				$("div.gnb").animate({ left: '-100%' });
+            });
+			//fix menu
+			$(window).scroll(function(){
+				if($(window).scrollTop() == $(document).height() - $(window).height()){
+					$(".fix_m").addClass("fix_m_none");
+				}else{
+					$(".fix_m").removeClass("fix_m_none");
+				}
+			});
+			//내용 슬라이드
+			$('.roll_page .img_area').flexslider({
+                animation: "",
+                directionNav: false,
+                slideshow: false,
+                animationSpeed: 1000,
+            });
+			//Menu write
+			$('#About_Services .flex-control-nav li').eq(0).find('a').html('Menu1');
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!--Header-->
+        <header>
+            <div class="header_content">
+                <h1><a href="#"><img src="images/logo.png" /></a></h1>
+                <a href="#" class="menu_btn"><img src="images/menu_btn.png" /></a>
+            </div>
+            <!--GNB-->
+            <div class="gnb">
+                <div class="gnb_content">
+                    <nav>
+                        <div class="top">
+                            <span><img src="images/nav_close.png" alt="메뉴닫기" /></span>
+                            <h2><img src="images/logo.png" /></h2>
+                        </div>
+                        <ul class="nav_btn">
+                            <li><a href="#"><img src="images/f_btn1.png" /><span>상담신청</span></a></li>
+                            <li><a href="#"><img src="images/f_btn2.png" /><span>DEMO</span></a></li>
+                            <li><a href="#"><img src="images/f_btn3.png" /><span>소개자료</span></a></li>
+                            <li><a href="#"><img src="images/f_btn4.png" /><span>App다운</span></a></li>
+                        </ul>
+                        <div class="menulist">                           
+                            <dl class="m1 list_open">
+                                <dt>BIZ-RUN</dt>
+                                <dd style="display:block">
+                                    <a href="#About_Services">비즈런소개</a>
+                                    <a href="#Service_Features">비즈런 서비스특징</a>
+                                    <a href="#Main_function">비즈런 주요기능</a>
+                                    <a href="#Extra_service">비즈런 부가서비스</a>
+                                </dd>
+                            </dl>
+                            <dl class="m2">
+                                <dt>고객센터</dt>
+                                <dd>
+                                    <a href="#">공지사항</a>
+                                    <a href="#">자료실</a>
+                                    <a href="#">FAQ</a>
+                                    <a href="#">사용자가이드</a>
+                                </dd>
+                            </dl>
+                            <dl class="m3">
+                                <dt>이벤트</dt>
+                                <dd>
+                                    <a href="#">진행중인 이벤트</a>
+                                    <a href="#">완료된 이벤트</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!--//GNB-->
+            <div class="gnb_pc">
+                <ul class="nav_btn">
+                    <li><a href="#"><img src="images/f_btn1.png" /><span>상담신청</span></a></li>
+                    <li><a href="#"><img src="images/f_btn2.png" /><span>DEMO</span></a></li>
+                    <li><a href="#"><img src="images/f_btn3.png" /><span>소개자료</span></a></li>
+                    <li><a href="#"><img src="images/f_btn4.png" /><span>App다운</span></a></li>
+                </ul>
+                <div class="menulist">
+                    <dl class="m1 list_open">
+                        <dt>BIZ-RUN</dt>
+                        <dd style="display:block">
+                            <a href="#About_Services">비즈런소개</a>
+                            <a href="#Service_Features">비즈런 서비스특징</a>
+                            <a href="#Main_function">비즈런 주요기능</a>
+                            <a href="#Extra_service">비즈런 부가서비스</a>
+                        </dd>
+                    </dl>
+                    <dl class="m2">
+                        <dt>공객센터</dt>
+                        <dd>
+                            <a href="#">공지사항</a>
+                            <a href="#">자료실</a>
+                            <a href="#">FAQ</a>
+                            <a href="#">사용자가이드</a>
+                        </dd>
+                    </dl>
+                    <dl class="m3">
+                        <dt>이벤트</dt>
+                        <dd>
+                            <a href="#">진행중인 이벤트</a>
+                            <a href="#">완료된 이벤트</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>          
+        </header>
+        <!--Content-->
+        <div class="content">
+            <!--Banner-->
+            <div class="main_banner">
+                <ul class="slides">
+                    <li><a href="#"><img src="images/banner_01.jpg" /></a></li>
+                    <li><a href="#"><img src="images/banner_01.jpg" /></a></li>
+                    <li><a href="#"><img src="images/banner_01.jpg" /></a></li>
+                </ul>
+            </div>
+            <div class="main_banner_pc">
+                <ul>
+                    <li><a href="#"><img src="images/banner_01.jpg" /></a></li>
+                    <li><a href="#"><img src="images/banner_01.jpg" /></a></li>
+                    <li><a href="#"><img src="images/banner_01.jpg" /></a></li>
+                </ul>
+            </div>
+            <!--//Banner-->
+            <!--BTN-->
+            <div class="main_btn">
+                <ul>
+                    <li><a href="#About_Services" class="m_btn1"><div class="icon"><img src="images/m_btn1.png" /></div><span>서비스 소개</span></a></li>
+                    <li><a href="#Service_Features" class="m_btn2"><div class="icon"><img src="images/m_btn3.png" /></div><span>서비스 특징</span></a></li>
+                    <li><a href="#Main_function" class="m_btn3"><div class="icon"><img src="images/m_btn2.png" /></div><span>주요 기능</span></a></li>                    
+                    <li><a href="#Extra_service" class="m_btn4"><div class="icon"><img src="images/m_btn4.png" /></div><span>부가 서비스</span></a></li>
+                    <li><a href="#Customer_Support" class="m_btn5"><div class="icon"><img src="images/m_btn5.png" /></div><span>고객지원</span></a></li>
+                    <li><a href="#Service_Contact" class="m_btn6"><div class="icon"><img src="images/m_btn6.png" /></div><span>서비스문의</span></a></li>
+                </ul>
+            </div>
+            <!--//BTN-->
+            <!--서비스소개-->
+            <div class="roll_page" id="About_Services">
+                <h3 class="page_title">서비스 소개</h3>
+                <div class="img_area">
+                    <ul class="slides">
+                        <li>
+                            <div class="main_img"><!--<a href="#"><img src="images/img_zoom.png" /></a>--><img src="images/About_Services_01.jpg"/></div>
+                            <dl>
+                                <dt><img src="images/tlt_icon_01.png" />bizRun 소개</dt>
+                                <dd class="tlt">저렴한 사용료로 누구나 편리하게 사용 할 수 있는 유통영업관리시스템</dd>
+                                <dd class="text">bIzRun은 유통업에서 매장, 본사, 창고등에서 필요한 정보를 활용 하기 위해 이용자가 하드웨어 및 어플리케이션 소프트웨어를 직접 구입, 설치하지 않고 저렴한 사용료만 내고 네트워크를 통해 자사의 시스템처럼 이용하는 IT 아웃소싱 서비스입니다.</dd>
+                            </dl>
+                        </li> 
+                        <li>
+                            <div class="main_img"><!--<a href="#"><img src="images/img_zoom.png" /></a>--><img src="images/About_Services_02.gif" /></div>
+                            <dl>
+                                <dt><img src="images/tlt_icon_02.png" />도입 전후 비교</dt>
+                                <dd class="table">
+                                    <table summary="비교표">
+                                        <colgroup>
+                                            <col style="width:15%" />
+                                            <col style="width:35%" />
+                                            <col style="width:15%" />
+                                            <col style="width:35%" />
+                                        </colgroup>
+                                        <tr>
+                                            <th colspan="2" scope="col" class="bf">도입전</th>
+                                            <th colspan="2" scope="col" class="af">도입후</th>
+                                        </tr>
+                                        <tr>
+                                            <td scope="col" class="bf_h">1단계</td>
+                                            <td scope="col" class="bf_c">매출/판매<br />재고/고객관리<br />Raw Data</td>
+                                            <td scope="col" class="af_h">1단계</td>
+                                            <td scope="col">매출/판매<br />재고/고객관리<br />Raw Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bf_h">2단계</td>
+                                            <td class="bf_c">수기정리<br />엑셀정리<br />데이터분석<br />통계산출</td>
+                                            <td rowspan="3" class="af_h">2단계</td>
+                                            <td rowspan="3">스마트<br />E-bussiness<br />플랫폼</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bf_h">3단계</td>
+                                            <td class="bf_c">발주/수금<br />지급/고객관리<br />보고서작성</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bf_h">4단계</td>
+                                            <td class="bf_c">매출/판매<br />재고/고객관련<br />Raw Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bf_h">5단계</td>
+                                            <td class="bf_c">업무효율저하<br />시간낭비<br />스트레스발생<br />자료관리 어려움<br />데이터 에러</td>
+                                            <td class="af_h">3단계</td>
+                                            <td>업무효율향상<br />시간절약<br />스트레스ZERO<br />자료관리용이<br />데이터 오류 제거</td>
+                                        </tr>
+                                    </table>
+                                </dd>
+                                <dd class="text">수기정리, 엑셀정리, 데이터 분석등 시간이 오래 걸리는업무를 BIZ-RUN 영업 관리 시스템으로 데이터정리/분석/통계산출/자금 및 재고관리등 다양한 기능을 업무에 적용함으로써 시간절약,자료관리용이, 데이터 오류제거 등 업무의 효율을 대폭 향상 시킬 수 있습니다.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="main_img"><!--<a href="#"><img src="images/img_zoom.png" /></a>--><img src="images/About_Services_03.gif" /></div>
+                            <dl>
+                                <dt><img src="images/tlt_icon_03.png" />기대효과</dt>
+                                <dd class="tlt">정확한 재고관리로 Loss 최소화,적정재고 유지</dd>
+                                <dd class="tlt">수발주 자동화를 통한 시간 절약</dd>
+                                <dd class="tlt">다양한 분석데이터를 활용 전략적 마케팅 및 의사결정으로 사업 경쟁력 강화</dd>
+                                <dd class="tlt">협력회사 EDI 제공으로 원활한 정보공유 및 시너지 효과</dd>
+                                <dd class="tlt">대형마트의 EDI데이터 연동으로 점 매출/재고관리의 효율화</dd>
+                                <dd class="tlt">고객관리를 통해 다양한 마케팅 및 리포트 가능</dd>
+                                <dd class="tlt">모바일 연동으로 언제 어디서나 제한없는 실시간 업무 가능</dd>
+                            </dl>
+                        </li>                      
+                    </ul>
+                </div>
+            </div>
+            <!--//서비스소개-->
+
+            <!--서비스특징-->
+            <div class="roll_page" id="Service_Features">
+                <h3 class="page_title">서비스 특징</h3>
+                <div class="features_con">
+                    <ul class="top_text">
+                        <li class="text1">솔루션 전문가 <img src="images/features_con_mono.gif" />가 만든<br />유통영업관리시스템</li>
+                        <li class="img"><img src="images/features_con_biz.gif" /></li>
+                        <li class="text2">맞춤형서비스 / 간편한운영관리 / 합리적인비용<br />PC(모바일)을 이용한 <span>실시간 업무처리</span></li>
+                    </ul>
+                    <img src="images/Service_Features.jpg" class="main_img" />
+                    <ul class="point_list">
+                        <li><span>저렴한 비용 및 편리한 사용</span>- 초기 투자 및 운영 비용 부담에서 벗어나 기업 전산 정보화 실현<br />- WEB 및 Mobile로 언제 어디서나 편리하게 시스템 사용</li>
+                        <li><span>솔루션 전문가가 만든 시스템</span>- 전문가가 만든  솔루션 으로 구축 실패의 RISK배제<br />- 다양한 매출처(대형할인점) Data 연동 및 협력업체<br />EDI서비스를 제공으로 통합 업무 지원</li>
+                        <li><span>업무에 최적화된 맞춤형 서비스</span>- 구축된 검증된 솔루션 적용으로 신규 개발 기간 단축<br />- 고객사 업무 환경에  맞는 맞춤형 서비스</li>
+                        <li><span>최신IT기술 트렌드 적용</span>- 어려운 전산 시스템 아웃소싱은 biz-Run,<br />고객사는 기업의 역량을 핵심사업에 집중<br />- 빠르게 변화하는 IT최신기술 접목 및 지원</li>
+                        <li><span>완벽한 운영 및 관리</span>- IT전문인력에 의한 전산시스템 운영 및  보안관리,<br />백업 관리 등 통합운영을 지원<br />- 연중무휴 24시간 운영되는 최첨단 데이터센터로<br />안정적인 시스템 운영</li>
+                    </ul>
+                </div>
+            </div>
+            <!--//서비스특징-->
+
+            <!--주요 기능-->
+            <div class="roll_page" id="Main_function">
+                <h3 class="page_title">주요 기능</h3>
+                <div class="img_area">
+                    <ul class="slides">
+                        <li>
+                            <dl>
+                                <dt><img src="images/tlt_icon_10.png" />시스템관리</dt>
+                                <dd class="tlt">사용자별 권한관리, 공지/쪽지를 통한 실시간 커뮤니케이션이 가능합니다.</dd>
+                                <dd class="text">* 매장의 기본정보 및 커뮤니케이션을 관리</dd>
+                                <dd class="list">
+                                    <ol>
+                                        <li>- 회사정보 관리</li>
+                                        <li>- 매출처(매장)관리 / 그룹 관리</li>
+                                        <li>- 매입거래처 관리</li>
+                                        <li>- 사용자정보 관리 / 사용자별 메뉴권한 관리</li>
+                                        <li>- 게시판 관리</li>
+                                        <li>- 마감관리</li>
+                                        <li>- 공지사항 관리</li>
+                                        <li>- 쪽지 관리</li>
+                                        <li>- 조직정보등록 관리</li>
+                                        <li>- 매장관리 시스템 메뉴 관리</li>
+                                        <li>- 지점 등록 관리</li>
+                                        <li>- 매장별 결제수단 관리</li>
+                                        <li>- 영수증 출력문구 관리</li>
+                                    </ol>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt><img src="images/tlt_icon_10.png" />코드관리</dt>
+                                <dd class="tlt">제품, 거래처 등의 코드 상세 분류로 업무효율을 높입니다.</dd>
+                                <dd class="text">*매장별 가격관리가 용이하여 실시간 전략구사가 가능</dd>
+                                <dd class="text">*재고자산의 정확한 분석 및 관리가 가능</dd>
+                                <dd class="list">
+                                    <ol>
+                                        <li>- 기타코드 관리 (창고코드 외 분류기준 관리)</li>
+                                        <li>- 상품코드등록 / 상품코드조회 및 삭제</li>
+                                        <li>- 상품별 매출처(매장) 상세정보</li>
+                                        <li>- 상품속성정의</li>
+                                        <li>- 매출처(매장)별 상품가격관리</li>
+                                        <li>- 할인점 상품코드 맵핑</li>
+                                        <li>- 상품코드 업로드</li>
+                                        <li>- 월별원가확정 관리</li>
+                                        <li>- 타 할인점 EDI 업로드</li>
+                                        <li>- 비용항목 정의 (매장별 손익관리)</li>
+                                        <li>- SET상품 구성 관리</li>
+                                        <li>- 통화관리</li>
+                                    </ol>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt><img src="images/tlt_icon_10.png" />발주관리</dt>
+                                <dd class="tlt">엑셀업로드/스캐닝/PDA/전표복사 등 반복업무효율이 올라갑니다.</dd>
+                                <dd class="text">*매입발주 기능</dd>
+                                <dd class="list">
+                                    <ol>
+                                        <li>- 발주등록</li>
+                                        <li>- 상품별 발주 현황</li>
+                                        <li>- 발주대비 입고 현황</li>
+                                    </ol>
+                                </dd>
+                                <dd class="icon_img"><img src="images/features_img_01.gif" /></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--//주요 기능-->
+            
+            <!--부가 서비스-->
+            <div class="roll_page" id="Extra_service">
+                <h3 class="page_title">부가 서비스</h3>
+                <div class="img_area">
+                    <ul class="slides">
+                        <li>
+                            <div class="main_img"><img src="images/Extra_service_01.jpg" /></div>
+                            <dl>
+                                <dt><img src="images/tlt_icon_11.png" />매장관리 시스템</dt>
+                                <dd class="text">매장 판매 및 관리에 효율을 증가 시켜주는 시스템 쉽고 편리한 화면으로 업무효율 증대</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="main_img"><img src="images/Extra_service_02.jpg" /></div>
+                            <dl>
+                                <dt><img src="images/tlt_icon_12.png" />쇼핑몰 연동 서비스</dt>
+                                <dd class="text">
+                                    <ol>
+                                        <li>- 자사의  온라인 쇼핑몰(오픈마켓, 대형몰)과 연동 해주는 서비스</li>
+                                        <li>- 온라인의 상품, 주문, 배송 등을 관리해주는 서비스</li>
+                                    </ol>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="main_img"><img src="images/Extra_service_03.jpg" /></div>
+                            <dl>
+                                <dt><img src="images/tlt_icon_12.png" />회계 시스템 연동</dt>
+                                <dd class="text">- 회계시스템과 BIZ-RUN 연동을 통해  전반적인 회계업무를 일괄적으로 관리</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--//부가 서비스-->  
+        </div>
+        <!--//Content-->
+        <!--Fix Menu-->
+        <div class="fix_m">
+            <div class="fix_m_content">
+                <ul class="left">
+                    <li><a href="#"><img src="images/f_btn1.png" /><span>상담신청</span></a></li>
+                    <li><a href="#"><img src="images/f_btn2.png" /><span>DEMO</span></a></li>
+                </ul>
+                <a href="#" class="home_btn"><img src="images/f_home_btn.png" alt="홈으로" /></a>
+                <ul class="right">
+                    <li><a href="#"><img src="images/f_btn3.png" /><span>소개자료</span></a></li>
+                    <li><a href="#"><img src="images/f_btn4.png" /><span>App다운</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--//Fix Menu-->
+        <!--App Down-->
+        <div class="app_download">
+            <ul class="tlt_text">
+                <li>정확한 재고 관리 / 실시간 판매현황 분석 및<br />철저한 고객관리가</li>
+                <li><span>모바일과 PC에서 한번에 가능합니다!</span></li>
+            </ul>
+            <div class="down_btn">
+                <a href="#"><img src="images/google_btn.png" /></a>
+                <a href="#"><img src="images/app_store_btn.png" /></a>
+            </div>
+            <a href="#" class="top_btn"><img src="images/top_btn.png" /></a>
+        </div>
+        <!--//App Down-->
+        <!--Footer-->
+        <footer>
+            <ul>
+                <li class="pc_h"><a href="http://www.bizrun.co.kr"><img src="images/logo.png" class="f_logo" /></a><a href="http://www.monoalliance.com" target="_blank"><img src="images/mono_logo.png" class="mono_logo" /></a></li>
+                <li class="link"><a href="#">개인정보 취급방침</a><span>|</span><a href="#">서비스 이용 약관</a></li>
+                <li class="pc_h">모노얼라이언스｜대표자 : 신명식</li>
+                <li class="pc_h">http://www.monoalliance.com/</li>
+                <li>서울시 구로구 구로동 235-2 에이스하이엔드 1차 917호</li>
+                <li>Tel : 02-3281-8881｜Fax : 02-6220-2337</li>
+                <li class="pc_h">E-mail : asr3015@monoalliance.com</li>
+                <li>ⓒ 2016 bizRun  All Rights Reserved.</li>
+            </ul>      
+        </footer>
+        <!--//Footer-->
+    </div>
+</body>
+</html>

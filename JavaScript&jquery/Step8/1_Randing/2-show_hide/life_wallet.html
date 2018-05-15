@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>7월 HOT SUMMER</title>
+    <script type="text/javascript" src="../../scripts/jquery-1.10.2.min.js"></script>
+    <style type="text/css">
+        #life_wallet{width:100%;height:100%;position:relative;text-align:center;display:block}
+        #life_wallet .wallet_content{width:100%;display:inline-block;max-width:1140px}
+        #life_wallet .wallet_content .cover{width:100%;position:relative}
+        #life_wallet .wallet_content .cover ul{position:absolute;width:100%;text-align:center;top:568px;margin:0;padding:0}
+        #life_wallet .wallet_content .cover ul li{width:168px;display:inline-block;margin:0 30px}
+        #life_wallet .wallet_content .cover ul li a{width:100%;height:269px;display:block;text-indent:-99999999px}
+        #life_wallet .wallet_content .cover ul li a.woman_link{background:url(images/woman_select.png) no-repeat center center}
+        #life_wallet .wallet_content .cover ul li a.woman_link:hover{background:url(images/woman_select_over.png) no-repeat center center}
+        #life_wallet .wallet_content .cover ul li a.man_link{background:url(images/man_select.png) no-repeat center center}
+        #life_wallet .wallet_content .cover ul li a.man_link:hover{background:url(images/man_select_over.png) no-repeat center center}
+        #life_wallet .wallet_content .select_wallet{width:100%;display:none}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//cover
+			$('.cover li a').click(function(){
+				$('.select_wallet').hide()
+				$('.cover').hide()
+				$($(this).attr('href')).show();
+				return false;
+			})
+			//woman
+			$('.man_view').click(function(){
+				$('#woman').hide();
+				$('#man').show();
+			})
+			//man
+			$('.woman_view').click(function(){
+				$('#woman').show();
+				$('#man').hide();
+			})
+        });
+    </script>
+</head>
+<body>
+    <div id="life_wallet">       
+        <div class="wallet_content">
+            <div class="cover">               
+                <ul>
+                    <li><a href="#woman" class="woman_link">여성</a></li>
+                    <li><a href="#man" class="man_link">남성</a></li>
+                </ul>
+                <img src="images/cover.jpg" alt="성별을 선택해주세요" />
+            </div>
+            <!--여성-->
+            <div class="select_wallet" id="woman">
+                 <img src="images/woman.jpg" alt="" usemap="#wonam_area" />
+                <map name="wonam_area" id="wonam_area">
+                    <area shape="rect" coords="1017,515,1053,597" href="#man" alt="남성보기" class="man_view" onfocus="this.blur();" />
+                    <area shape="rect" coords="147,1439,262,1471" href="http://www.louisclub.com/fr/specialtyshop/planView.do?PLN_MST_IDX=744&previewYn=Y&site=1#groupTitle-0" alt="베스트셀러 사피아노소재" onfocus="this.blur();" />
+                    <area shape="rect" coords="656,1398,771,1430" href="http://www.louisclub.com/fr/specialtyshop/planView.do?PLN_MST_IDX=744&previewYn=Y&site=1#groupTitle-3" alt="고급스런운 리자드패턴" onfocus="this.blur();" />
+                    <area shape="rect" coords="146,1760,261,1792" href="http://www.louisclub.com/fr/specialtyshop/planView.do?PLN_MST_IDX=744&previewYn=Y&site=1#groupTitle-1" alt="모던과 클래식의 조화" onfocus="this.blur();" />
+                    <area shape="rect" coords="414,1621,529,1653" href="http://www.louisclub.com/fr/specialtyshop/planView.do?PLN_MST_IDX=744&previewYn=Y&site=1#groupTitle-2" alt="소프트한 가죽의 매력" onfocus="this.blur();" />
+                    <area shape="rect" coords="656,1761,771,1793" href="http://www.louisclub.com/fr/specialtyshop/planView.do?PLN_MST_IDX=744&previewYn=Y&site=1#groupTitle-4" alt="내구성 강한 모노그램 PVC" onfocus="this.blur();" />
+                    <area shape="rect" coords="912,1845,1027,1877" href="http://www.louisclub.com/fr/specialtyshop/planView.do?PLN_MST_IDX=744&previewYn=Y&site=1#groupTitle-5" alt="아기자기한 모노그램 엠보" onfocus="this.blur();" />
+                </map>
+            </div>
+            <!--//여성-->
+            <!--남성-->
+            <div class="select_wallet" id="man">
+                <img src="images/man.jpg" alt="" usemap="#man_area" />
+                <map name="man_area" id="man_area">
+                    <area shape="rect" coords="976,515,1012,597" href="#man" alt="여성보기" class="woman_view" onfocus="this.blur();" />
+                    <area shape="rect" coords="148,1439,263,1471" href="http://www.louisclub.com/fr/specialtyshop/planView.do?PLN_MST_IDX=744&previewYn=Y&site=1#groupTitle-6" alt="남성지갑 스테디셀러" onfocus="this.blur();" />
+                    <area shape="rect" coords="656,1398,771,1430" href="http://www.louisclub.com/fr/specialtyshop/planView.do?PLN_MST_IDX=744&previewYn=Y&site=1#groupTitle-9" alt="휴대하기 간편한" onfocus="this.blur();" />
+                    <area shape="rect" coords="146,1760,261,1792" href="http://www.louisclub.com/fr/specialtyshop/planView.do?PLN_MST_IDX=744&previewYn=Y&site=1#groupTitle-7" alt="카드지갑 탈부착" onfocus="this.blur();" />
+                    <area shape="rect" coords="414,1621,529,1653" href="http://www.louisclub.com/fr/specialtyshop/planView.do?PLN_MST_IDX=744&previewYn=Y&site=1#groupTitle-8" alt="유니크한 매력" onfocus="this.blur();" />
+                    <area shape="rect" coords="656,1761,771,1793" href="http://www.louisclub.com/fr/specialtyshop/planView.do?PLN_MST_IDX=744&previewYn=Y&site=1#groupTitle-10" alt="슬림하고 실용적인" onfocus="this.blur();" />
+                    <area shape="rect" coords="912,1845,1027,1877" href="http://www.louisclub.com/fr/specialtyshop/planView.do?PLN_MST_IDX=744&previewYn=Y&site=1#groupTitle-11" alt="고급스러운디자인" onfocus="this.blur();" />
+                </map>
+            </div>
+            <!--//남성-->
+        </div>
+    </div>
+</body>
+</html>

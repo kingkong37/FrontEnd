@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.move').click(function(){
+				$('div').animate({'left':'300px'}, "slow")
+			})
+			$('.reset').click(function(){
+				$('div').animate({'left':'40px'}, 500);
+			});
+			//애니메이션을 시간(frame)을 각각(Key frame) 구성하여 표현하고싶다면
+			$('.motion').click(function(){
+				var aa = $('div');
+				aa.animate({'height' : '300px'}, 3000);
+				aa.animate({'width' : '300px'}, 1000);
+				aa.animate({'height' : '100px'}, 500);
+				aa.animate({'width' : '100px'}, 500);
+			});
+        });
+    </script>
+</head>
+<body>
+	<div style="width:100px;height:100px;background:red;position:absolute;top:40px;left:40px"></div>
+	<button class="move">이동</button>
+	<button class="reset">리셋</button>
+	<button class="motion">모션</button>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	//변수를 선언할때 변수명이 다른 영역과 충돌되는 것을 막기위한방법
+	//전역변수를 지역변수로 바꿀 수 있다.
+
+	(function(){//일회성 함수 사용법
+		var Myvar = {}
+		Myvar.aa = {
+		   'num1' : null,
+		   'num2' : null,
+		}
+		Myvar.aa.num1 = 30;
+		Myvar.aa.num2 = 40;
+		document.write(Myvar.aa.num1 + Myvar.aa.num2)
+	}());//()괄호를 선언하면 함수호출을 의미한다.
+    
+	function myfun(){//같은 함수를 여러군데 사용하고자 할때 선언하여 사용하는 방식
+		var Myvar = {}
+		Myvar.aa = {
+		   'num1' : null,
+		   'num2' : null,
+		}
+		Myvar.aa.num1 = 30;
+		Myvar.aa.num2 = 40;
+		document.write(Myvar.aa.num1 + Myvar.aa.num2)
+	}
+	myfun();
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

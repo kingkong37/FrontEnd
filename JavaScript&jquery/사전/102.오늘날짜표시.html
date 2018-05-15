@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+        var now = new Date();//now라는 날짜변수를 생성합니다
+
+        var year = now.getFullYear();//현재의 연도를 구해서year라는 변수에 저장합니다
+
+        var month = (now.getMonth() + 1);//현재의 월에 해당하는 값을 구해서month라는 변수에 저장합니다.
+
+        var date = now.getDate();//오늘의 날짜 값을 구합니다
+
+        var week = new Array("일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일");//배열
+
+        var weekday = week[now.getDay()];//week변수에 value값을 현재요일의 key값에 대입
+
+        today = "오늘은" + year + "년" + month + "월" + date + "일" + weekday + "입니다";//각각의 변수와 문자열을 조합해서 출력할 내용을today라는 새로운 변수에 담습니다
+
+       document.write(today);
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

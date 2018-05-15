@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<style type="text/css">
+		html,body{margin:0;padding:0}
+		*{box-sizing:border-box}
+		.gnb{width:100%;background:#89a4b1;display:block;text-align:center}
+		.gnb ul{width:357px;display:inline-block;margin:0;padding:0;list-style:none}
+		.gnb ul li{float:left}
+		.gnb ul li a{width:100%;background:url(images/sprite_menu.png);text-indent:-999999px;height:48px;display:block}
+		.gnb ul li.m1{width:78px}
+		.gnb ul li.m2{width:83px}
+		.gnb ul li.m3{width:98px}
+		.gnb ul li.m4{width:98px}
+
+		.gnb ul li.m1 a{background-position:0 0}
+		.gnb ul li.m2 a{background-position:-78px 0}
+		.gnb ul li.m3 a{background-position:-161px 0}
+		.gnb ul li.m4 a{background-position:-259px 0}
+
+		.gnb ul li.m1 a:hover , .gnb ul li.m1 a.on{background-position:0 -48px}
+		.gnb ul li.m2 a:hover , .gnb ul li.m2 a.on{background-position:-78px -48px}
+		.gnb ul li.m3 a:hover , .gnb ul li.m3 a.on{background-position:-161px -48px}
+		.gnb ul li.m4 a:hover , .gnb ul li.m4 a.on{background-position:-259px -48px}
+
+	</style>
+</head>
+<body>
+	<div class="gnb">
+		<ul>
+			<li class="m1"><a href="#" class="on">Home</a></li>
+			<li class="m2"><a href="#">About</a></li>
+			<li class="m3"><a href="#">Services</a></li>
+			<li class="m4"><a href="#">Contact</a></li>
+		</ul>
+	</div>
+</body>
+</html>

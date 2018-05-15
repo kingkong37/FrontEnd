@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        *{box-sizing:border-box}
+        html,body{margin:0;padding:0;text-align:center}
+        .info_text{width:100%;text-align:right;font-size:14px;display:block;margin:10px 0}
+        .info_text span{color:red}
+        form{width:700px;margin:0 auto;display:inline-block}
+        table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;border-top:2px solid #4f8fb5;font-size:14px}
+        table tr{border-bottom:1px solid #4f8fb5}
+        table tr th{width:23%;padding:10px;text-align:left;border-right:1px solid #4f8fb5}
+        table tr td{padding:10px;text-align:left}
+        table tr td input.textfield{width:200px;height:28px}
+        table tr td input.tel{width:100px;height:28px;text-align:center}
+        table tr td input[type=button]{width:200px;height:40px;background:#4f8fb5;color:#fff;margin:0 auto;border:none;font-weight:bold;border-radius:3px}
+        table tr td.submit_btn{text-align:center}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+		//필수입력항목의 입력이 한개라도 안된다면
+        $(document).ready(function () {
+            $('.submit_btn input[type=button]').click(function(){
+				//input의 val로 사용가능한 요소의 입력값의 유무를 확인하는 방법(textarea사용가능)
+				if($('.user_name').val()==false || $('.user_id').val()==false || $('.user_pw').val()==false){
+					alert('필수입력 항목이 입력되지 않았습니다.')
+				}else{
+					alert('가입되었습니다.')
+				}
+			})
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <div class="info_text"><span>*</span>필수입력 항목입니다.</div>
+        <table>
+            <tr>
+                <th>이름<span>*</span></th>
+                <td><input type="text" class="textfield user_name" /></td>
+            </tr>
+            <tr>
+                <th>아이디<span>*</span></th>
+                <td><input type="text" class="textfield user_id" /></td>
+            </tr>
+            <tr>
+                <th>패스워드<span>*</span></th>
+                <td><input type="password" class="textfield user_pw" /></td>
+            </tr>
+            <tr>
+                <th>연락처</th>
+                <td><input type="text" class="textfield tel" /><span>-</span><input type="text" class="textfield tel" /><span>-</span><input type="text" class="textfield tel" /></td>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <td><input type="text" class="textfield email" /></td>
+            </tr>
+            <tr>
+                <th>주소</th>
+                <td><input type="text" class="textfield address" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="submit_btn"><input type="button" value="가입하기" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+		//slide함수는 요소를 슬라이드시켜 보이거나 숨길때 사용한다.
+		//메뉴, FAQ게시판에 주로 사용된다.
+        $(document).ready(function () {
+			$('a.btn1').click(function(){
+				$('h1.aa').slideDown();//슬라이드되어 보임
+			})
+			$('a.btn2').click(function(){
+				$('h1.bb').slideUp();//슬라이드되어 숨김
+			})
+
+			$('a.btn3').click(function(){
+				$('h1.cc').slideToggle();//슬라이드 Show/Hide
+			})
+        });
+    </script>
+</head>
+<body>
+	<h1 class="aa" style="display:none">제이쿼리1</h1>
+	<h1 class="bb">제이쿼리2</h1>
+	<h1 class="cc">제이쿼리3</h1>
+	<a href="#" class="btn1">Slidedown</a><br/>
+	<a href="#" class="btn2">Slideup</a><br/>
+	<a href="#" class="btn3">SlideToggle</a>
+</body> 
+</html>

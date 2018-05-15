@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+  //선택자를 이용한 css변경방법
+	window.onload = function(){
+		var header = document.getElementById('header');
+		header.style.border = '2px solid black';
+		header.style.color = '#fff';
+		header.style.background = 'green';
+
+		var header2 = document.querySelector('.header');
+		header2.style.color = 'yellow';
+		header2.style.background = 'black';
+	}
+
+  </script>
+ </head>
+ <body>
+	<h1 id="header">아이디 인라인 스타일</h1>
+	<h1 class="header">클래스 인라인 스타일</h1>
+
+ </body>
+</html>

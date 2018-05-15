@@ -1,0 +1,50 @@
+﻿html,body{width:100%;height:100%}
+html{overflow-y:auto}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0}
+body,h1,h2,h3,h4,input,button{font-family:Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif;font-size:12px;color:#383d41}
+body{background:#f4f7f6;text-align:center;*word-break:break-all;-ms-word-break:break-all}
+img,fieldset,iframe{border:0 none}
+li{list-style:none}
+input,select,button{vertical-align:middle}
+img{vertical-align:top}
+i,em,address{font-style:normal}
+label,button{cursor:pointer}
+button{margin:0;padding:0}
+a{color:#777;text-decoration:none}
+a:hover{color:#777;text-decoration:none}
+a:active{color:#777;text-decoration:none;background-color:transparent}
+button *{position:relative}
+button img{left:-3px;*left:auto}
+html:first-child select{height:20px;padding-right:6px}
+option{padding-right:6px}
+hr{display:none}
+legend{*width:0}
+table{border-collapse:collapse;border-spacing:0}
+*{box-sizing:border-box;-moz-box-sizing:border-box}
+/*Chrome*/
+input:focus{outline:none;}
+textarea{resize:none}
+/*Gnb*/
+.gnb_area{width:100%;height:70px;background:#171817;display:inline-block}
+.gnb_area .gnb{width:1200px;height:70px;margin:0 auto;position:relative;display:inline-block}
+.gnb_area .gnb h1.logo{position:absolute;left:0;top:0;text-align:left;width:390px;z-index:9}
+.gnb_area .gnb .drop_menu{width:100%;height:70px;position:absolute;right:0;top:0;z-index:8;overflow:hidden;background:#fff url(../images/drop_menu_bg.gif) no-repeat left top}
+.gnb_area .gnb .drop_menu ul.main_menu{width:100%;display:inline-block;margin-right:30px;text-align:right;padding:0 15px}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1{display:inline-block;position:relative}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1 a.depth1{width:100%;line-height:70px;color:#fff;font-size:13px;display:block;text-align:center;font-family: 'Noto Sans KR'}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1 a.depth1:hover{background:#666}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1.on a.depth1{background:#666}
+.gnb_area .gnb .drop_menu ul.main_menu li.mm1{width:170px}
+.gnb_area .gnb .drop_menu ul.main_menu li.mm2{width:165px}
+.gnb_area .gnb .drop_menu ul.main_menu li.mm3{width:165px}
+.gnb_area .gnb .drop_menu ul.main_menu li.mm4{width:152px}
+.gnb_area .gnb .drop_menu ul.main_menu li.mm5{width:148px}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1 ul{width:100%;position:absolute;left:0;top:85px}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1 ul li{width:100%;display:inline-block;text-align:left}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1 ul li a{font-size:13px;line-height:30px;font-family: 'Noto Sans KR'}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1 ul li a:hover{color:#000}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1 ul.m1{left:45px}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1 ul.m2 li{padding-left:45px}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1 ul.m3 li{padding-left:45px}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1 ul.m4 li{padding-left:45px}
+.gnb_area .gnb .drop_menu ul.main_menu li.d1 ul.m5 li{padding-left:45px}

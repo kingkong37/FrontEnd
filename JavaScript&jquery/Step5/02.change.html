@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+		//change명령문을 체크의 유무를 확인하여 실행할때 주로 사용된다.
+        $(document).ready(function () {
+			$('.aa').change(function(){//change함수는 내가 설정한 값에서 변경되었을때 실행되는 함수
+				alert('입력되고있음')
+			})
+			$('.bb').change(function(){
+				$(this).css('background','yellow')
+			})
+        });
+		//패밀리사이트에 대한 페이지 이동시에도 사용 할 수 있다.
+    </script>
+</head>
+<body>
+	<form>
+		<input type="text" class="aa" />
+		<input type="text" class="bb" />
+	</form>
+</body>
+</html>

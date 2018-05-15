@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+	.aa{font-size:20px}
+  </style>
+ </head>
+ <body>
+	<div class="aa" id="css_change">CSS바꾸기</div>
+	<button onclick="document.getElementById('css_change').style.fontSize='40px'">글자 키우기</button>
+	<!--
+		자바스크립트로 CSS를 변경하면 Inline-style로 CSS가 적용되어 css스타일을 무시하고 적용된다.
+		하지만 css상에 !important로 되어있다면 자바스크립트 CSS를 무시하여 적용 할 수 없다.
+
+		--CSS적용 우선 순위--
+		inline !important : 1순위
+		CSS !important : 2순위
+		inline : 3순위
+		내부 CSS : 4순위
+		외부 CSC : 5순위
+	-->
+	
+	<div id="show_hide"><img src="images/turn_off.gif"/></div>
+	<button onclick="document.getElementById('show_hide').style.display='none'">이미지 숨기기</button>
+	<button onclick="document.getElementById('show_hide').style.display='block'">이미지 보이기</button>
+	<!--
+		자바스크립트 명령문을 넣기위해 button태그를 사용 해도 되지만 <a>나 <input type="button"/> <img/>에 넣을 수 있다.
+		거의 모든 Tag에 이벤트 문이 들어간다고 할 수 있지만 되지 않는 Tag들도 존재한다.
+		체크박스,라디오버튼,파일첨부등은 적용되는 방법이 다르다.
+	-->
+
+ </body>
+</html>

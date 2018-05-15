@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+		div{width:100px;height:100px;}
+		div.aa{background:orange;position:absolute;top:200px}
+		div.bb{background:green}
+	</style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//attr()함수는 선택자에 의해 선택된요소의 속성(설정값)을 가지고 올때 사용한다.
+			var aa = $('img').attr('src');
+			var bb = $('img').attr('title');
+			alert(aa);
+			alert(bb);
+
+			//많이 사용하는 예제
+			var tab = $('a').attr('href');
+        });
+    </script>
+</head>
+<body>
+	<img src="images/ironman.jpg" title="아이언맨" alt="아이언맨 이미지"/>
+
+	<!--많이 사용하는 예제-->
+	<a href="#이동위치">탭버튼</a>
+	<div id="이동위치"></div>
+
+
+</body> 
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <link href="jquery-ui/jquery-ui.min.css" type="text/css" rel="stylesheet" />
+    <link href="jquery-ui/jquery-ui.structure.min.css" type="text/css" rel="stylesheet" />
+    <link href="jquery-ui/jquery-ui.theme.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/reset.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+        .menu_area{width:200px;float:left;margin-left:20px}
+        ul{width:100%;display:inline-block}
+        #menu_line{font-size:14px;letter-spacing:1px;text-align:left;line-height:24px;color:#d1d1d1;font-size:14px}
+        #sortable{line-height:24px;color:#d1d1d1;font-size:14px}
+        #sortable li{font-size:14px;letter-spacing:1px;text-align:left;line-height:30px;color:#d1d1d1;font-size:14px}
+        #sortable li a{font-weight:bold}
+        div.finish{width:100%;display:inline-block;text-align:left}
+    </style>
+    <script type="text/javascript">
+		//sortable은 table태그에서는 사용 불가
+        $(document).ready(function () {
+			//$('#sortable').sortable();//sortable 재정렬의 기본
+			$('#sortable').sortable({
+				revert : true//부드러운 정렬
+			});
+			$('#menu_line').draggable({
+				connectToSortable : '#sortable',//각각 다른영역을 연결후 정렬하는 방법
+				helper:'clone'//정렬되는요소(드래그되는 대상)의 복제 (original 설정도 있음)
+			})
+			//완료버튼
+			$('.finish button').click(function(){
+				$('#sortable').sortable('disable');//정렬이 종료('disable')된 상태에서는 다시 정렬하려면 if문을 이용하여 함수를 구성하면된다.
+			})
+        });
+    </script>
+</head>
+<body>
+    <div class="menu_area">
+        <ul>
+            <li id="menu_line">---------------------</li>
+        </ul>
+
+        <ul id="sortable">
+            <li><a href="#">네이버</a></li>
+            <li><a href="#">다음</a></li>
+            <li><a href="#">네이트</a></li>
+            <li><a href="#">구글</a></li>
+            <li><a href="#">bing</a></li>
+            <li><a href="#">ZUM</a></li>
+        </ul>
+    </div>
+    <div class="finish"><button>완료</button></div>
+</body>
+</html>

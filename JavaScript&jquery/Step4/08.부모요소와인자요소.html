@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//$(선택자).요소의선택함수(선택자).실행문
+			$('span').css('color','blue');
+			$('span').parent().css('background','yellow');//부모요소의 선택
+			$('ul').children().css('color','red');//직계하위요소(인자)의 선택
+			$('ul li').children('span').css('font-size','30px');
+			//직계하위요소 선택 시 children에 대한 선택자가 없으면 ul li하위요소에 구성된 모든태그를 뜻한다.
+			$('span').hover(function(){
+				$(this).parent().parent().prev().css('color','red');//parent를 여러번 작성하면 더 상위요소를 선택하게된다.
+				$(this).parent().parent().nextAll('.bb').css('color','red');
+				$(this).parent().parent().parent().find('.cc').css('color','red');
+			})
+        });
+    </script>
+</head>
+<body>
+	<div>
+		<h1>헤더</h1>
+		<ul>
+			<li><div>첫번째<div></li>
+			<li class="aa"><span>두번째</span></li>
+			<li>세번째</li>
+			<li class="bb">네번째</li>
+			<li>다섯번째</li>
+		</ul>
+		<div class="aa">aa</div>
+		<div class="bb">bb</div>
+		<div class="cc">cc</div>
+	</div>
+</body>
+</html>

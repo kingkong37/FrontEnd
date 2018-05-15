@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	Array.prototype.random = function(){
+		var aa = Math.floor(Math.random()* city_name.length);
+		return this[aa];
+	}
+	var city_name = new Array('서울','도쿄','베이징','뉴욕','파리');
+	document.write(city_name.random());
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

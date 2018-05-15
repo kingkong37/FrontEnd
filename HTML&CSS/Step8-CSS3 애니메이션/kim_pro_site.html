@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+  <link href="../reset.css" rel="stylesheet" type="text/css" />
+  <title>Document</title>
+  <style type="text/css">
+  body{font-family:"Nanum Gothic", sans-serif;font-size:1em}
+	#wrap{width:100%;height:100%;max-width:414px;position:relative;margin:0 auto;display:inline-block}
+	.intro{width:100%;height:100%;position:fixed;bottom:0;left:0;background:url(images/kimpro.jpg) no-repeat center center;background-size:cover;z-index:99}	
+	.intro{
+		animation-name:first_view;
+		animation-duration:1s;
+		animation-delay:2s;
+		animation-fill-mode:forwards;
+	}
+	@keyframes first_view{
+		from{opacity:1}
+		to{opacity:0;left:-100%}
+	}
+	.main_login{width:100%;position:absolute;left:0;top:20%;padding:0 3.7%}
+	.main_login h1{width:100%;display:inline-block}
+	.main_login h1 img{width:50%}
+
+	.main_login .tab_menu{width:100%;display:inline-block;margin-top:30px}
+	.main_login .tab_menu a{width:50%;height:50px;float:left;color:#939393;border:1px solid #939393;font-weight:700;line-height:50px;background:#f3f3f3;font-size:1em}
+	.main_login .tab_menu a:nth-child(2){border-left:none}
+	.main_login .tab_menu a:hover{background:#fff;border-top:2px solid #363636;border-bottom:none;color:#363636}
+	.main_login .tab_menu a.on{background:#fff;border-top:2px solid #363636;border-bottom:none;color:#363636}
+	.main_login form{margin-top:20px}
+	.main_login form , 
+	.main_login fieldset , 
+	.main_login ul , 
+	.main_login li{width:100%;display:inline-block;margin-bottom:10px}
+    .main_login li input.enter{width:100%;padding:15px 2%;border:none;border-bottom:1px solid #f3f3f3;font-size:1em;color:#363636}
+	.main_login li input[type=button]{width:100%;height:50px;color:#fff;border-radius:5px;font-size:1em;font-weight:700;border:none}
+	.main_login li input.btn1{background:#49484e}
+	.main_login li input.btn2{background:#76bf3a}
+	.main_login li input.btn3{background:#909090}
+  </style>
+ </head>
+ <body>
+  <div id="wrap">
+	<div class="intro"></div>
+	<div class="main_login">
+		<h1><img src="images/kimpro_logo.gif"/></h1>
+		<!--Tab-->
+		<div class="tab_menu">
+			<a href="#" class="on">점주</a>
+			<a href="#">직원</a>
+		</div>
+		<!--//Tab-->
+		<form>
+			<fieldset>
+				<ul>
+					<li><input type="text" class="enter" placeholder="아이디를 입력하세요"/></li>
+					<li><input type="password"class="enter" placeholder="비밀번호를 입력하세요"/></li>
+					<li><input type="button" value="로그인" class="btn1"/></li>
+					<li><input type="button" value="회원가입" class="btn2"/></li>
+					<li><input type="button" value="아이디/비밀번호 찾기" class="btn3"/></li>
+				</ul>
+			</fieldset>
+		</form>
+	</div>
+  </div>
+ </body>
+</html>

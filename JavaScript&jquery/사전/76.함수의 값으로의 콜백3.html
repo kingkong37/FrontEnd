@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	var aa = [
+		function(bb){return bb + 10},//처음 리턴 받은값 1+10 = 11
+		function(bb){return bb * bb},//두번째 리턴값 11*11 =121
+		function(bb){return bb / 2}//세번째 리턴값 121 / 2 = 60.5
+	];
+	
+	var bb = 1;//bb의 초기화
+	for(i=0; i < aa.length; i++){//aa의 배열 갯수만큼 만복
+		bb = aa[i](bb);
+		/*for문이 처음 시작할때
+		계산된값 대입(1) = aa[0](1)
+		*/
+	}
+	alert(bb);
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('button').click(function(){
+				$('.aa').removeAttr('disabled', '');//비활성화를 활성화로 돌림
+			});
+			$('.bb').click(function(){
+				$('.aa').attr('disabled', 'disabled');//비활성화 선언
+				$('.aa').val('');//비활성화된 input의 입력된내용이 있다면 삭제
+			})
+        });
+    </script>
+</head>
+<body>
+	<button>aa필드 활성화</button>
+	<input type="text" class="aa" disabled="disabled" /><!--비활성화 시킨 input-->
+	<input type="text" class="bb" />
+</body>
+</html>

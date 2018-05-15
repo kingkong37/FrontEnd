@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+
+    var scope1 = "가가가"
+	function Myfun(){
+	   var scope1 = "나나나"
+	   scope1 = "다다다"
+	}
+	Myfun();
+	alert(scope1)//return = 가가가
+
+	/*
+	함수안에 변수를 지정했을 때 지역함수(var)과 전역함수가 같이 있으면 지역함수를 우선으로 한다.
+	전역함수는 효응이 없어진다.
+	지역함수인 "나나나"는 함수 안에서만 동작할 수 있으므로 밖으로 나올 수 없다.
+	alert으로 사용가능한 변수는 "가가가"
+	*/
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

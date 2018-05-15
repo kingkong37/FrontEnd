@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//is함수는 선택요소가 is문안에 내용과 일치할때 실행을 목적으로하는 메서드
+			$('p').click(function(){
+				if($('p').is('.aa')){
+					alert('p에 클레스 aa')
+				}
+			})
+			$('span').click(function(){
+				if($(this).parent().is('div')){
+					alert('일치')
+				}
+			})
+        });
+    </script>
+</head>
+<body>
+	<p class="aa">클릭</p>
+	<div>
+		<span>span클릭</span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function aa(){
+	   var i = 1;
+	}
+	for(var i=0; i < 5; i++){
+       aa();
+	   document.write(i)
+	}
+	//function과 for문은 별개, for문 안에 aa(i=1)는 지역변수로 가지고 있기 때문에 사용할 수 없다.
+	//함수에 var을 삭제하면 지역변수로 변화되지만 for문 i에 대입되는 숫자가 계속해서 1의 값을 갖게되어 무한 루프가 발생한다.
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

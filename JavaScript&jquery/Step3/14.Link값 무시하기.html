@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .on{background:#000;color:#fff}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('a').click(function(){
+				$(this).css('color','orange');
+				return false;//페이지 이동이 목적인 <a>태그에 사용하는 경우가 많다.
+				//링크의 href를 무시하기 위해 사용하지만 실제로 페이지가 이동해야한다면 선택자에서 변화를줘야한다.
+			});
+        });
+    </script>
+</head>
+<body>
+	<a href="#aa">링크값</a>
+	<a href="http://www.naver.com">네이버</a>
+</body>
+</html>

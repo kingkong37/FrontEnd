@@ -1,0 +1,22 @@
+/*Jquery Css*/
+.top_banner .control .p_num .flex-control-nav{width:16px;height:16px;overflow:hidden;float:left}
+.top_banner .control .p_num .flex-control-nav li a{display:none;color:#343434}
+.top_banner .control .p_num .flex-control-nav li a.flex-active{display:block}
+.banner_control-nav{width:100%;position:absolute;bottom:0;left:0;background:rgba(255,255,255,0.9);z-index:9;border-bottom:1px solid #dbdbdb}
+.banner_control-nav li{width:106px;float:left;border-right:1px solid #f1f1f1}
+.banner_control-nav li a{width:100%;padding:10px 0;display:block;color:#343434}
+.banner_control-nav li a.banner_active{background:#f43142;color:#fff}
+.banner_pauseplay{width:40px;height:37px;position:absolute;right:0;bottom:1px;z-index:9}
+.banner_pauseplay a.banner_pause{width:100%;height:37px;display:block;text-indent:-999999px;background:url(../images/pause.gif)}
+.banner_pauseplay a.banner_play{width:100%;height:37px;display:block;text-indent:-999999px;background:url(../images/play.gif)}
+.banner_direction-nav{width:100%;position:absolute;left:0;top:200px;z-index:5}
+.banner_direction-nav li{width:60px;height:60px}
+.banner_direction-nav li a{width:100%;height:60px;display:block;background:url(../images/banner_btn_sp.png) no-repeat;text-indent:-99999px}
+.banner_direction-nav li.banner_nav-prev{float:left}
+.banner_direction-nav li.banner_nav-next{float:right}
+.banner_direction-nav li.banner_nav-prev a{background-position:-280px 0}
+.banner_direction-nav li.banner_nav-next a{background-position:-350px 0}
+.banner_direction-nav.mouseover li.banner_nav-prev a{background-position:0 0}
+.banner_direction-nav.mouseover li.banner_nav-next a{background-position:-70px 0}
+.banner_direction-nav:hover li.banner_nav-prev a{background-position:-140px 0}
+.banner_direction-nav:hover li.banner_nav-next a{background-position:-210px 0}

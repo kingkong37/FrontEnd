@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	//12시간으로 표시하는 방법
+	var nowtime = new Date();
+	var nowhh = nowtime.getHours();
+
+	function h12(){
+		if(nowhh >= 12){
+			document.write(nowhh - 12 + '시')
+		}else{
+			document.write(nowhh + '시')
+		}
+	}
+	h12();
+
+	//오전오후
+	function ampm(){
+		if(nowtime.getHours() <= 12){
+			aa = "오전"
+		}else{
+			aa = "오후" 
+		}
+		am_pm = "지금은" + aa + "입니다.";
+		document.write(am_pm);
+	}
+	ampm();
+
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+	<!--Jquery UI-->
+	<script src="jquery-ui/jquery-ui.min.js"></script>
+	<link href="jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
+	<link href="jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
+	<!--//Jquery UI-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.layer_popup').dialog({
+				autoOpen : false//팝업창이 처음부터 안보이게 설정
+			});
+			//클릭으로 팝업을 열기위해서는 Class를 사용하여 선택자를 명시해준다. 
+			$('button.aa').click(function(){
+				$('.layer_popup').dialog('open')
+			})
+        });
+    </script>
+</head>
+<body>
+	<button class="aa">팝업열기</button>
+	<div class="layer_popup">
+		<p>팝업내용</p>
+	</div>
+</body>
+</html>

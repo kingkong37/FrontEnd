@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        html,body{padding:0;margin:0;text-align:left}
+        .wrap{width:500px}
+        div.counsel{width:500px;height:40px;display:inline-block;background:#ddcaac}
+        div.counsel ul{padding:0;margin:0 auto;width:100%;max-width:1200px;display:inline-block}
+        div.counsel ul li{width:25%;float:left;text-align:center;margin:0;padding:0;list-style:none}
+        div.counsel ul li a{color:#533b00;font-size:14px;font-weight:bold;text-decoration:none;width:100%;display:block;line-height:40px}
+        div.counsel ul li a:hover{color:#fff;background:#b9955d}
+        div.counsel ul li a.on{color:#fff;background:#b9955d}
+        .tab_area{width:500px;height:150px;display:inline-block;margin-top:-4px;border:1px solid #d5d5d5;border-top:none;box-sizing:border-box;}
+        .tab_area .tab_data{width:500px;box-sizing:border-box;padding:10px;display:none}
+        .tab_area ul{padding:0;margin:0}
+        .tab_area li{font-size:14px;line-height:26px;list-style:none;padding:0;margin:0}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//초기화
+			$('.counsel ul li a').first().addClass('on');
+			$('.tab_area .tab_data').first().css('display','block');
+			//Tab
+			$('.counsel ul li a').click(function(){
+				//$(this).attr('href').show();다음과 같이 작성하면 attr을 선택자로 쓸수 없고 태그의 설정으로만 사용가능하다.
+				$('.tab_area .tab_data').hide();//자기 자신이선택한 요소를 제외한 모든 탭 숨기기 (순서가중요)
+				$($(this).attr('href')).show();//attr을 포함하여 선택자로 만들어야 href를 찾아갈 수 있다.
+				return false;
+			})
+
+			//Menu Selected
+            $('div.counsel ul li a').click(function () {
+                $('div.counsel ul li a').removeClass('on');
+                $(this).addClass('on');
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="counsel">
+            <ul>
+                <li><a href="#aa">교수학습</a></li>
+                <li><a href="#bb">학생역량</a></li>
+                <li><a href="#cc">취업지원</a></li>
+                <li><a href="#dd">학생생활</a></li>
+            </ul>
+        </div>
+        <div class="tab_area">
+            <div class="tab_data" id="aa">
+                <ul>
+                    <li>1.교수학습내용</li>
+                    <li>2.교수학습내용</li>
+                    <li>3.교수학습내용</li>
+                    <li>4.교수학습내용</li>
+                </ul>
+            </div>
+            <div class="tab_data" id="bb">
+                <ul>
+                    <li>1.학생역량내용</li>
+                    <li>2.학생역량내용</li>
+                    <li>3.학생역량내용</li>
+                    <li>4.학생역량내용</li>
+                </ul>
+            </div>
+            <div class="tab_data" id="cc">
+                <ul>
+                    <li>1.취업지원내용</li>
+                    <li>2.취업지원내용</li>
+                    <li>3.취업지원내용</li>
+                    <li>4.취업지원내용</li>
+                </ul>
+            </div>
+            <div class="tab_data" id="dd">
+                <ul>
+                    <li>1.학생생활내용</li>
+                    <li>2.학생생활내용</li>
+                    <li>3.학생생활내용</li>
+                    <li>4.학생생활내용</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

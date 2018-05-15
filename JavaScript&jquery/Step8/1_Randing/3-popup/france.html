@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>8월 쇼케이스</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="../../scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//Event1 Check
+            $('.event_check ul li span').click(function () {
+                $('.event_check ul li span').removeClass('select');
+                $(this).addClass('select');
+                $('.event_check ul li span input').removeAttr('checked', 'checked');
+                $(this).find("input").attr('checked', 'checked');
+				
+            });
+            //Popup
+            $(".map_click a").click(function () {
+                $(".france_map_popup .pop_data").hide();
+                $(".france_map_popup").show();
+                $($(this).attr("href")).show();
+                return false;
+            });
+            $(".france_map_popup .pop_data span").click(function () {
+				$(".france_map_popup .pop_data").hide();
+                $(".france_map_popup").hide();
+            });
+        });
+    </script>
+    <style type="text/css">
+        html,body{text-align:center;width:100%;margin:0;padding:0}
+        .container{width:100%;text-align:center;display:inline-block}
+        .france{width:100%;display:inline-block;text-align:center;max-width:1140px}
+        .france div.img{width:100%;position:relative}
+        .france div.map_click a{position:absolute}
+        .france div.map_click a.btn1{left:565px;top:478px}
+        .france div.map_click a.btn2{left:467px;top:706px}
+        .france div.map_click a.btn3{left:641px;top:662px}
+        .france div.map_click a.btn4{left:721px;top:636px}
+        .france div.event_check ul{width:100%;position:absolute;text-align:center;left:0;top:265px}
+        .france div.event_check ul li{width:140px;display:inline-block;position:relative;margin:0 2px}
+        .france div.event_check ul li span{width:42px;height:42px;position:absolute;background:url(images/event1_off.png) no-repeat;top:123px;left:48px;cursor:pointer}
+        .france div.event_check ul li span:hover{background:url(images/event1_on.png) no-repeat}
+        .france div.event_check ul li span.select{background:url(images/event1_on.png) no-repeat}
+        .france div.event_check ul li span input{display:none}
+        .france div.event_check a.btn{position:absolute;left:463px;top:500px}
+        .france .france_map_popup{width:100%;height:100%;position:fixed;bottom:0;left:0;background:url(images/black_bg.png);z-index:9999;display:none}
+        .france .france_map_popup div.pop_data{width:1140px;position:absolute;top:10%;left:50%;margin-left:-570px}
+        .france .france_map_popup div.pop_data span{position:absolute;top:25px;right:20px;cursor:pointer}
+    </style>
+    <!--//적용-->
+</head>
+<body>
+    <div id="container">
+        <div class="france">
+            <div class="img map_click">
+                <img src="images/france_01.jpg" />
+                <a href="#paris" class="btn1"><img src="images/map.png" /></a>
+                <a href="#bordeaux" class="btn2"><img src="images/map.png" /></a>
+                <a href="#lyon" class="btn3"><img src="images/map.png" /></a>
+                <a href="#evian" class="btn4"><img src="images/map.png" /></a>
+            </div>
+            <div class="img event_check">
+                <ul>
+                    <li><span><input type="radio" name="eventch" /></span><img src="images/check_01.png" /></li>
+                    <li><span><input type="radio" name="eventch" /></span><img src="images/check_02.png" /></li>
+                    <li><span><input type="radio" name="eventch" /></span><img src="images/check_03.png" /></li>
+                    <li><span><input type="radio" name="eventch" /></span><img src="images/check_04.png" /></li>
+                    <li><span><input type="radio" name="eventch" /></span><img src="images/check_05.png" /></li>
+                    <li><span><input type="radio" name="eventch" /></span><img src="images/check_06.png" /></li>
+                </ul>
+                <a href="#" class="btn"><img src="images/btn.png" /></a>
+                <img src="images/france_02.jpg" />
+            </div>
+            <div class="img">
+                <img src="images/france_03.jpg" usemap="#image_map" />
+                <map name="image_map">
+                    <area shape="rect" coords="118,299,306,449" href="http://www.louisclub.com/fr/product/productView.do?site=1&amp;PRD_MST_CD=LLHK3AL03FA0INP011" onfocus="this.blur();" />
+                    <area shape="rect" coords="314,221,468,449" href="http://www.louisclub.com/fr/product/productView.do?site=1&amp;PRD_MST_CD=LLMK3NH01MD1BL0041" onfocus="this.blur();" />
+                    <area shape="rect" coords="482,220,636,448" href="http://www.louisclub.com/fr/product/productView.do?site=1&amp;PRD_MST_CD=LLHK3TL31FA5GBU011" onfocus="this.blur();" />
+                    <area shape="rect" coords="655,264,824,447" href="http://www.louisclub.com/fr/product/productView.do?site=1&amp;PRD_MST_CD=LLHK3TL01FA4CBE011" onfocus="this.blur();" />
+                    <area shape="rect" coords="845,243,1011,448" href="http://www.louisclub.com/fr/product/productView.do?site=1&amp;PRD_MST_CD=LLHK4AL16FA0BDW011" onfocus="this.blur();" />
+                </map>
+            </div>
+            <div class="img"><img src="images/france_04.jpg" /></div>
+            <!--popup-->
+            <div class="france_map_popup">
+                <div class="pop_data" id="paris">
+                    <span><img src="images/pop_close.png" /></span>
+                    <img src="images/paris.jpg" usemap="#paris" />
+                    <map name="paris">
+                        <area shape="rect" coords="204,607,566,692" href="http://www.louisclub.com/fr/product/productView.do?site=1&PRD_MST_CD=LLHK3AL03FA0INP011" onfocus="this.blur();" />
+                        <area shape="rect" coords="720,606,1082,691" href="http://www.louisclub.com/fr/product/productView.do?site=1&amp;PRD_MST_CD=LLMK3NH01MD1BL0041" onfocus="this.blur();" />
+                    </map>
+                </div>
+                <div class="pop_data" id="bordeaux">
+                    <span><img src="images/pop_close.png" /></span>
+                    <img src="images/bordeaux.jpg" usemap="#bordeaux" />
+                    <map name="bordeaux">
+                        <area shape="rect" coords="328,620,842,692" href="http://www.louisclub.com/fr/product/productView.do?site=1&amp;PRD_MST_CD=LLHK4AL16FA0BDW011" onfocus="this.blur();" />
+                    </map>
+                </div>
+                <div class="pop_data" id="lyon">
+                    <span><img src="images/pop_close.png" /></span>
+                    <img src="images/lyon.jpg" usemap="#lyon" />
+                    <map name="lyon">
+                        <area shape="rect" coords="357,615,843,700" href="http://www.louisclub.com/fr/product/productView.do?site=1&amp;PRD_MST_CD=LLHK3TL01FA4CBE011" onfocus="this.blur();" />
+                    </map>
+                </div>
+                <div class="pop_data" id="evian">
+                    <span><img src="images/pop_close.png" /></span>
+                    <img src="images/evian.jpg" usemap="#evian" />
+                    <map name="evian">
+                        <area shape="rect" coords="352,569,871,653" href="http://www.louisclub.com/fr/product/productView.do?site=1&amp;PRD_MST_CD=LLHK3TL31FA5GBU011" onfocus="this.blur();" />
+                    </map>
+                </div>
+            </div>
+            <!--//popup-->
+        </div>
+    </div>
+</body>
+</html>

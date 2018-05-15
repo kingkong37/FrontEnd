@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+  //변수면 없이 선택하고 명력문 적용
+	window.onload = function(){
+		document.getElementById('header').onclick = function(){
+			this.style.color = 'orange';//this는 function을 가르키고 function은 ById에 대입이되어 결국 header를 말한다.
+		};
+	}
+
+  </script>
+ </head>
+ <body>
+	<h1 id="header">클릭</h1>
+ </body>
+</html>

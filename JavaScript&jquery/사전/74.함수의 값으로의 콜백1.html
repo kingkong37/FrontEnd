@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	//함수를 인자값으로 사용하는방법
+	function myfun(me, you){
+		return me(you);//me함수에 (you = 1)라는 인자를 선언
+	}
+	function feat(you){//myfun에서 리턴받은 1의 값을 feat you인자에 적용(you의 변수명은 달라도 상관없다.)
+		return you + 1;
+	}
+	function feat2(you){
+		return you - 1;
+	}
+	
+	alert(myfun(feat,1));//feat함수를 (me)에적용, 1(you)에 적용
+	alert(myfun(feat2,1));
+	
+
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

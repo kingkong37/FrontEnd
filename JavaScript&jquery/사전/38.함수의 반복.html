@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function number (){
+	   for(var i=0; i<5; i++){//for문에 var을 추가하면 지역변수로 선언된다. var이 없으면 전역변수가 되어 모든 변수에 적용된다.
+	     document.write(i+1+ "<br/>");
+	   }
+	}
+	for(var i=0; i<1000; i++){
+	   number();
+	}
+	//for문 안에 함수를 호출하여 사용할 수도 있다. 
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

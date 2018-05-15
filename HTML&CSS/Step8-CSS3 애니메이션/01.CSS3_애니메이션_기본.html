@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+	div{
+		width:300px;
+		height:300px;
+		background:orange;
+		animation-name:aa;/*적용하고자하는 애니메이션 이름*/
+		animation-duration:3s;/*총 재생시간*/
+		animation-delay:1s;/*몇초 후 실행*/
+		animation-iteration-count:infinite;/*infinite는 무한반복, 횟수를 숫자로 작성하면 그 횟수만큼 재생*/
+	}
+	@keyframes aa{
+		0%{background:red}/*시작 시점(from)으로 작성가능*/
+		50%{background:yellow}
+		100%{background:green}/*끝난 시점(to)으로 작성가능*/
+	}
+  </style>
+ </head>
+ <body>
+	<div></div>
+ </body>
+</html>

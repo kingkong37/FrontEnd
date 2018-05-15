@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	function sum(){
+		var aa =0;
+		for(i = 0; i < arguments.length ; i++){//arguments.length는 배열의 총 갯수를 얘기하며 현재 수치는 4이다.
+			document.write(i + ":" + arguments[i] + "<br/>");
+			//arguments의 시작은 alert 데이터값의 배열을 얘기하고 배열의 index값을 1부터 져온다.
+			aa += arguments[i];//+=는 연산대입
+			/*
+			aa에 변수에 +=는
+			aa = 0일때
+			aa += 1이라면
+			aa = aa+1과 같다.
+			0 += 1시작 
+			1 += 2
+			2 += 3
+			.
+			.
+			*/
+		}
+		return aa;//return된 aa는 반복문 종료 후 데이터 값을 합산한 10이된다.
+	}
+	document.write(sum(1,2,3,4,5,10));
+
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

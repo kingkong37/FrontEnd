@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('h1').click(function(){
+				var aa = $('div').length;//div의 갯수를 aa에 대입
+				var bb = $(this).html();//h1의 내용(헤더)
+				$('body').append('<div>'+aa+bb+'</div>');
+			})
+        });
+    </script>
+</head>
+<body>
+	<h1>헤더</h1>
+</body> 
+</html>

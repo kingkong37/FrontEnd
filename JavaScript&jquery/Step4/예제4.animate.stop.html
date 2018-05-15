@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style type="text/css">
+        html,body{text-align:center}
+        ul,li{padding:0;margin:0;list-style:none}
+        li{width:80px;height:40px;background:#444;margin-bottom:10px;}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			//animate의 조건(마우스event)에 동작을 할 동안만 실행하고 싶다면 stop()으로 컨트롤 해준다.
+			//stop()함수는 slide설정에도 넣어줄수있다.
+			$('.nostop li').hover(
+				function(){
+					$(this).animate({'width' : '200px'},500);
+				},
+				function(){
+					$(this).animate({'width' : '80px'},500);
+				}
+			);
+
+			$('.stop li').hover(
+				function(){
+					$(this).stop().animate({'width' : '200px'},500);
+				},
+				function(){
+					$(this).stop().animate({'width' : '80px'},500);
+				}
+			);
+        });
+    </script>
+</head>
+<body>
+    
+    <ul class="nostop">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <hr/>
+    <ul class="stop">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</body>
+</html>

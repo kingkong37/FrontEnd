@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .banner {
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            border: 2px solid #000;
+        }
+        
+        #banner1 {
+            top: 100px;
+            left: 100px;
+        }
+        
+        #banner2 {
+            left: 550px;
+            top: 100px;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+    <script src="./libs/jquery-1.11.0.min.js"></script>
+    <script>
+        /**/
+
+        /*
+            step #03
+                - 롤링베너에서 기존 타이머 코드 제거하기 
+
+            step #02
+                - 오토플레이 클래스와 롤링베너를 연결  (오토플레이 기능을 합성해서 사용)
+                
+            step #01
+                - 타이머 기능을 클래스로 독립시키기 
+            
+         */
+        $(document).ready(function() {
+            var imageList = ["logo_01.jpg", "logo_02.jpg", "logo_03.jpg", "logo_04.jpg", "logo_05.jpg", "logo_06.jpg", "logo_07.jpg", "logo_08.jpg"];
+            var imageList2 = ["logo_02.jpg", "logo_04.jpg", "logo_05.jpg", "logo_06.jpg", "logo_08.jpg"];
+            var banner1 = new RollingBanner("#banner1", imageList, {});
+            var banner2 = new RollingBanner("#banner2", imageList, {
+                duration: 3000
+            });
+
+        });
+
+
+        function RollingBanner(selector, imageList, options) {
+            this._$banner = null;
+            this._currentIndex = 0;
+            this._selector = selector;
+            this._imageList = imageList;
+            this._options = options;
+            this._autoPlayer = null;
+            this._start();
+        }
+
+        RollingBanner.default_options = {
+            startIndex: 0,
+            duration: 1000
+        };
+
+
+        RollingBanner.prototype._start = function() {
+            if (this._imageList && this._imageList.length > 0) {
+                this._init();
+                this._initEvent();
+                this.showBannerAt(this._options.startIndex)
+                this.startAutoPlay();
+            } else {
+                console.log("이미지가 존재하지 않습니다.")
+            }
+        }
+
+
+        RollingBanner.prototype._init = function() {
+            this._$banner = $(this._selector);
+            let tempOtions = $.extend({}, RollingBanner.default_options);
+            this._options = $.extend(tempOtions, this._options);
+
+            this._autoPlayer = new AutoPlayer(this._options.duration);
+            this._autoPlayer.setNextListener(this.nextBanner.bind(this))
+        }
+
+        RollingBanner.prototype._initEvent = function() {
+
+        }
+
+        RollingBanner.prototype.nextBanner = function() {
+            var index = this._currentIndex + 1;
+            if (index >= this._imageList.length)
+                index = 0;
+
+            this.showBannerAt(index);
+        }
+
+        RollingBanner.prototype.showBannerAt = function(index) {
+            this._currentIndex = index;
+            var imgName = this._imageList[index];
+            this._$banner.attr("src", "./images/" + imgName);
+        }
+
+        RollingBanner.prototype.startAutoPlay = function() {
+            this._autoPlayer.play();
+        }
+
+
+        function AutoPlayer(duration) {
+            this._duration = duration;
+            this._callback = null;
+            this._timerID = 0;
+            this._playing = false;
+        }
+
+        AutoPlayer.prototype.setNextListener = function(callback) {
+            console.log("SDFsdf");
+            this._callback = callback;
+        }
+
+        AutoPlayer.prototype.play = function() {
+            if (this._timerID == 0 && this._callback) {
+                var self = this;
+                this._timerID = setInterval(function() {
+                    self._callback();
+                }, this._duration);
+            }
+
+        }
+
+        AutoPlayer.prototype.stop = function() {
+            setTimeout(this._timerID);
+            this._timerID = 0;
+        }
+
+
+        AutoPlayer.prototype.getState = function() {
+            return this._playing;
+        }
+    </script>
+
+</head>
+
+<body>
+    <img src="images/logo_01.jpg" class="banner" id="banner1">
+    <img src="images/logo_01.jpg" class="banner" id="banner2">
+</body>
+
+</html>

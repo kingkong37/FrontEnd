@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        .id_pw_enter{width:500px;display:inline-block}
+        fieldset{padding:10px 15px}
+        legend{background:#000;color:#fff;padding:5px 15px;font-size:14px;font-weight:bold;border-radius:5px}
+        dl{width:100%;display:inline-block}
+        dt{width:100px;height:30px;float:left;padding:0;margin:0 0 10px 0;font-size:14px;line-height:30px}
+        dd{width:320px;height:30px;float:left;margin:0 0 10px 0;padding:0}
+        dd input{width:348px;height:26px;padding:0 5px;margin:0}
+        input[type=submit]{width:100%;height:40px;border:none;background:#6c6c6c;font-weight:bold;color:#fff;font-size:14px;cursor:pointer}
+        .data_popup{width:400px;height:180px;background:#fff;border:1px solid #6c6c6c;position:absolute;left:50%;top:0;margin-left:-200px;padding:20px;box-sizing:border-box;text-align:center;display:none}
+        .data_popup ul{margin:0;padding:0;width:100%;list-style:none}
+        .data_popup ul li{width:100%;margin:10px 0;padding:0;float:left}
+        .data_popup ul li p{width:100px;float:left;margin:0;padding:0;text-align:left}
+        .data_popup ul li span{width:250px;float:left;text-align:left;font-size:16px;font-weight:bold;color:#5b15bf}
+        .data_popup button{background:#6c6c6c;color:#fff;border:none;padding:10px 25px;display:inline-block;margin:10px auto 0 auto;clear:both;cursor:pointer}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('#my-form').submit(function(event){
+				var u_id = $('#user_id').val();
+				var u_pw = $('user_pw').val();
+				$('.data_popup').show();
+				$('#enter_id span').html(u_id);
+				$('#enter_pw span').html(u_pw);
+				event.preventDefault();
+				//submit명령문은 제출 후 스크립트를 종료(return)시키므로 팝업의 원래상태인 none상태가된다.
+				//return상황을 막기위해 .preventDefault()함수를 넣어준다.
+				return false;//.preventDefault()명령문이나 return false를 사용하면 된다. 
+			})
+			$('.data_popup button').click(function(){
+                $('.data_popup').hide();
+            })
+        });
+    </script>
+</head>
+<body>
+    <form id="my-form" class="id_pw_enter">
+        <fieldset>
+            <legend>아이디&middot;패스워드 확인</legend>
+            <dl>
+                <dt>아이디</dt>
+                <dd><input type="text" id="user_id" /></dd>
+                <dt>패스워드</dt>
+                <dd><input type="password" id="user_pw" /></dd>
+            </dl>
+            <input type="submit" value="확인" />
+        </fieldset>        
+    </form>
+    <div class="data_popup">
+        <ul>
+            <li id="enter_id"><p>아이디</p><span>fasd</span></li>
+            <li id="enter_pw"><p>패스워드</p><span>sadf</span></li>
+        </ul>
+        <button>닫기</button>
+    </div>
+</body>
+</html>

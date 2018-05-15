@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+  //변수명 없이 선택하고 명력문 적용
+	window.onload = function(){
+		//객체를 변수에 대입(명령문을 간소화하기위함)
+		var p_btn = document.getElementById('plus');
+		var m_btn = document.getElementById('minus');
+		var p_co = document.getElementById('P_count');
+		var m_co = document.getElementById('M_count');
+
+		p_btn.onclick = function(){
+			p_co.innerHTML = Number(p_co.innerHTML) + 1;
+			//Number(내장함수)를 사용 하여 현재 수치를 남겨두고 값을 변동시키기 위함
+			//Number를 사용하면 html에 작성된 문자열(0)을 숫자로 변환
+		}
+		m_btn.onclick = function(){
+			m_co.innerHTML = Number(m_co.innerHTML) - 1;
+		}
+	}
+
+  </script>
+ </head>
+ <body>
+	<button id='plus'>1씩증가</button>
+	<button id='minus'>1씩감소</button>
+	
+	<h1>Plus Count<span id="P_count">0</span></h1>
+	<h1>Minus Count<span id="M_count">0</span></h1>
+
+
+ </body>
+</html>

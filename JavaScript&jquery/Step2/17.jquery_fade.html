@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+		//fade in-out은 해당 요소를 서서히 나타내거나 사라지게 할때사용
+        $(document).ready(function () {
+			$('a.btn1').click(function(){
+				$('.aa').fadeIn(1000);//초로 작성 가능
+				$('.bb').fadeToggle();//fadeToggle은 현재상태에따라 나타냄
+			})
+			$('a.btn2').click(function(){
+				$('.aa').fadeOut('fast');//fast,slow로 작성가능
+				$('.cc').fadeTo('slow', 0.4);//fadeTo는 사라지는 범위를 설정하여 opacity가 적용된 상태로 보일 수 있다.
+			})
+        });
+    </script>
+</head>
+<body>
+	<h1 class="aa">제이쿼리1</h1>
+	<h1 class="bb">제이쿼리2</h1>
+	<h1 class="cc">제이쿼리3</h1>
+	<a href="#" class="btn1">Fade In</h1>
+	<a href="#" class="btn2">Fade Out</h1>
+</body> 
+</html>

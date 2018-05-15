@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('p').click(function(){
+				$('div').slideToggle();//슬라이드 토글을 슬라이드의 유무를 확인하여 보여줌
+
+				$('div').toggle('slow');
+				//원래목적은 show/hide가 주된 목적이나 'slow' ,' fast', '시간설정'을 통해 슬라이드 효과를 낼수 있다.
+			})
+        });
+    </script>
+</head>
+<body>
+	<p class="aa">클릭</p>
+	<div style="display:none">내용</div>
+</body>
+</html>

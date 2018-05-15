@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style type="text/css">
+        html,body{margin:0;padding:0;text-align:center;line-height:0}
+        .homepage_wrap{width:100%;display:inline-block}
+        .img_data{width:1349px;margin:0 auto}
+        .right_menu{width:95px;position:absolute;right:2%;top:80px}
+        .right_menu a{width:100%;float:left;background:url(images/quick2.gif);text-indent:-999999px}
+        .right_menu a.btn1{height:97px;background-position:0 0}
+        .right_menu a.btn2{height:96px;background-position:0 -97px}
+        .right_menu a.btn3{height:96px;background-position:0 -197px}
+        .right_menu a.btn1:hover{background-position:-95px 0}
+        .right_menu a.btn2:hover{background-position:-95px -97px}
+        .right_menu a.btn3:hover{background-position:-95px -197px}
+        .right_menu a.btn1.on{background-position:-95px 0}
+        .right_menu a.btn2.on{background-position:-95px -97px}
+        .right_menu a.btn3.on{background-position:-95px -197px}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        //Quick Movie
+        $(function () {
+            var quick_menu = $(".right_menu");
+            var quick_top = 50;
+            $(window).scroll(function () {
+                quick_menu.stop().animate({ "top": $(document).scrollTop() + quick_top + "px" }, 500);
+            });
+			//컨텐츠의 영역이 하나의 이미지로 만들어진 경우
+			$(window).scroll(function(){
+				var aa = $(window).scrollTop();
+				if(aa >=0 && aa < 400){
+					$('.right_menu a.btn1').addClass('on');
+					$('.right_menu a.btn2').removeClass('on');
+					$('.right_menu a.btn3').removeClass('on');
+				}
+				if(aa >=401 && aa < 700){
+					$('.right_menu a.btn2').addClass('on');
+					$('.right_menu a.btn1').removeClass('on');
+					$('.right_menu a.btn3').removeClass('on');
+				}
+				if(aa >=701 && aa < 1200){
+					$('.right_menu a.btn3').addClass('on');
+					$('.right_menu a.btn1').removeClass('on');
+					$('.right_menu a.btn2').removeClass('on');
+				}
+			})
+        });
+    </script>
+</head>
+<body>
+    <div class="homepage_wrap">
+        <div class="right_menu">
+            <a href="#" class="btn1">회사소개</a>
+            <a href="#" class="btn2">찾아오시느길</a>
+            <a href="#" class="btn3">제품소개</a>
+        </div>
+        <div class="img_data"><img src="images/home_page.jpg" /></div>
+    </div>
+</body>
+</html>

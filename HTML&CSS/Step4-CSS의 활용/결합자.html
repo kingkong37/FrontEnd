@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<style type="text/css">
+		div > h3{color:red}/*div 안에 바로 작성된 h3만 선택하여 변경*/
+		div + h3{color:green}/*div태그 바로 다음 작성 된 태그를 선택하여 변경*/
+		div ~ h3{color:orange}/*div태그 바로다음에 작성된 모든 태그를 선택*/
+	</style>
+</head>
+<body>
+    <div>
+        <h3>CSS Combinators</h3>
+        <h3>CSS Combinators</h3>
+        <h3>CSS Combinators</h3>
+        <a href="#"><h3>CSS Combinators</h3></a>
+    </div>
+    <h3>CSS Combinators</h3>
+    <h3>CSS Combinators</h3>
+</body>
+</html>

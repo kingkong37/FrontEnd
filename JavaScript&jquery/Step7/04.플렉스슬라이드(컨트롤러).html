@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="modules/jquery.flexslider-min.js" type="text/javascript"></script>
+	<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+	<style>
+		ul{display:inline-block;left:0}
+	</style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.photo').flexslider({
+				slideshow : true,
+				slideshowSpeed: 1000,
+				animation : 'slide',
+				animationLoop : true,
+				/*컨트롤러*/
+				controlNav : true,//해당배너로 이동하는 버튼생성
+				directionNav : true,//이전,다음 이동버튼
+				pausePlay : true,//재생 정지 버튼
+				keyboard : true,//키보드로 컨트롤
+				mousewheel : true,//마우스휠로 컨트롤
+				multipleKeyboard : true,//컨트롤 대상이 2개이상일때 키보드로 컨트롤
+				touch : true,//모바일 터치가능
+				pauseOnAction : true,//컨트롤러 영역(버튼)에 이벤트가 발생하면 동작을 멈춤
+				pauseOnHover : true//마우스가 배너위에 올라와있을때 동작을 멈춤
+			})
+        });
+    </script>
+</head>
+<body>
+	<div class="photo">
+		<ul class="slides">
+			<li><img src="images/flex_banner_01.jpg" /></li>
+			<li><img src="images/flex_banner_02.jpg" /></li>
+			<li><img src="images/flex_banner_03.jpg" /></li>
+			<li><img src="images/flex_banner_04.jpg" /></li>
+		</ul>
+	</div>
+</body>
+</html>

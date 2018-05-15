@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+ </head>
+ <body>
+		<img src="../Step1/images/potal.jpg" usemap="#potal" /><!--usemap 맵태그와 연결-->
+		<map name="potal">
+			<area shape="rect" coords="6,5,305,119" href="http://google.co.kr" onfocus="this.blur();" />
+			<!--영역의 모양(사각형)의 좌측상단xy좌표,우측하단x,y좌표-->
+		</map>
+		
+		<img src="../Step1/images/circle_link.jpg" usemap="#aa"/>
+		<map name="aa">
+			<area shape="circle" coords="300,307,144" href="#" onfocus="this.blur();" />
+			<!--영역의 모양(원)의 중심xy,반지름-->
+		</map>
+
+		<img src="../Step1/images/seoul.jpg" usemap="#bb"/>
+		<map name="bb">
+			<area shape="poly" coords="281,341,453,464,394,518,225,377" href="#" onfocus="this.blur();" />
+			<!--영역의 모양(다각형)의 각 포인트 마다xy 작성-->
+		</map>
+
+ </body>
+</html>

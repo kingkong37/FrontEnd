@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<script type="text/javascript">
+		window.onload = function (){
+			document.getElementById('ok_btn').onclick = function(){//제출 버튼클릭 시 함수 호출
+				var pw = document.getElementById('pass').value;//input에 입력되는 내용은 .value가 필요
+				var pw_check = document.getElementById('pass-check').value;
+				if(pw == pw_check){//변수의 내용(value)가 일치 하는지 확인
+					alert('일치')
+				}else{
+					alert('다시입력')
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+    <form id="my-form">
+        <label for="pass">비밀번호</label><br />
+        <input type="password" name="pass" id="pass" /><br />
+        <label for="pass-check">비밀번호 확인</label><br />
+        <input type="password" id="pass-check" /><br />
+        <input type="button" value="제출" id="ok_btn" />
+    </form>
+</body>
+</html>

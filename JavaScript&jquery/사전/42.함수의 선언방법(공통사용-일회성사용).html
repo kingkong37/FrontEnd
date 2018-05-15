@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+
+    function bb(){//공통사용
+	   document.write('함수의사용');
+	}
+	bb();
+
+    aa = function(){//함수명을 앞에 사용하여 공통으로 사용되게 정의함
+	   for(var i=0; i<10; i++){
+	      document.write(i)
+	   }
+	}
+	aa();
+    
+    (function(){//일회성 함수는 한번만 사용하고 종료시킬 경우
+	    document.write("일회성 함수");
+	})();
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

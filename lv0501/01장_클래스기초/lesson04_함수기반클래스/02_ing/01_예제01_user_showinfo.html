@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title> </title>
+
+	<script>
+		/*
+		 예제 01: 함수 방식을 활용한 간단한 클래스 만들기
+		 */
+		// 클래스 정의
+		// function User() {
+		// 	this.프로퍼티 = 값;
+		// 	this.메서드 = function() {
+		//
+		// 	}
+		// }
+
+		function User(userName) {
+			this.userName = "userName";
+			this.showName = function() {
+				console.log("userName = ", this.userName);
+			}
+		}
+
+		// 인스턴스 생성
+		var user1 = new User("kingkong");
+
+		// 메서드 호출
+		user1.showName();
+
+
+
+	</script>
+</head>
+
+	<body>
+
+	</body>
+
+</html>

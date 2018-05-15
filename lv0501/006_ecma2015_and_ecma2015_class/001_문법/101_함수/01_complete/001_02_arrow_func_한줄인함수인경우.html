@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+       /*
+       함수 구문이 한줄 일때
+       단 return은 사용할 수 없음
+        */
+
+       /*
+        ES5
+        */
+
+       function test1(a,b,c){
+           console.log("1. es5, test1="+(a+b+c));
+       }
+       test1(10,20,30);
+
+        // ES2015
+        var test2 = (a,b,c)=>console.log("2. es6, test2="+(a+b+c));
+        test2(10,20,30);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

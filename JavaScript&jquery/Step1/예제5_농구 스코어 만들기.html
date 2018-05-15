@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        html,body{background:url(images/nba.png)}
+        .score_wrap{width:1200px;height:630px;background:url(images/score_bg.jpg) no-repeat;background-size:cover;position:absolute;left:50%;top:50%;margin-left:-600px;margin-top:-315px;box-shadow:rgba(0,0,0,0.4) 3px 3px}
+        .team_score{width:50%;height:630px;text-align:center}
+        .team_score div.score{width:100%;text-align:center;font-size:250px;color:#fff;margin-top:190px}
+        .controller{width:100%;position:absolute;bottom:7%;left:0}
+        .controller .blue_con{width:45%;float:left;text-align:right;padding-right:5%}
+        .controller .red_con{width:45%;float:right;text-align:left;padding-left:5%}
+        .blue_team{float:left}
+        .red_team{float:right}
+        .controller button{padding:10px 30px;color:#fff;border:none;font-size:16px;font-weight:bold;display:inline-block;cursor:pointer}
+        .controller .blue_con button{background:#041a53}
+        .controller .red_con button{background:#8a0b14}
+        .controller button.minus_point{background:#008b65}
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            //Blue
+			var blue_point = document.getElementById('blue_score');//블루 포인트 변수
+
+            var blue_btn_one = document.getElementById('blue_one_point');
+            blue_btn_one.onclick = function () {
+                blue_point.innerHTML = Number(blue_point.innerHTML) + 1;
+            };
+
+            var blue_btn_two = document.getElementById('blue_two_point');
+            blue_btn_two.onclick = function () {
+                blue_point.innerHTML = Number(blue_point.innerHTML) + 2;
+            };
+
+            var blue_btn_three = document.getElementById('blue_three_point');
+            blue_btn_three.onclick = function () {
+                blue_point.innerHTML = Number(blue_point.innerHTML) + 3;
+            };
+            var blue_btn_minus = document.getElementById('blue_minus_point');
+            blue_btn_minus.onclick = function () {
+                blue_point.innerHTML = Number(blue_point.innerHTML) - 1;
+            };
+
+            //Red
+			var red_point = document.getElementById('red_score');//레드 포인트 변수
+
+            var red_btn_one = document.getElementById('red_one_point');
+            red_btn_one.onclick = function () {
+                red_point.innerHTML = Number(red_point.innerHTML) + 1;
+            };
+
+            var red_btn_two = document.getElementById('red_two_point');
+            red_btn_two.onclick = function () {
+                red_point.innerHTML = Number(red_point.innerHTML) + 2;
+            };
+
+            var red_btn_three = document.getElementById('red_three_point');
+            red_btn_three.onclick = function () {
+                red_point.innerHTML = Number(red_point.innerHTML) + 3;
+            };
+            var red_btn_minus = document.getElementById('red_minus_point');
+            red_btn_minus.onclick = function () {
+                red_point.innerHTML = Number(red_point.innerHTML) - 1;
+            };
+        };
+    </script>
+</head>
+<body>
+    <div class="score_wrap">
+        <div class="team_score blue_team">
+            <div class="score" id="blue_score">0</div>
+        </div>
+        <div class="team_score red_team">
+            <div class="score" id="red_score">0</div>
+        </div>
+    </div>
+    <div class="controller">
+        <div class="blue_con">
+            <button class="one_point" id="blue_one_point">1점</button>
+            <button class="two_point" id="blue_two_point">2점</button>
+            <button class="three_point" id="blue_three_point">3점</button>
+            <button class="minus_point" id="blue_minus_point">-1점</button>
+        </div>
+        <div class="red_con">
+            <button class="one_point" id="red_one_point">1점</button>
+            <button class="two_point" id="red_two_point">2점</button>
+            <button class="three_point" id="red_three_point">3점</button>
+            <button class="minus_point" id="red_minus_point">-1점</button>
+        </div>
+    </div>
+</body>
+</html>

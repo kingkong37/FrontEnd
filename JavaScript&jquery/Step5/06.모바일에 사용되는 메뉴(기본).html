@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<style type="text/css">
+		.menu{width:100%;height:100%;background:#ff9900;position:fixed;bottom:0;right:-100%}
+	</style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.open').click(function(){
+				$('.menu').animate({right:'0'})
+			})
+			$('.close').click(function(){
+				$('.menu').animate({right:'-100%'})
+			})
+        });
+    </script>
+</head>
+<body>
+	<button class="open">메뉴열기</button>
+	<!--Menu-->
+	<div class="menu">
+		<button class="close">메뉴닫기</button>
+	</div>
+	<!--//Menu-->
+</body>
+</html>

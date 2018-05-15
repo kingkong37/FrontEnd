@@ -1,0 +1,148 @@
+body{font-family: "Nanum Gothic", sans-serif;font-size:1em;color:#333}
+#wrap{width:100%;height:100%;display:block;position:relative}
+/*Common*/
+a{color:#333}
+section{width:100%;display:block;padding:50px 0}
+article{width:960px;height:100%;display:inline-block;position:relative}
+
+
+/*header*/
+header{width:100%;position:relative;display:inline-block}
+header h1{position:absolute;top:0;left:50%;margin-left:-62px;z-index:9}
+header nav{width:960px;display:inline-block;padding:30px 0}
+header nav ul{width:100%;display:block}
+header nav ul li{width:130px;display:inline-block}
+header nav ul li a{font-weight:700}
+header nav ul li a:hover{color:#6c236}
+header a.m_menu_open{display:none}
+/*Contents*/
+#container{width:100%;display:block}
+	/*Banner*/
+	.main_banner{height:780px;background:url(../images/main_img_01.jpg) no-repeat center center;background-size:cover;padding:0}
+	.main_banner article ul{position:absolute;right:0;top:30%}
+	.main_banner article ul li{width:100%;display:block}
+	.main_banner article ul li.sub_tit{color:#324e0b;font-weight:700;margin-bottom:5px}
+	.main_banner article ul li.main_tit{font-family:'Nanum Myeongjo';font-size:1.6em;line-height:1.2em;font-weight:700}
+	.main_banner article ul li.main_tit span{color:#6b8738}
+	.main_banner article ul li.text{margin-top:10px}
+	.main_banner .slide_btn{width:100%;top:50%;left:0;position:absolute;}
+	.main_banner .slide_btn a{position:absolute;top:0}
+	.main_banner .slide_btn a:first-child{left:5%}
+	.main_banner .slide_btn a:last-child{right:5%}
+
+	/*brand new*/
+	.brand_new{padding:80px 0;background:#7b9636 url(../images/brand_new_bg.png) no-repeat center center} 
+	.brand_new article > ul{float:left}
+	.brand_new article > ul li.sec_tit{color:#324e0b;padding:20px 0;font-size:0.8em;font-weight:700}
+    .brand_new article > ul li.main_tit{font-weight:800;font-size:1em;color:#344f0c;margin:10px 0}
+    .brand_new article > ul li.text{font-size:0.8em;color:#c3dc84;line-height:1.6em}
+    .brand_new article > ul li.link{margin-top:20px}
+    .brand_new article > ul li.link a{line-height:2.6em;background:#344f0c;padding:0 40px;display:inline-block;color:#7b9636;border-radius:30px;font-size:0.8em}
+    .brand_new article > ul li.link a:hover{color:#fff}
+	.brand_new div.prd_img{float:right}
+
+	/*Partner*/
+	.partner{padding:50px 0;background:url(../images/partner_bg.jpg) no-repeat center center fixed;background-size:cover}
+	.partner ul{margin-bottom:30px}
+	.partner ul li{color:#fff;text-shadow:#000 2px 2px 3px}
+	.partner ul li.sec_tit{font-size:0.8em;font-weight:700}
+	.partner ul li.main_tit{font-family:'Nanum Myeongjo';font-size:1.6em;line-height:1.2em;font-weight:700;margin:30px 0 5px 0}
+	.partner ul li.text{font-size:0.8em}
+	.partner iframe{width:80%;height:500px;display:inline-block;box-shadow:rgba(0,0,0,0.5)5px 5px 3px}
+
+	/*System*/
+	.system{padding:50px 0}
+	.system ul{margin-bottom:30px}
+	.system ul li.sec_tit{font-size:0.8em;font-weight:700;color:#324e0b}
+	.system ul li.main_tit{font-family:'Nanum Myeongjo';font-size:1.6em;line-height:1.2em;font-weight:700;margin:20px 0 5px 0;color:#333}
+	.system ul li.text{font-size:0.8em;color:#333;margin-bottom:20px}
+	
+	/*Facts*/
+	.facts{padding:50px 0;background:#7b9636}
+	.facts ul.top_tit{margin-bottom:30px}
+	.facts ul.top_tit li.sec_tit{font-size:0.8em;font-weight:700;color:#fff}
+	.facts ul.top_tit li.main_tit{font-family:'Nanum Myeongjo';font-size:1.6em;line-height:1.2em;font-weight:700;margin:20px 0 5px 0;color:#fff}
+	.facts div.facts_data{width:100%;display:inline-block}
+	.facts div.facts_data ol{width:136px;display:inline-block;margin:0 2%}
+	.facts div.facts_data ol li{color:#fff}
+	.facts div.facts_data ol li.data_tit{padding:10px 0;border-top:1px solid #607736;border-bottom:1px solid #607736;font-size:0.8em}
+	.facts div.facts_data ol li.num_text{font-size:2em;letter-spacing:-5px}
+	.facts div.facts_data ol li.num_text span{font-size:1.4em;font-weight:800}
+
+/*footer*/
+footer{width:100%;padding:50px 0;background:#3e3e3e;color:#fff}
+	.footer_info{width:100%;position:relative;display:inline-block}
+	.footer_info img.f_banner{float:left}
+	.footer_info select{width:200px;height:30px;background:#666;color:#fff;border:none;position:absolute;right:0;top:0}
+	.footer_info img.f_family{position:absolute;right:0;bottom:0}
+	address{width:100%;display:block;text-align:left;font-style:normal;font-size:0.7em;line-height:1.6em;margin-top:20px}
+	address a{color:#fff}
+	address ul li:first-child{font-weight:700}
+	address ul li br{display:none}
+
+@media all and (max-width:959px) {
+	article{width:100%}
+	header{padding:30px 0}
+	header h1{width:15%;margin-left:-7.5%}
+	header h1 img{width:100%}
+	header a.m_menu_open{display:inline-block;position:absolute;left:2%;top:30%}
+	header nav{display:none}
+	.main_banner{height:700px;background-position:20% center;padding:20px}
+	.main_banner article ul{width:100%;bottom:0;top:inherit}
+	.main_banner .slide_btn{top:40%}
+	.main_banner .slide_btn a:first-child{left:1%}
+	.main_banner .slide_btn a:last-child{right:1%}
+	.brand_new{padding:50px 2%}
+	.partner iframe{width:98%}
+	.system{padding:50px 2%}
+	.system img{width:100%}
+	footer{padding:50px 2%}
+}
+@media all and (min-width:320px) and (max-width:876px){
+	.facts div.facts_data ol{width:16%;margin:0 1%}
+	.facts ol li.icon img{width:100%}
+	.facts div.facts_data ol li.num_text{font-size:1.4em;letter-spacing:-2px}
+	.facts div.facts_data ol li.num_text span{font-size:1.2em}
+}
+@media all and (min-width:320px) and (max-width:414px){
+	header > h1{width:24%;margin-left:-12%;}
+    .main_banner{height:500px;padding-bottom:10px}
+    .main_banner article ul li.main_tit{font-size:1.2em}
+    .main_banner article ul li.text{font-size:0.7em}
+	.main_banner .slide_btn{top:30%}
+	.brand_new article > ul{width:100%}
+    .brand_new article > div{width:100%;text-align:center;margin-top:30px}
+	.brand_new div.prd_img{width:100%}
+	.brand_new div.prd_img img{width:50%}
+	.partner iframe{height:250px}
+    .system ul li.main_tit{font-size:1.4em}
+    .facts_data{padding:0 20%}
+    .facts div.facts_data ol{width:100%;margin:0 0 30px 0}
+    .facts div.facts_data ol li.icon img{width:auto}
+    .facts div.facts_data ol li.num_text{font-size:1.6em}
+	
+    footer{padding:50px 5%}
+    .footer_info{padding-bottom:40px}
+    .footer_info select{right:0;top:inherit;width:100%;height:30px;bottom:0}
+    .footer_info img.f_banner{width:100%}
+	.footer_info img.f_family{display:none}
+    footer address ul li{text-align:center}
+    footer address ul li br{display:block}
+}
+@media all and (max-width:320px){
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

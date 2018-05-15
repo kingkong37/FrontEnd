@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+		//innerHTML과 같은 방식의 Jquery작성법
+        $(document).ready(function () {
+			$('.aa').html('<span>내용</span>');//html에 맞게 Tag가 있다면 tag로 내용을 작성
+			$('.bb').text('<span>내용</span>');//내용 그대로 텍스트로 출력
+        });
+    </script>
+</head>
+<body>
+	<h1 class="aa"></h1>
+	<h1 class="bb"></h1>
+</body>
+</html>

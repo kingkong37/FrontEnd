@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	//함수안에 this는 함수가 포함된 객체를 가르키는것이 기본원리이다.
+	
+	function myfun(){
+		aa = this;//aa var이 없으므로 함수가 선언되면 전역변수가 됨.
+	}
+	myfun();
+
+	if(aa == window){
+		alert('윈도우 일치');// return = true
+	}
+
+	var obj = new myfun();
+	if(aa == obj){//new를 생성하면 aa(this)는 그 생성자가 만든 요소를 가르킨다.
+		alert('생성자 일치');//return = true
+	} 
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

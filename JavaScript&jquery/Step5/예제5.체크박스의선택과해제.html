@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        div{width:400px;float:left;font-weight:bold}
+        div span{width:20px;height:20px;float:left;background:url(images/checkbox_off.png);cursor:pointer;margin-right:3px}
+        div span.on{background:url(images/checkbox_on.png)}
+        div span input{visibility:hidden}
+    </style>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/toggleAttr.js"></script><!--toggleAttr을 사용하기 위한 모듈-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('span').click(function(){
+				$(this).toggleClass('on');
+				$(this).children().toggleAttr('checked' , 'checked');
+			})
+        });
+    </script>
+</head>
+<body>
+    <div><span><input type="checkbox" /></span>아이디저장</div>
+</body>
+</html>

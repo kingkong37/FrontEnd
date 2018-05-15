@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	/*
+	상속이란 부보가 되는 객체의 로직을 그대로 받아 만들수 있는 기능을 얘기한다.
+	(실무에서는 프로토타입이라고함)
+	로직에대한 재활용과 유지보수가 빠르게 이루어질수있다.
+	*/
+	function user_name(aa){
+		this.aa = aa;
+	}
+	user_name.prototype.aa = null;//값이 없다는 뜻도 있지만 비워졌다라는 뜻도있음
+	user_name.prototype.info = function(){
+		return '이름' + ':' + this.aa;
+	}
+	
+	var user1 = new user_name('사용자');
+	document.write(user1.info());
+		
+	//재활용 사용방법
+	function admin(aa){
+		this.aa = aa;
+	}
+	admin.prototype = new user_name();
+
+	var user2 = new admin('관리자');
+	document.write(user2.info());
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	var city_name = new Array('서울','도쿄','베이징','뉴욕','파리');//Array는 배열을 만들기 위한 내장함수
+	
+	function RandomCityName(){
+		var CT = Math.floor(Math.random()* city_name.length);//변수 CT에 수를 랜덤하게 정수로 대입
+
+		return city_name[CT];//변수의 수치가 [CT]안에 들어가 배열의 데이터를 출력한다.
+	}
+	document.write(RandomCityName(city_name));
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

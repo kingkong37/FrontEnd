@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+		div{width:100px;height:100px;}
+		div.aa{background:orange;position:absolute;top:200px}
+		div.bb{background:green}
+	</style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			$('.img1').attr('width',200);//attr은 속성이 없을때 추가해주는 역할도있다.
+			$('.gallery img').attr({
+				'width' : 200,
+				'height' : 200,
+				'alt' : '이미지'
+			})
+        });
+    </script>
+</head>
+<body>
+	<img src="images/ironman.jpg" class="img1"/>
+
+	<div class="gallery">
+		<img src="images/captain_america.jpg"/>
+		<img src="images/ironman.jpg"/>
+	</div>
+	
+</body> 
+</html>

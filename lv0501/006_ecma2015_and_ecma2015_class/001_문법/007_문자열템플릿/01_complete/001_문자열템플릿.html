@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /*
+
+         문자열 템플릿
+            -"이 아닌 `임
+            - `` <--- 감싸야함
+
+         문법 :
+         `${변수이름}`;
+
+
+         */
+
+// es5
+var a=10;
+var b=20;
+console.log("1. es5, a="+a+", b="+b);
+
+// es6
+var a=10;
+var b=20;
+var str = `a= ${a}, b= ${b} ${1+2}`;
+console.log("2. es6, ", str);
+console.log("3. es6, ", `a= ${a}, b= ${b} ${1+2}`);
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

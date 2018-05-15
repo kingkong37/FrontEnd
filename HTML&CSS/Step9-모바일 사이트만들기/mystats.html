@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+   <link href="../reset.css" rel="stylesheet" type="text/css" />
+  <title>Document</title>
+  <style type="text/css">
+	body{font-family: "Nanum Gothic", sans-serif;font-size:1em}
+	#wrap{width:100%;max-width:640px;display:inline-block;position:relative}
+	header{width:100%;display:inline-block}
+	header h1{float:left}
+	header a.menu_open{float:right}
+	section{width:100%;display:inline-block}
+	section.banner img{width:100%}
+	section.menu{margin-top:-4px;border-top:1px solid gray}
+	section.menu a{width:50%;float:left;line-height:3em;background:#f2f2f2;color:black;font-weight:700;text-align:left;padding:0 2%;border-bottom:1px solid gray}
+	section.menu a:nth-child(odd){border-right:1px solid gray}
+	section.tel{background:#477cab;padding:10px 0;margin-top:-4px}
+	section.tel a{color:#fff;font-size:1.6em;line-height:3em;font-weight:700}
+	section.tel a img{vertical-align:middle}
+	footer{width:100%;display:inline-block;border-top:1px solid #fff;background:#477cab;padding-bottom:10px}
+	footer section.top_btn a{width:10%;display:inline-block}
+	footer section.top_btn a img{width:100%}
+	footer ul{margin-top:10px}
+	footer ul li{color:#fff;font-size:0.8em;line-height:1.2em}
+	footer ul li:first-child{font-size:1em;font-weight:700}
+  </style>
+ </head>
+ <body>
+	<div id="wrap">
+		<header>
+			<h1><a href="#" title="홈으로 이동"><img src="images/mystats/top_logo.png" alt="로고"/></a></h1>
+			<a href="#" class="menu_open" title="메뉴열기"><img src="images/mystats/all_menu_btn.png" alt="메뉴버튼"/></a>
+		</header>
+		<div class="container">
+			<section class="banner" id="banner"><img src="images/mystats/visual01.jpg"/></section>
+			<section class="menu" id="menu">
+				<a href="#">메뉴1</a>
+				<a href="#">메뉴2</a>
+				<a href="#">메뉴3</a>
+				<a href="#">메뉴4</a>
+				<a href="#">메뉴5</a>
+				<a href="#">메뉴6</a>
+			</section>
+			<section class="tel">
+				<a href="tel:010-7104-7707"><img src="images/mystats/icon_f_tel.png">010-7104-7707</a>
+				<!--
+					전화번호 연결 : href에 tel:전화번호 적용
+					이메일 연결 : href에 mailto:이메일
+				-->
+			</section>
+		</div>
+		<footer>
+			<section class="top_btn"><a href="#banner"><img src="images/mystats/go_top_icon.png"/></a></section>
+			<!--
+				네임앵커 : 같은 페이지에 가고자하는 위치를 id값으로 설정 후 버튼 [href="#id명"]을 준다.
+				                 다른 페이지에 가고자하는 위치는 [href="연결문서.htlm#아이디명"]
+			-->
+			<ul>
+				<li>마이스텟</li>
+				<li>COPYRIGHT(C) mystats.</li>
+				<li>ALL RIGHTS RESERVED.</li>
+			</ul>
+		</footer>
+	</div>
+ </body>
+</html>

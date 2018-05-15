@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        /*
+		$(document).ready(function () {
+			$('h1').first().appendTo('body');//첫번째 요소를 맨뒤로 보냄
+        })
+		*/
+		$(document).ready(function () {
+			setInterval(function(){
+				$('h1').first().appendTo('body');
+			},2000)
+        })
+    </script>
+</head>
+<body>
+	<h1>1</h1>
+	<h1>2</h1>
+	<h1>3</h1>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript">
+	/*
+	클로져란 내부함수가 외부함수의 접근하는 방식을 말한다.
+	*/
+	function ofun(){//외부함수
+		function ifun(){//내부함수
+			var aa ="내부함수 외부함수"
+			alert(aa);
+		}
+		ifun();
+	}
+	ofun();
+
+	function bb(){
+		var i = "내부함수 외부함수2"//외부함수에 변수를 지정
+		function cc(){//각각 사용되는 스크립트 문이 다를 경우 유용하다.
+			alert(i);
+		}
+		function dd(){
+			document.write(i);
+		}
+		cc();
+	}
+	bb();
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>
