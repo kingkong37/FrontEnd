@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\03장_jQuery플러그인_제작",
-    "\\03장_jQuery플러그인_제작\\lesson08_미션",
+    "\\000_practice",
+    "\\000_practice\\js_practice001",
+    "\\005_추가미션02_롤링배너만들기\\002_심플배너만들기_클래스버전\\01_complete",
     "\\03장_jQuery플러그인_제작\\lesson08_미션\\01_complete",
     "\\03장_jQuery플러그인_제작\\lesson08_미션\\01_complete\\m01_심플갤러리를_플러그인으로_만들기"
   ],
-  "SelectedNode": "\\03장_jQuery플러그인_제작\\lesson08_미션\\01_complete\\m01_심플갤러리를_플러그인으로_만들기\\step00_풀이전코드.html",
+  "SelectedNode": "\\000_practice\\js_practice001\\practice.html",
   "PreviewInSolutionExplorer": false
 }
