@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+    <script>
+        /*
+        일반적으로 연속작업을 하게 되는 경우 callback()을 많이 사용하게 됨.
+        이때 콜백지옥이 발생하게 됨.
+
+        callback 보다 promise를 사용해야 하는 이유는?
+         - 콜백지옥을 없앨수 있음.
+         - promise라는 표준에 맞춰서 결과를 처리 할 수 있음.
+         callback을 사용하는 경우 개발자 임의대로 처리하게 됨.
+         */
+
+        function test1(callback){
+            console.log("test1 실행");
+            setTimeout(function(){
+                callback("OK!");
+            },3000);
+        }
+        test1(function(){
+            console.log("3초 후 실행됨.");
+        });
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

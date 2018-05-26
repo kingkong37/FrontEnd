@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="libs/jquery-1.11.0.min.js"></script>
+
+    <script>
+        /*
+             체인 구조가 아닌 예제
+                -B에서 error발생을 하는 경우 C에서 잡을 순 없음.
+                 C는 A와 연결되어 있기 때문
+
+         */
+        let count=1;
+        let p = new Promise((resolve, reject)=>{
+            console.log("1. 데이터 보내기");
+            resolve("data"+count);   //A
+        });
+
+
+        p.then((data)=>{
+            console.log("2. data="+data);
+            throw new Error("에러 발생");   //B
+        },(error)=>{
+            console.log("2. error"+error);
+        })
+
+
+        p.then((data)=>{
+            console.log("3. data="+data);
+        },(error)=>{                         //C
+            console.log("3. error"+error);
+        })
+
+        // function test11():Promise<any>{
+        //     let count=1;
+        //     let p = new Promise((resolve, reject)=>{
+        //         console.log("1. 데이터 보내기");
+        //         resolve("data"+count);   //A
+        //     });
+
+
+        //     let p2 = p.then((data)=>{
+        //         console.log("2. data="+data);
+        //         throw new Error("에러 발생");   //B
+        //     },(error)=>{
+        //         console.log("2. error"+error);
+        //     })
+
+
+        //     p.then((data)=>{
+        //         console.log("3. data="+data);
+        //     },(error)=>{                         //C
+        //         console.log("3. error"+error);
+        //     })
+
+        //     return p2;
+        // }
+
+        // test11().then((data)=>{
+
+        // })
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

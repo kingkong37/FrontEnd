@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="libs/jquery-1.11.0.min.js"></script>
+
+    <script>
+        /*
+         체인 구조인 상태 .
+         - B는 A의 응답.
+         - C는 B의 응답.
+            즉 B에서 error 발생 시 C가 실행됨.
+
+         */
+        let count=1;
+        let p = new Promise((resolve, reject)=>{
+            console.log("1. 데이터 보내기");
+            resolve("data"+count);  //A
+        });
+        // B.
+        p.then((data)=>{
+            console.log("2. data="+data);
+            //return "new data";
+            throw new Error("2에서 에러 발생");
+        },(error)=>{
+            console.log("2. error="+error);
+        }).then((data)=>{      //C.
+            console.log("3. data="+data);
+        },(error)=>{
+            console.log("3. error="+error);
+        })
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

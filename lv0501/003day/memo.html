@@ -1,0 +1,60 @@
+var str="<ul>";
+str+="<li>test1</li>";
+str+="<li>test2</li>";
+str+="</ul>"
+
+var str=`<ul>
+<li>test1</li>
+<li>test2</li>      
+</ul>`;
+
+//es5
+var test=function(a){
+    if(a==null)
+        a=10;
+}
+
+test();
+
+
+//es2015
+var test==function(a=10)=>{
+
+}
+test();
+
+//es2015
+var test==(a=10)=>{
+
+}
+var test==(a=10)=>a;
+
+
+
+
+function 클래스이름(){
+    this.프로퍼티1=값;
+    this.프로퍼티2=값;
+}
+클래스이름.prototype.메소드1=function(){
+    this.프로퍼티/메서드();
+}
+
+var instance = new 클래스이름();
+instance.프로퍼티/메서드();
+
+
+//es2015
+
+class 클래스이름{
+    constructor(매개변수1,...){
+        this.프로퍼티1=값;
+        this.프로퍼티2=값;
+    }
+    메소드1(){
+        this.프로퍼티/메서드();
+    }
+}
+
+var instance = new 클래스이름();
+instance.프로퍼티/메서드();

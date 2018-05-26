@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="libs/jquery-1.11.0.min.js"></script>
+
+    <script>
+        /*
+         체인 구조인 상태 .
+            - B는 A의 응답.
+            - C는 B의 응답.
+
+         */
+        let count=1;
+        let p = new Promise((resolve, reject)=>{
+            console.log("1. 데이터 보내기");
+            resolve("data"+count);  //A
+        });
+        p.then((data)=>{    //B.
+            console.log("2. data="+data);
+            return "new data";
+
+        }).then((data)=>{      //C.
+            console.log("3. data="+data);
+        })
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

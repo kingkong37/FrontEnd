@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="libs/jquery-3.3.1.min.js"></script>
+
+    <script>
+        /*
+          promise! 즉 비동기 처리를 좀더 간결하게 하는 방법은?
+          async, await 사용하기 : ES8(ECMAScript2017) 공식 스펙
+
+          - await를 사용하기 위해서는 반드시 async로 감싸야 합니다.
+
+          - async를 사용하면 기본으로 promise 객체가 만들어짐.
+        */
+
+
+        function  sleep( delay )  {
+            let  promise  =  new Promise(function(resolve,reject) {
+                setTimeout(function () {
+                    let value = Math.ceil(Math.random()*1000);
+                    resolve(value);
+                }, delay);
+            });
+            return promise;
+        }
+
+        async  function start() {
+            console.time("value1");
+            let value1 = await sleep(1000);
+            console.timeEnd("value1");
+            console.log("value 1= ", value1);
+
+
+            console.time("value2");
+            let value2 = await sleep(2000);
+            console.timeEnd("value2");
+            console.log("value 2= ", value2);
+
+            return value1+value2;
+        }
+        let promise = start();
+        promise.then((value)=>{
+            console.log("최종 = "+ value);
+        })
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

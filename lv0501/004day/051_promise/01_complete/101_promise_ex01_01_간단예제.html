@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+    <script>
+        /*
+
+         */
+
+        function test1(callback){
+            console.log("test1 실행");
+            setTimeout(function(){
+                callback("OK!");
+            },3000);
+        }
+        test1(function(){
+           console.log("3초 후 실행됨.");
+        });
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        /*
+            - reject()가 발생하는 경우
+              then()의 reject부분 또는
+              catch()를 만날 때까지 흘러감.
+            - 즉 하나의 catch()를 가지고 앞에서 발생하는 예외 처리가 가능 .
+
+         */
+
+        let count=1;
+        let p = new Promise((resolve, reject)=>{
+            console.log("1. promise 시작");
+
+            //throw new Error("에러 발생")
+            reject("abcde "+count);
+            count++;
+
+        });
+
+        p.then(function(){
+            console.log("2. test");
+        }).then(function(){
+            console.log("3. test");
+        },function(error){
+            console.log("4. error = "+error);
+        }).catch(function(error){
+            console.log("5. error = "+error);
+        })
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

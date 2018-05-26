@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="libs/jquery-3.3.1.min.js"></script>
+
+    <script>
+        /*
+        해결책 es2015의 promise()를 이용하는 방법
+         */
+        function   sleep( delay )  {
+            var  promise  =  new Promise(function(resolve,reject) {
+                setTimeout(function () {
+                    resolve();
+                }, delay);
+            });
+            return promise;
+        }
+
+
+        sleep(1000)
+            .then(function() {console.log(1);return sleep(2000)})
+            .then(function(){console.log(2)})
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

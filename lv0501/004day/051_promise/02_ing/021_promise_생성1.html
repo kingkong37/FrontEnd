@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        /*
+             promise 생성방법
+             var p=new Promise(function(resolve, reject){
+                // 정상적인 경우
+                resolve(데이터);
+
+                // 에러인 경우
+                reject(new Error("에러 메시지"));
+             });
+
+             // 응답 받기
+             p.then(onFulfilled, onRejected)
+         */
+        
+        var p = new Promise((resolve, reject)=>{
+            reject("실패!");
+        })
+
+        p.then((value)=>{
+            alert(value);
+        },(error)=>{
+            alert(error);
+        })
+
+
+        // class My1{
+        //     constructor(){
+
+
+        //         method1():Promise<object>{
+        //             let promise = new Promise((resolve, reject)=>{
+
+        //             })
+
+        //             return promise;
+        //         }
+        //     }
+        // }
+//??         
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

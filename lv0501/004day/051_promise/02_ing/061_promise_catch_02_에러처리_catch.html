@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        /*
+            - 에러 발생시 catch()를 이용한 처리
+         */
+
+        let count=1;
+        let p = new Promise((resolve, reject)=>{
+            console.log("1. promise 시작");
+
+            //throw new Error("에러 발생")
+           reject("abcde "+count);
+           count++;
+
+        });
+
+        //??
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

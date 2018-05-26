@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="libs/jquery-1.11.0.min.js"></script>
+
+    <script>
+        /*
+             아래 예제는 체인이 아니라 p의  then()을 두번 호출한 것이기 때문에 1번에서 2번으로 데이터를 넘기거나 예외를 처리할 수 없음.
+             해결책은 p.then()에 의해서 만들어진 promise()를 넘기는 것임.
+         */
+        function test() {
+
+            let p = new Promise((resolve)=> {
+                resolve("실행");
+            });
+            return p.then(()=>{
+                console.log("1. 실행");
+                throw new Error("에러 발생")
+            },(error)=>{
+                console.log("1. 에러 처리");
+            })
+        }
+
+        test().then(()=>{
+            console.log("2. 실행");
+        }, (error)=>{
+            console.log("2. 에러 처리");
+        })
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

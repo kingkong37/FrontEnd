@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        /*
+ promise의 상태는 다음과 같이 나눠짐
+    - Pending: 객체가 생성된 초기 상태
+    - Fulfilled : 성공했을때 상태, 즉 resolve() 메서드를 실행하는 경우 Fulfilled로 변경
+    - Rejected: 실패했을때 상태, reject() 또는 throw new Error("메시지")를 실행하는 경우 Rejected로 됨
+
+    - 상태가 한번 변경되면 끝.
+      즉 resolve()를 실행하고 다시 resolve()를 실행하는 경우 Fulfilled로 등록한 함수는 한번 만 실행됨.
+
+         */
+
+let p = new Promise((resolve, reject)=>{
+    console.log("1. promise 시작");
+    setTimeout(()=>{
+        console.log("2. 보내기");
+        resolve("111");
+        //??
+    },1000);
+})
+
+p.then((data)=>{
+    console.log("3. 받은 데이터="+data);
+}, (error)=>{
+
+})
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

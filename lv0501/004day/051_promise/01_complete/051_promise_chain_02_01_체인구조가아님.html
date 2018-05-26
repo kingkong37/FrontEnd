@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="libs/jquery-1.11.0.min.js"></script>
+
+    <script>
+        /*
+             체인 구조가 아닌 예제
+              - B와 C의 then은 A의 응답을 받는 부분.
+                즉 1:다 인 상태.
+              - B에서 값을 리턴한다고 해도 C에서 받질 못함.
+                C는 A의 내용을 받는 부분임..
+
+         */
+        let count=1;
+        let p = new Promise((resolve, reject)=>{
+            console.log("1. 데이터 보내기");
+            resolve("data"+count);  //A
+        });
+
+        // B.
+        p.then((data)=>{
+            console.log("2. data="+data);
+            return "new data";
+        })
+
+        // C.
+        p.then((data)=>{
+            console.log("3. data="+data);
+        })
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

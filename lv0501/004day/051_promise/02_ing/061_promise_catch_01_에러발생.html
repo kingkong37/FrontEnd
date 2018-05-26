@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        /*
+            에러 발생시 catch()를 이용한 처리
+            - then()의 두 번째 인자 값에서도 처리 가능
+            - throw 보다는 reject()를 통한 오류 처리
+         */
+
+        let count=1;
+        let p = new Promise((resolve, reject)=>{
+            console.log("1. promise 시작");
+
+            //throw new Error("에러 발생")
+            //??
+
+        });
+
+
+        p.catch((data)=>{
+            console.log("2. 받은 데이터="+data);
+        }, (error)=>{
+            console.log("2. error"+error);
+        });
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

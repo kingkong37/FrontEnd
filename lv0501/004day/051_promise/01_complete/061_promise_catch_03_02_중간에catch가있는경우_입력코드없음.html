@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        /*
+            - catch()부분을 실행 한 후는
+              기존과 동일하게 실행. (
+            - catch()는 일종의 try-catch와 동일하게 동작 즉 catch() 전 promise()에서 에러가 발생하는 경우 catch가 실행
+         */
+
+        let count=1;
+        let p = new Promise((resolve, reject)=>{
+            console.log("1. promise 시작");
+
+            //throw new Error("에러 발생")
+            reject("abcde "+count);
+            count++;
+
+        });
+
+        p.then(function(){
+            console.log("2. test");
+        }).then(function(){
+            console.log("3. test");
+        },function(error){
+            console.log("4. error = "+error);
+        }).catch(function(error){
+            console.log("5. error = "+error);
+        }).then(function(data){
+            console.log("6.___");
+        });
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
