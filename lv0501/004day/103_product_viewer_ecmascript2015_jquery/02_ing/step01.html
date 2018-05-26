@@ -95,8 +95,19 @@
 		*/
 	    $(document).ready(function() {
 
-		    var viewer1 = new ProductViewer("#slider1");
-	    });
+            //var viewer1 = new ProductViewer("#slider1");
+            $("#slider1").viewer();
+        });
+        
+        (function($){
+            $.fn.viewer=function(){
+                this.each(function(){
+                    var viewer1 = new ProductViewer(this);
+                })
+
+                return this;
+            }
+        })(JQuery)
 
 	    class ProductViewer {
 
