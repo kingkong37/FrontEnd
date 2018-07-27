@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+		/*
+                 v-if v-else
+                   -
+             */
+      </script>
+</head>
+<body>
+<div id="app">
+      <button @click="toggle">
+            토글
+      </button>
+      <div v-if="visible">
+            조건이 맞을때
+      </div>
+      <div v-else>
+            조건이 맞지 않을 때
+      </div>
+</div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+			visible:true
+		},
+		methods:{
+			toggle:function(){
+				this.visible=!this.visible;
+                  }
+		}
+	})
+
+</script>
+</body>
+</html>

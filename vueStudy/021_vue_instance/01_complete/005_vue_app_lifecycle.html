@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/vue.js"></script>
+      <script>
+            /*
+                  - vue 뿐만아니라 다른 라이브러를 같이 사용해도됩니다.
+                  - 특정 영역만을 vue로 관리할 수도 있습니다.
+             */
+      </script>
+</head>
+<body>
+      <div>
+
+            <h3>기본 구조</h3>
+            <div>
+                  <p id="app">
+                        {{name}}, count={{count}}
+                  </p>
+            </div>
+
+      </div>
+
+      <script>
+
+
+
+		var app1 = new Vue({
+			el:"#app",
+			data:{
+				name:"안녕하세요~~~ 이 내용은 Vue1에서 만들어졌습니다.",
+                        count:0
+			},
+                  beforeCreate:function(){
+			      console.log("1. beforeCreate = ", this.name);
+                  },
+                  created:function(){
+				console.log("2. created = ", this.name);
+				this.test();
+                  },
+                  beforeMount:function(){
+				console.log("3. beforeMount = ", this.name);
+                  },
+                  mounted:function(){
+				console.log("4. mounted = ", this.name);
+                  },
+                  beforeUpdate:function(){
+				console.log("11. beforeUpdate = ", this.name, this.count);
+                  },
+                  updated:function(){
+				console.log("12. updated = ", this.name, this.count);
+                  },
+			methods:{
+                        test:function(){
+                        	setInterval(()=>{
+                        		this.count++;
+                              },500)
+                        }
+			}
+		})
+
+      </script>
+</body>
+</html>

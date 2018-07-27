@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+            /*
+                  v-for="(value, key) in 배열"
+             */
+      </script>
+</head>
+<body>
+      <div id="app">
+            <div class="list">
+                  <ul //??>
+                        {{key}} = {{value}}
+                  </ul>
+            </div>
+      </div>
+      <script>
+		var data = {
+			list:["user1", "user2", "user3", "user4"]
+		}
+
+		var vm = new Vue({
+			el: '#app',
+			data:data
+		})
+
+      </script>
+</body>
+</html>

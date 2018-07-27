@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+            /*
+                  v-for + 메서드를 이용해 필터링 처리 하기
+             */
+      </script>
+</head>
+<body>
+      <div id="app">
+            <div class="list">
+                  <div>
+                        serach = <input type="text" v-model="value">
+                  </div>
+                  <ul v-for="user in search()">
+                        name={{user}}
+                  </ul>
+            </div>
+      </div>
+      <script>
+		var data = {
+			list:["김춘경", "김철수", "홍길동", "영심이", "이영자"],
+                  value:""
+		}
+
+		var vm = new Vue({
+			el: '#app',
+			data:data,
+                  methods:{
+				search:function(){
+					if(this.value.length==0)
+						return this.list;
+
+					return this.list.filter((name)=>{
+						return name.indexOf(this.value)!=-1;
+                              })
+
+
+                        }
+                  }
+		})
+
+
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+            /*
+            
+             */
+      </script>
+</head>
+<body>
+      <div id="app">
+            <div class="list">
+                  <ul v-for="user in list">
+                        <li>name = {{user.name}}</li>
+                        <li>age = {{user.age}}</li>
+                        <li>address = {{user.address}}</li>
+                  </ul>
+            </div>
+      </div>
+      <script>
+		var data = {
+			list:[{
+				name:"user_1",
+				age:10,
+				address:"address_1"
+			},{
+				name:"user_2",
+				age:20,
+				address:"address_2"
+			},{
+				name:"user_3",
+				age:30,
+				address:"address_3"
+			}]
+		}
+
+		var vm = new Vue({
+			el: '#app',
+			data:data
+		})
+
+      </script>
+</body>
+</html>

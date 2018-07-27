@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+		/*
+                 기본 이벤트 수식어
+                  - 이벤트 수식어란? : 이벤트 추가 기능
+                  - 사용법 : @이벤트명.수식어명.수식어명...
+                        수식어를 여러 개 붙여 사용 가능.
+
+                  - 기본 수식어
+                       .stop = stopPropagation()과 동일
+                       .prevent = preventDefault()
+                       .capture = event.capture
+                       .self = event.target이 자기 자신인 경우에만 실행
+                       .once = 한번만 이벤트 실행.
+
+
+             */
+      </script>
+</head>
+<body>
+      <div id="app">
+            <div @click="test">
+                  <button @click="addMessage">실행, stop없이</button>
+                  <button @click.stop="addMessage">실행, stop추가</button>
+                  <div v-html="message">
+
+                  </div>
+            </div>
+      </div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+                  message:""
+		},
+
+		methods:{
+			addMessage:function(){
+
+				this.message+="addMessage 실행<br>"
+			},
+
+			test:function(){
+				this.message+="test실행<br>"
+                  }
+		}
+	})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/vue.js"></script>
+      <script>
+            /*
+            심플 메모장
+                  stop #04
+                        - 수정
+                  step #03
+                        - 삭제
+
+                  step #02
+                        - 추가
+
+                  step #01
+                        - 리스트 출력
+             */
+      </script>
+</head>
+<body>
+      <div id="app">
+            <div class="list">
+                  <ul>
+                        <li>사용자명<button>삭제</button><button>수정</button></li>
+                  </ul>
+            </div>
+
+            <div>
+                  <p>
+                        <span>name:<input type="text" class="user-name" v-model="newUser"></span><br>
+                  <p>
+                        <button class="btn-add-user"> 추가</button>
+                  </p>
+            </div>
+      </div>
+
+      <script>
+            var data = {
+                  list:["user1","user2", "user3"],
+                  newUser:""
+            }
+
+		var vm = new Vue({
+			el: '#app',
+			data:data,
+                  methods:{
+
+                  }
+		})
+
+
+
+      </script>
+</body>
+</html>

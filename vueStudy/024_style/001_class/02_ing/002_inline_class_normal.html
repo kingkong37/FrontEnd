@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+		/*
+               스타일 설정 방법
+                  - 클래스
+                        - 인라인 오브젝트 클래스
+                        - 인라인 배열 클래스
+                        - 오브젝트 클래스
+
+                  - 스타일
+                        - 인라인 스타일
+                        - 오브젝트 스타일
+
+            테스트
+                  - 인라인 오브젝트 클래스2 (여러 클래스 적용)
+                        
+             */
+      </script>
+
+      <style>
+            .active1 {
+                  border:4px solid #f00;
+            }
+            .active2 {
+                  font-size:20px;
+            }
+      </style>
+</head>
+<body>
+<div id="app">
+      <div >
+            <button @click="toggle1">토글(border)</button>
+            <button @click="toggle2">토글(font)</button>
+            <div //??>테스트입니다 </div>
+
+      </div>
+</div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+                  isActive1:false,
+			isActive2:false
+		},
+
+		methods:{
+			toggle1:function(){
+				//??
+                  },
+			toggle2:function(){
+				//??
+			}
+		}
+	})
+
+</script>
+</body>
+</html>

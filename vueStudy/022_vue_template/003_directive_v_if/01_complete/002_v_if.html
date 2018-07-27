@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+		/*
+                 v-fi
+                  - 보이고,숨기기
+                  - 화면에서 완전히 삭제
+             */
+      </script>
+</head>
+<body>
+<div id="app">
+      <button @click="toggle">
+            토글
+      </button>
+      <div v-if="visible">
+            보이고 숨기기
+      </div>
+</div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+			visible:true
+		},
+		methods:{
+			toggle:function(){
+				this.visible=!this.visible;
+                  }
+		}
+	})
+
+</script>
+</body>
+</html>

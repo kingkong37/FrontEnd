@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+            /*
+                 양방향
+                  - input 테그와 주로 사용.
+                  - 데이터명 <->입력정보가 동시 연동되는 구조
+                  - <input v-model="데이터명">
+
+             */
+      </script>
+</head>
+<body>
+      <div id="app">
+            <input type="text" v-model="name">
+            <div>
+                  입력한내용 : {{name}}
+            </div>
+      </div>
+
+      <script>
+
+
+
+		var app1 = new Vue({
+			el:"#app",
+			data:{
+                        name:"data"
+			}
+		})
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/jquery-3.3.1.min.js"></script>
+      <script src="../../libs/vue.js"></script>
+      <script>
+            /*
+                  - vue 뿐만아니라 다른 라이브러를 같이 사용해도됩니다.
+                  - 특정 영역만을 vue로 관리할 수도 있습니다.
+             */
+      </script>
+</head>
+<body>
+      <div>
+
+            <h3>기본 구조</h3>
+            <div>
+                  <p class="sub1">
+                        뷰 설명~~~
+                  </p>
+            </div>
+            <div class="sub2">
+
+                  {{name}}
+            </div>
+      </div>
+
+      <script>
+            var app = new Vue({
+                  el:".sub2",
+                  data:{
+                  	name:"이 내용은 Vue에서 만들어졌습니다."
+                  },
+                  methods:{
+
+                  }
+            })
+
+            $(".sub1").html("안녕하세요~~~ 이 내용은 jQuery로 만들어졌습니다.");
+      </script>
+</body>
+</html>

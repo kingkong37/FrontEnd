@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+            /*
+
+                 요소의 속성에도 바인딩을 적용할  수 있습니다.
+                 - <tagName :속성명="데이터명"> </tagName>
+                 - <tagName v-bind:속성명="데이터명"> </tagName>
+             */
+      </script>
+</head>
+<body>
+      <div id="app">
+            <div :class="'class1'+count">
+                  count={{count}}
+            </div>
+
+      </div>
+
+      <script>
+
+
+
+		var app1 = new Vue({
+			el:"#app",
+			data:{
+                        count:1
+			},
+                  created:function(){
+				this.addCount();
+                  },
+                  methods:{
+				addCount:function(){
+					setInterval(()=>{
+						this.count++;
+                                    },1500
+                              )
+                        }
+                  }
+		})
+
+      </script>
+</body>
+</html>

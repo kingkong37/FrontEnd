@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+		/*
+                 단방향 바인딩
+                  - {{속성이름}}
+                  - 데이터 값이 변경되면 자동으로 업데이트 됨.
+             */
+      </script>
+</head>
+<body>
+<div id="app">
+      count={{count}}
+</div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+			count:1
+		},
+		created:function(){
+			this.addCount();
+		},
+		methods:{
+			addCount:function(){
+				setInterval(()=>{
+						this.count++;
+					},1500
+				)
+			}
+		}
+	})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+		/*
+                 이벤트 리스터 설정하기
+                  - v-on:이벤트명="리스너명"
+                  - @이벤트명="리스너명"
+                  - 리스너명 작성할때 ()붙여도  되고, 안해도 되요.
+                        붙여서 작성할때는 파라메터 값을 넘길 때 사용.
+
+
+             */
+      </script>
+</head>
+<body>
+<div id="app">
+      <button //??>실행</button>
+      <button //??>실행</button>
+      <button //??>실행</button>
+      <div>
+            count = {{count}}
+      </div>
+</div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+			count:1
+		},
+
+		methods:{
+			addCount:function(){
+				this.count++;
+			}
+		}
+	})
+
+</script>
+</body>
+</html>

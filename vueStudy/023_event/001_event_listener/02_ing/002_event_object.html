@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+		/*
+                 이벤트 리스터에 이벤트 객체 넘기기
+                  - listener($event)
+
+
+             */
+      </script>
+</head>
+<body>
+<div id="app">
+      <button //??>실행</button>
+      <div>
+            count = {{count}}
+      </div>
+</div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+			count:1
+		},
+
+		methods:{
+			addCount:function(//??){
+				this.count++;
+				console.log("count ", event);
+			}
+		}
+	})
+
+</script>
+</body>
+</html>

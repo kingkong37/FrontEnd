@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/vue.js"></script>
+      <script>
+            /*
+            심플 메모장
+                  stop #04
+                        - 수정
+                  step #03
+                        - 삭제
+
+                  step #02
+                        - 추가
+
+                  step #01
+                        - 리스트 출력
+             */
+      </script>
+</head>
+<body>
+      <div id="app">
+            <div class="list">
+                  <ul v-for="(user,index) in list">
+                        <li>name = {{user}} <button @click="deleteUser(user)">삭제</button><button @click="selectedUser(index,user)">수정</button></li>
+                  </ul>
+            </div>
+
+            <div>
+                  <p>
+                        <span>name:<input type="text" class="user-name" v-model="newUser" @keydown.enter="addUser"></span>
+                  </p>
+                  <p v-if="state=='add'">
+                        <button class="btn-add-user" @click="addUser" > 추가</button>
+                  </p>
+                  <p v-if="state=='update'">
+                        <button class="btn-add-user" @click="updateUser" > 적용</button><button class="btn-add-user" @click="cancel" >취소</button>
+                  </p>
+            </div>
+      </div>
+
+      <script>
+            var data = {
+                  list:["user1","user2", "user3"],
+                  newUser:"",
+                  state:"add",
+                  updateUserIndex:-1
+            }
+
+		var vm = new Vue({
+			el: '#app',
+			data:data,
+                  methods:{
+				selectedUser:function(index, targetUser){
+                              this.updateUserIndex=index;
+                              this.newUser = targetUser;
+                              this.state="update";
+                        },
+
+				updateUser:function(){
+				      if(this.state=="update"){
+				      	this.list[this.updateUserIndex] = this.newUser;
+						this.updateUserIndex = -1;
+						this.newUser="";
+				      	this.state="add";
+					}
+                        },
+                        cancel:function(){
+					this.updateUserIndex = -1;
+					this.newUser="";
+					this.state="add";
+                        },
+
+				deleteUser:function(targetUser){
+
+				      for(var i=0;i<this.list.length;i++){
+				            if(this.list[i]==targetUser){
+				            	this.list.splice(i,1);
+                                    }
+                              }
+                        },
+                        addUser:function(){
+                        	if(this.newUser.length==0){
+                        		alert("값을 입력해주세요.");
+                        		return;
+                              }
+                        	this.list.push(this.newUser);
+                        }
+                  }
+		})
+
+
+
+      </script>
+</body>
+</html>

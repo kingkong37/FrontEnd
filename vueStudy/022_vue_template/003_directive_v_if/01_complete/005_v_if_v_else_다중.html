@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+		/*
+                 v-if v-else
+                   -
+             */
+      </script>
+</head>
+<body>
+<div id="app">
+      <div>
+            점수 입력<input type="text" v-model="value">
+      </div>
+      <div v-if="value=='a'">
+            a입니다.
+      </div>
+      <div v-else-if="value=='b'">
+            b입니다.
+      </div>
+      <div v-else-if="value=='c'">
+            c입니다.
+      </div>
+      <div v-else-if="value=='d'">
+            d입니다.
+      </div>
+      <div v-else>
+            해당하는 값이 없습니다.
+      </div>
+
+</div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+			value:""
+		}
+
+	})
+
+</script>
+</body>
+</html>

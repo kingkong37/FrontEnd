@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/vue.js"></script>
+      <script>
+            /*
+            el에 아이디가 아닌  클래스를 넘겨도 됩니다.
+             */
+      </script>
+</head>
+<body>
+
+      <div class="app">
+            <h3>기본 구조</h3>
+            {{name}}
+      </div>
+      <script>
+            var app = new Vue({
+                  el:".app",
+                  data:{
+                  	name:"ddandongne"
+                  },
+                  methods:{
+
+                  }
+            })
+      </script>
+</body>
+</html>
