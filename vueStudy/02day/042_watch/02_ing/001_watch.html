@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/vue.js"></script>
+      <script>
+		/*
+               watch
+                  - 속성 값이 변경되것을 감지하고 싶을 때 사용
+             */
+      </script>
+
+
+</head>
+<body>
+<div id="app">
+      <div >
+            <div><button @click="addMessage()">데이터 변경</button></div>
+            <div>
+                  {{message}}
+            </div>
+
+      </div>
+</div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+			count:7,
+			message:"1,2,3,4,5,6,7",
+
+		},
+
+		//??,
+            methods:{
+
+                  addMessage:function(){
+				this.count++;
+				this.message+=","+this.count;
+                  }
+            }
+	})
+
+</script>
+</body>
+</html>

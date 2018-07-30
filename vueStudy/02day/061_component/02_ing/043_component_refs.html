@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/vue.js"></script>
+      <script>
+		/*
+               ref란?
+                  - 레퍼런스(인스턴스명)이라고 생각하세요.
+             */
+      </script>
+
+
+</head>
+<body>
+<div id="app">
+      <my-component //??></my-component>
+      <my-component //??></my-component>
+
+      <div>
+            <button @click="count1()">com1 값 확인</button>
+      </div>
+      <div>
+            <button @click="count2()">com2 값 확인</button>
+      </div>
+</div>
+
+<script>
+
+
+
+	// 등록
+	Vue.component('my-component', {
+		template: `
+		      <div>
+		            <button @click="addCount()">추가</button>
+		            <p>
+                              count = {{count}}
+                        </p>
+		      </div>
+		`,
+		data:function(){
+			return {
+				count:1
+			}
+		},
+
+		methods:{
+			addCount(){
+				return this.count++;
+			}
+		}
+	})
+
+	// 루트 인스턴스 생성
+	new Vue({
+		el: '#app',
+            methods:{
+			count1(){
+				//??
+                  },
+			count2(){
+				//??
+			}
+
+            }
+	})
+
+</script>
+</body>
+</html>

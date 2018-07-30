@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/vue.js"></script>
+      <script>
+		/*
+               computed property vs method
+                  - mehtod()는 계속해서 호출
+                  - computed property는 값이 변경될때만 사용.
+
+            예제:
+
+
+
+
+             */
+      </script>
+
+
+</head>
+<body>
+<div id="app">
+      <div >
+            <div><button @click="toggle()">토글</button> <button @click="addMessage()">데이터 변경</button></div>
+            <div >1. reversedMesasge1 = {{reversedMessage}} </div>
+
+            <div v-if="sw">2. computed property = {{reversedMessage}} </div>
+            <div v-if="sw">3. methods  = {{reversedMessage2()}} </div>
+
+      </div>
+</div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+			count:7,
+			message:"1,2,3,4,5,6,7",
+                  sw:false
+		},
+
+		computed:{
+
+			reversedMessage:function(){
+				console.log("test1");
+				return this.message.split(",").reverse().join("_");
+                  }
+            },
+            methods:{
+			toggle:function(){
+				this.sw = !this.sw;
+				return this.sw;
+			},
+                  addMessage:function(){
+				this.count++;
+				this.message+=","+this.count;
+                  },
+
+                  reversedMessage2:function(){
+				console.log("test2");
+				return this.message.split(",").reverse().join("_");
+                  }
+            }
+	})
+
+</script>
+</body>
+</html>

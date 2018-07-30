@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/vue.js"></script>
+      <script>
+		/*
+               slot
+                  사용 : 부모에서 보내는 콘텐츠 정보를 자식에서 사용하고자 할때 사용
+
+             */
+      </script>
+      <style>
+            .header{
+                  border:1px solid #f00;
+            }
+            .main{
+                  border:1px solid #f00;
+            }
+            .footer{
+                  border:1px solid #f00;
+            }
+      </style>
+
+
+</head>
+<body>
+<div id="app">
+      <my-header class="header"></my-header>
+      <my-header class="header">이 정보는 부모에서 보내는 header 값</my-header>
+      <my-header class="header"><p>이 정보는 부모에서 보내는 header 값</p></my-header>
+</div>
+</div>
+
+<script>
+
+
+
+	// 등록
+	Vue.component('my-header', {
+		template: `
+		      <div>
+		            <p>MyHeader 컴포넌트 내부입니다.</p>
+		            <slot>이 값은 content 정보가 없을때만 보입니다.</slot>
+                  </div>
+		`
+	})
+
+	// 루트 인스턴스 생성
+	new Vue({
+		el: '#app'
+	})
+
+</script>
+</body>
+</html>

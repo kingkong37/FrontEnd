@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../../libs/vue.js"></script>
+      <script>
+		/*
+                 v-text
+                  - innerText에 바인딩
+             */
+      </script>
+</head>
+<body>
+<div id="app">
+      <div v-text="message">
+
+      </div>
+</div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+			message:"test_",
+                  count:1
+		},
+		created:function(){
+			this.addCount();
+		},
+		methods:{
+			addCount:function(){
+				setInterval(()=>{
+						this.message="<p>message "+this.count+"</p>";
+						this.count++;
+					},500
+				)
+			}
+		}
+	})
+
+</script>
+</body>
+</html>

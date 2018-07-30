@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/vue.js"></script>
+      <script>
+		/*
+               watch
+                  - 다음과 같이 값이 어떤 값을 감시하고 있다고 변경되는 값에 따라 특정 처리등을 할때
+                  - template에서 사용하는 연산자 directive로 처리하기에는 역부족인 경욱가 있음.
+
+             */
+      </script>
+
+
+</head>
+<body>
+<div id="app">
+      <div >
+            <div>
+                  입력<input v-model="message">
+            </div>
+            <div>
+                  {{message}}
+            </div>
+            //??
+
+      </div>
+</div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+			message:"",
+                  sw:false
+		},
+
+		watch:{
+			message:function(newValue, oldValue){
+				//??
+			}
+		}
+	})
+
+</script>
+</body>
+</html>

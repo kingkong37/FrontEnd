@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/vue.js"></script>
+      <script>
+		/*
+               slot
+                  사용 : 부모에서 보내는 콘텐츠 정보를 자식에서 사용하고자 할때 사용
+
+             */
+      </script>
+      <style>
+            .header{
+                  border:1px solid #f00;
+            }
+
+      </style>
+
+
+</head>
+<body>
+<div id="app">
+      <div>
+            메인 영역의 내용입니다.
+      </div>
+      <my-header>
+            <p slot="name2">
+                  부모에서 전달한 내용 - name2
+            </p>
+
+            <p slot="name1">
+                  부모에서 전달한 내용 - name1
+            </p>
+            <p slot="name3">
+                  부모에서 전달한 내용 - name3
+            </p>
+      </my-header>
+</div>
+</div>
+
+<script>
+
+
+
+	// 등록
+	Vue.component('my-header', {
+		template: `
+		      <div>
+		            <p>MyHeader 컴포넌트 내부입니다.</p>
+		            <div>
+		                  <p>slot name1</p>
+		                  <slot name="name1"></slot>
+		            </div>
+
+		            <div>
+		                  <p>slot name2</p>
+		                  <slot name="name2"></slot>
+		            </div>
+
+		            <div>
+		                  <p>slot name3</p>
+		                  <slot name="name3"></slot>
+		            </div>
+
+                  </div>
+		`
+	})
+
+	// 루트 인스턴스 생성
+	new Vue({
+		el: '#app'
+	})
+
+</script>
+</body>
+</html>

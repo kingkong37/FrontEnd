@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/vue.js"></script>
+      <script>
+		/*
+            Vue 기본 구조
+                  new Vue({
+                       el:"연결할 선택자",
+                       data:데이터,
+                       methods:메서드 목록
+                  });
+
+            - Vue 객체는 여러 개 생성할 수 있음.
+            - Vue 객체 하나는 하나의 영역을 Vue로 관리하겠다로 해석하세요.
+             */
+      </script>
+</head>
+<body>
+      <div id="app">
+            <h3>기본 구조</h3>
+            {{name}}
+      </div>
+      <script>
+            var app = new Vue({
+                  el : "#app",
+                  data : {
+                        name:"kingkong"
+                  },
+                  methods:{
+
+                  }
+            })
+      </script>
+</body>
+</html>

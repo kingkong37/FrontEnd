@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <script src="../../libs/vue.js"></script>
+      <script>
+		/*
+               radio
+                  - 다중 선택 처리
+             */
+      </script>
+
+
+</head>
+<body>
+<div id="app">
+      <div >
+            <Select v-model="message">
+                  <option value="">선택</option>
+                  <option value="철수">철수</option>
+                  <option value="영희">영희</option>
+                  <option value="영수">영수</option>
+            </Select>
+            <div>
+                  {{message}}
+            </div>
+
+      </div>
+</div>
+
+<script>
+
+
+
+	var app1 = new Vue({
+		el:"#app",
+		data:{
+			message:"영수"
+
+		}
+	})
+
+</script>
+</body>
+</html>
